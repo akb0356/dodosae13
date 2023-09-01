@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "bitbit";
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff")
+    format("woff");
+}
+
+body {
+  font-family: bitbit;
+  background-image: url(patterndot.png);
+  text-align: center;
+}
+
+#heartimage {
+  width: 450px;
+  display: block;
+  margin: auto;
+}
+
+.info {
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+input {
+  margin: 5px;
+  padding: 13px;
+  border-radius: 30px;
+  font-family: bitbit;
+}
+
+.login {
+  text-align: center;
+  margin-top: 20px;
+  font-family: bitbit;
+}
+
+#textbox {
+  font-size: 20px;
+  line-height: 50%;
+}

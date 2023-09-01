@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Lora&display=swap");
+
+body,
+button {
+  font-family: "Hi Melody", cursive;
+}
+
+#wrap {
+  width: 500px;
+  margin: auto;
+}
+
+#mytitle {
+  width: 500px;
+  height: 600px;
+  background-image: url("/230901/loginmission/iuiu.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: black;
+  padding-top: 40px;
+  border-radius: 10px;
+}
+
+#textbox {
+  background-color: rgba(211, 211, 211, 0.5);
+  margin-top: 80%;
+  padding: 15px;
+}
+
+#join {
+  text-align: center;
+}
+
+label {
+  width: 40px;
+  display: inline-block;
+}
+
+#loginbox {
+  text-align: center;
+}
+
+#loginbox > button {
+  width: 100px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/230831/homework/loginpage.css" />
+  </head>
+  <body>
+    <img
+      src="/230831/homework/heart-box-655_512.gif"
+      alt="하트가 사각형 안에서 기울어지며 하단에는 ID/PW를 입력해주세요. 문구가 적혀있다."
+      id="heartimage"
+    />
+    <div id="textbox">
+      <h1 style="color: red">로그인 페이지</h1>
+      <h4 style="color: dimgray">
+        <span style="color: red">ID/PW</span> 입력해주세요.
+      </h4>
+    </div>
+    <form action="">
+      <table class="info">
+        <tr>
+          <td>
+            <label for="id"><b>ID</b></label>
+          </td>
+          <td><input type="text" id="id" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pw"><b>PW</b></label>
+          </td>
+          <td><input type="text" id="pw" /></td>
+        </tr>
+      </table>
+      <div class="login">
+        <input type="submit" value="회원가입" />
+        <input
+          type="submit"
+          value="로그인하기"
+          style="background-color: red; color: white"
+        />
+      </div>
+    </form>
+  </body>
+</html>

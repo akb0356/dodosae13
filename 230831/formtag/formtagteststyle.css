@@ -1,0 +1,24 @@
+fieldset {
+  margin: auto;
+  width: 350px;
+  padding: 30px;
+}
+
+#name {
+  margin: auto;
+  color: aqua;
+}
+
+.info {
+  margin: auto;
+}
+
+#search {
+text-align: center;
+margin-top: 20px;
+}
+
+.label {
+margin-top: 50px;
+
+}

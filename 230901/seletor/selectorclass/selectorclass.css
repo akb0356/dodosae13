@@ -1,0 +1,107 @@
+/* input[type="text"] {
+  background-color: red;
+}
+
+input[type="password"] {
+  background-color: blue;
+} */
+
+/* #header > h1 {
+  color: red;
+}*/
+
+/* h1 + h2 {
+  color: red;
+}
+
+h1 ~ h2 {
+  background-color: orange;
+}*/
+
+/*h1:hover {
+color: red;
+}
+
+h1:active {
+color: blue;
+}*/
+
+/*input {
+  background-color: #fff;
+}
+
+input:disabled {
+  background-color: grey;
+}
+
+input:focus {
+  background-color: orange;
+}*/
+
+/*input[type="checkbox"]:checked + div {
+  height: 0px;
+}
+
+div {
+  height: 300px;
+  overflow: hidden;
+  transition-duration: 1s;
+}*/
+
+/*li {
+  list-style: none;
+  float: left;
+  padding: 15px;
+  color: #fff;
+}
+li:nth-child(2n) {
+  background-color: #ff0000;
+}
+
+li:nth-child(2n + 1) {
+  background-color: #800000;
+}
+
+li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+li:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+li:first-child > a {
+  color: black;
+}*/
+
+/*h1:first-of-type{
+  color: red;
+}
+
+h2:first-of-type{
+color: red;
+}*/
+
+/*p::first-letter {
+  font-size: 3em;
+}
+
+p::first-line {
+  color: rebeccapurple;
+}*/
+
+/*개중요함*/
+p {
+  counter-increment: rint;
+}
+
+p::before {
+  content: counter(rint) ".";
+}
+
+p::after {
+  content: "~" attr(data-page) "page";
+}
+
+p::first-letter{
+  font-size: 3em;
+}

@@ -1,0 +1,39 @@
+/* h1 선택자태그, color : 속성, red : 속성값 */
+/* h1 {
+  color: red;
+}*/
+/* * {
+  color: red;
+} */
+
+/* h1,
+h2 {
+  color: red;
+}
+p {
+  color: blue;
+} */
+#header {
+  width: 800px;
+  background-color: red;
+  margin: 0 auto;
+  color: #ffff;
+}
+
+#wrap {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#aside {
+  width: 200px;
+  background-color: blue;
+  float: left;
+}
+
+#content {
+  width: 600px;
+  background-color: green;
+  float: left;
+}
