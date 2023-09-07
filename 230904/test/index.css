@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}

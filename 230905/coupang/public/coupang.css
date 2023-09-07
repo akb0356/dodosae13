@@ -64,7 +64,7 @@ body {
   float: left;
   width: 140px;
   height: 50px;
-  background: url("/public/img/sprite_top.png");
+  background: url("/230905/coupang/img/sprite_top.png");
 }
 
 #top_gnb > div.item_1 {
@@ -126,7 +126,7 @@ body {
   float: left;
   width: 98px;
   height: 80px;
-  background: url("/public/img/sprite_bottom.png");
+  background: url("/230905/coupang/img/sprite_bottom.png");
 }
 
 #bottom_gnb > div.item_1 {

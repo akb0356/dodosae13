@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+/* body 값을 기준으로 움직인다는 position 값*/
+
+#box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  background: linear-gradient(#cb60b3 0%, #db36a4 100%);
+  animation-name: rint;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#box:hover {
+  animation-play-state: paused;
+}
+
+/* 애니메이션 효과 넣을때 반드시 */
+@keyframes rint {
+  from {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    ledt: 500px;
+  }
+  to {
+    left: 500px;
+    transform: rotate(360deg);
+  }
+}
