@@ -1,0 +1,422 @@
+/* reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* 기본 검정 상속받겠다는 의미 */
+  color: inherit;
+}
+
+/* common css */
+
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28px;
+}
+
+#leftnav,
+#rightnav {
+  display: flex;
+  gap: 27px;
+}
+
+/* search */
+form {
+  width: 809px;
+  height: 60px;
+  margin: 0 auto 26px;
+  position: relative;
+}
+
+main input {
+  display: block;
+  margin: auto;
+  width: 809px;
+  height: 60px;
+  border: 2px solid #03c75a;
+  border-radius: 60px;
+  font-size: 18px;
+  margin-bottom: 50px;
+  padding-left: 90px;
+  z-index: 9999;
+  background-color: transparent;
+}
+main input:focus {
+  border: 2px solid #03c75a;
+  /* 이걸 해야 클릭시 색변화 스타일이 먹음 */
+  outline: none;
+}
+#character {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 809px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 600px;
+  z-index: -9999;
+}
+#character > span {
+  font-size: 20px;
+  color: #03c75a;
+}
+#character > .naver {
+  color: #03c75a;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* card */
+
+#icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+.boxitems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxitem {
+  display: flex;
+  /* 중심축 기준 */
+  justify-content: center;
+  /* 수직정렬 */
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #f7f7f8;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #b3b3be;
+  color: #03c75a;
+  margin-bottom: 10px;
+}
+.boxitem > span:first-child {
+  font-size: 25px;
+}
+
+/* main */
+#maincontent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 22px;
+}
+/* addsection1 */
+#addsection {
+  background-image: url("/missionresult/contents/ad1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 833px;
+  height: 115px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* news section */
+#newssection {
+  width: 833px;
+  height: 428px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  padding: 20px;
+}
+#newsstand {
+  font-size: 18px;
+  color: #b3b3be;
+  margin-bottom: 18px;
+}
+#newsstand > span:nth-child(2) {
+  font-weight: bold;
+  color: #000;
+}
+.livebox {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  padding: 2px 10px;
+  color: #fff;
+  border-radius: 20px;
+}
+.fa-wifi {
+  width: 30px;
+}
+
+/* newstitle */
+#newstitle {
+  width: 792px;
+  height: 51px;
+  background-color: #f3f3fe;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+#newstitle > span {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+/* news imgs */
+#newsimgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 237px;
+}
+.newscontents {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.newscontent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#newsimg1 > .newscontents > .newscontent:nth-child(1) > .newscontentimg {
+  background-image: url("/missionresult/contents/newscontents1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 155px;
+  height: 105px;
+  border-radius: 5px;
+}
+#newsimg1 > .newscontents > .newscontent:nth-child(2) > .newscontentimg {
+  background-image: url("/missionresult/contents/newscontents2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 155px;
+  height: 105px;
+  border-radius: 5px;
+}
+#newsimg2 > .newscontents > .newscontent:nth-child(1) > .newscontentimg {
+  background-image: url("/missionresult/contents/newscontents3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 155px;
+  height: 105px;
+  border-radius: 5px;
+}
+#newsimg2 > .newscontents > .newscontent:nth-child(2) > .newscontentimg {
+  background-image: url("/missionresult/contents/newscontents4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 155px;
+  height: 105px;
+  border-radius: 5px;
+}
+.newscontent_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 212px;
+  height: 105px;
+}
+.newscontent_items > .top {
+  display: flex;
+  justify-content: space-between;
+}
+.newscontent_items > .top > .channel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+#newsimg1
+  > .newscontents
+  > .newscontent
+  > .newscontent_items
+  > .top
+  > .channel
+  > span:nth-child(1) {
+  background-color: #00f;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+#newsimg1
+  > .newscontents
+  > .newscontent:nth-child(2)
+  > .newscontent_items
+  > .top
+  > .channel
+  > span:nth-child(1) {
+  background-color: tomato;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+#newsimg2
+  > .newscontents
+  > .newscontent
+  > .newscontent_items
+  > .top
+  > .channel
+  > span:nth-child(1) {
+  background-color: rgb(32, 139, 158);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+#newsimg2
+  > .newscontents
+  > .newscontent:nth-child(2)
+  > .newscontent_items
+  > .top
+  > .channel
+  > span:nth-child(1) {
+  background-color: transparent;
+  color: #8a7575;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+}
+.newscontent_items .top .channel span:nth-child(2) {
+  font-weight: bold;
+}
+.newscontent_items > .top > span {
+  font-weight: bold;
+  border: 1px solid rgb(142, 142, 246);
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 30px;
+  color: rgb(142, 142, 246);
+}
+.newscontent_items > .bottom > span:last-child {
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+/* news media */
+#medias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  gap: 40px;
+}
+
+#medias > span:first-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid #b3b3be;
+  text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#medias > span:first-child:hover {
+  background-color: #f4f4f8;
+  box-shadow: 0 0 10px #f4f4f8;
+  transition-duration: 0.3s;
+}
+
+#medias > span:last-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid #b3b3be;
+  text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#medias > span:last-child:hover {
+  background-color: #f4f4f8;
+  box-shadow: 0 0 10px #f4f4f8;
+  transition-duration: 0.2s;
+}
+
+/* login */
+#login {
+  width: 420px;
+  height: 170px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 18px;
+}
+#login > span:nth-child(2) {
+  /* e뒤에 녹색 로그인박스 만드려면 너비값 줘야해서 */
+  display: inline-block;
+  width: 382px;
+  height: 54px;
+  background-color: #03c75a;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 54px;
+  font-size: 22px;
+  font-weight: bold;
+}
+#login > span:nth-child(2) > span {
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+/* add section02 */
+#sidead {
+  background: url("/missionresult/contents/ad2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 420px;
+  height: 240px;
+  border-radius: 8px;
+}
