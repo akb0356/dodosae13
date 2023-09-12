@@ -1,0 +1,36 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrap {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 4px solid #000;
+}
+#wrap div {
+  display: inline-block;
+  width: 31%;
+  /* 300px/960 */
+/* height: 100%;
+} */
+/* #wrap div:first-child {
+  margin-right: 37.6%;
+  /* 360/960px */
+/* 가변마진주는방법 */
+/* background: #1f518b; */
+/* } */
+/* #wrap div:last-child {
+  background: #f7e041;
+} */
+
+#para {
+  font-size: 6em;
+}
+
+#para p {
+  font-size: 4rem;
+  /* 64px / 96px */
+  /* em이라는 단위를 사용하게되면, 부모요소의 영향을 받는다. */
+}
