@@ -1,0 +1,126 @@
+@import url("/kakaoresult/css/reset.css");
+@import url("/kakaoresult/css/var.css");
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  width: 360px;
+  height: 100%;
+  background: var(--color-yellow);
+}
+
+/* header */
+#header {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+#header_box {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  text-align: center;
+}
+#header span {
+  display: inline-block;
+  width: 24px;
+}
+#header .icon_group {
+  width: 55px;
+}
+#header span i {
+  color: transparent;
+  -webkit-text-stroke: 0.6px var(--color-middlegray);
+}
+#header span i {
+  width: 20px;
+}
+
+/* logo */
+.logo {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+#logo_img {
+  background: url("/kakaoresult/img/kakao-talk.png");
+  width: 110px;
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/* login */
+.loginbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 105px;
+}
+.loginfield {
+  display: flex;
+  flex-direction: column;
+}
+.loginbox,
+.autologin {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 65px;
+}
+.loginfield input {
+  border: none;
+  width: 200px;
+  height: 37px;
+  border-radius: 3px;
+  padding-left: 10px;
+  box-shadow: 0 0 2px var(--color-middlegray);
+}
+.loginfield input:focus {
+  outline: none;
+}
+.loginfield input:focus::placeholder {
+  color: transparent;
+}
+.loginstyle input:nth-child(2) {
+  border-top: 1px solid var(--color-middlegray);
+}
+
+.login {
+  width: 200px;
+  height: 37px;
+}
+.loginstyle input {
+  width: 200px;
+  height: 37px;
+  border: 1px solid var(--color-middlegray);
+  border-radius: 3px;
+}
+
+.autologin input {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -1px;
+}
+.autologin label {
+  padding-left: 25px;
+}
+
+/* footer */
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 37px;
+}

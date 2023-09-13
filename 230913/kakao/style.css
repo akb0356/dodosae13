@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 22.5rem;
+  height: 36.875rem;
+  background: #fde500;
+  padding: 10px;
+}
+
+.setting {
+  display: flex;
+  position: relative;
+}
+
+.setting .minus_x {
+  position: absolute;
+  right: 0;
+}
