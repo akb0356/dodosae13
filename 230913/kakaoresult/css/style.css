@@ -20,11 +20,11 @@ body {
   width: 100%;
   height: 30px;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #header_box {
   position: absolute;
-  top: 5px;
+  top: 9px;
   right: 4px;
   text-align: center;
 }
@@ -32,14 +32,14 @@ body {
   display: inline-block;
   width: 24px;
 }
-#header .icon_group {
-  width: 55px;
-}
 #header span i {
   color: transparent;
   -webkit-text-stroke: 0.6px var(--color-middlegray);
 }
-#header span i {
+#header .icon_group {
+  width: 55px;
+}
+#header .icon_group i {
   width: 20px;
 }
 
@@ -50,7 +50,7 @@ body {
   margin: 0 auto;
 }
 #logo_img {
-  background: url("/kakaoresult/img/kakao-talk.png");
+  background: url("/kakaoresult/img/kakao-talk.png") center no-repeat;
   width: 110px;
   height: 110px;
   background-size: cover;
@@ -64,37 +64,36 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  height: 250px;
   margin-bottom: 105px;
 }
-.loginfield {
+.input_field {
   display: flex;
   flex-direction: column;
 }
-.loginbox,
-.autologin {
-  width: 100%;
-  height: 250px;
-  margin-bottom: 65px;
-}
-.loginfield input {
+.input_field input {
   border: none;
   width: 200px;
   height: 37px;
   border-radius: 3px;
-  padding-left: 10px;
+  padding-left: 14px;
   box-shadow: 0 0 2px var(--color-middlegray);
 }
-.loginfield input:focus {
+.input_field input:focus {
   outline: none;
 }
-.loginfield input:focus::placeholder {
+.input_field input:placeholder-shown {
+  font-size: 13px;
+}
+.input_field input:focus::placeholder {
   color: transparent;
 }
 .loginstyle input:nth-child(2) {
   border-top: 1px solid var(--color-middlegray);
 }
-
-.login {
+.loginstyle,
+.autologin {
   width: 200px;
   height: 37px;
 }
@@ -104,15 +103,33 @@ body {
   border: 1px solid var(--color-middlegray);
   border-radius: 3px;
 }
-
+.loginstyle i {
+  position: absolute;
+  line-height: 39px; 
+  padding-left: 48px;
+  color: var(--color-gray);
+  z-index: 5;
+}
+.loginstyle > #qrlogin {
+  padding-left: 26px;
+}
+.autologin {
+  position: relative;
+}
 .autologin input {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: -1px;
+  top: 3px;
 }
 .autologin label {
   padding-left: 25px;
+}
+.autologin span {
+  background: var(--color-middlegray); 
+  opacity: 0.7;
+  padding: 0 10px;
+  border-radius: 50%;
 }
 
 /* footer */

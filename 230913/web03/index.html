@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/web03/css/style.css" />
+    <link rel="stylesheet" href="/web03/style.css" />
+    <script src="/web03/img/js/jquery.min.js"></script>
+    <script src="/web03/script.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -29,6 +31,7 @@
         <img src="/web03/img/images/p-images/slide01.jpg" alt="img" />
       </article>
       <section class="content">
+        <!--  -->
         <section class="display_section">
           <div class="container">
             <h2 class="sec_title">WE ARE</h2>
@@ -38,6 +41,7 @@
             </p>
           </div>
         </section>
+        <!-- promotion -->
         <section class="promotion_section">
           <div class="container">
             <ul class="promo_list">
@@ -89,6 +93,7 @@
           </div>
         </section>
         <hr class="divider" />
+        <!-- work -->
         <section class="work_section cfixed">
           <h2 class="sec_title">WORK</h2>
           <!--ul.work_list>(li>a>(div.info>h3+span)+img)*8-->
@@ -167,10 +172,91 @@
             </li>
           </ul>
         </section>
-        <section class="blog_section"></section>
-        <section class="contact_section"></section>
+        <hr class="middle_divider" />
+        <!-- blog -->
+        <section class="blog_section">
+          <div class="container">
+            <h2 class="sec_title">BLOG</h2>
+            <ul class="blog_list">
+              <li>
+                <a href="#"
+                  ><img src="/web03/img/images/p-images/blog01.jpg" alt="img"
+                /></a>
+                <time datetime="2023.09.14">sept 14,2023</time>
+                <a href="#">
+                  <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/web03/img/images/p-images/blog02.jpg" alt="img"
+                /></a>
+                <time datetime="2023.09.14">sept 14,2023</time>
+                <a href="#">
+                  <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="/web03/img/images/p-images/blog03.jpg" alt="img"
+                /></a>
+                <time datetime="2023.09.14">sept 14,2023</time>
+                <a href="#">
+                  <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- contact -->
+        <section class="contact_section">
+          <div class="container">
+            <h2 class="sec_title">CONTACT</h2>
+            <div class="form_box">
+              <form action="#">
+                <fieldset class="cfixed">
+                  <legend class="blind">CONTACT US</legend>
+                  <div class="form">
+                    <label for="name" class="blind">NAME</label>
+                    <input type="text" id="name" placeholder="Name" />
+                    <label for="phone" class="blind">PHONE</label>
+                    <input type="tel" id="phone" placeholder="phone" />
+                    <label for="email" class="blind">EMAIL</label>
+                    <input type="email" id="email" placeholder="email" />
+                  </div>
+                  <div class="text_area">
+                    <label for="message" class="blind">MESSAGE</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="message"
+                    ></textarea>
+                  </div>
+                </fieldset>
+                <div class="send_btn">
+                  <button>SEND MESSAGE</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
       </section>
-      <footer class="footer"></footer>
+      <!-- footer -->
+      <footer class="footer">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.111677235935!2d126.97473421573828!3d37.575987879796195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2eaa19c763d%3A0xb28a32722d675764!2z6rSR7ZmU66y4KEd3YW5naHdhbXVuIEdhdGUp!5e0!3m2!1sko!2skr!4v1481946656451"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen
+        ></iframe>
+        <p class="copyright">INDIGO</p>
+      </footer>
     </div>
   </body>
 </html>
