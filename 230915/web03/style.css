@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  border: 1px solid red;
+}
+.header h1 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.header h5 {
+  color: gray;
+}
+.header span {
+  color: red;
+}
+.header .blue_bar {
+  background: skyblue;
+  width: 60px;
+  height: 2px;
+  position: absolute;
+}
+
