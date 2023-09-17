@@ -33,8 +33,11 @@ body {
   width: 24px;
 }
 #header span i {
+  color: var(--color-middlegray);
+}
+#header span .fa-gear {
   color: transparent;
-  -webkit-text-stroke: 0.6px var(--color-middlegray);
+  -webkit-text-stroke: 1.5px var(--color-middlegray);
 }
 #header .icon_group {
   width: 55px;
@@ -76,9 +79,14 @@ body {
   border: none;
   width: 200px;
   height: 37px;
-  border-radius: 3px;
   padding-left: 14px;
   box-shadow: 0 0 2px var(--color-middlegray);
+}
+.input_field input:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.input_field input:last-child {
+  border-radius: 0 0 3px 3px;
 }
 .input_field input:focus {
   outline: none;
@@ -105,7 +113,7 @@ body {
 }
 .loginstyle i {
   position: absolute;
-  line-height: 39px; 
+  line-height: 39px;
   padding-left: 48px;
   color: var(--color-gray);
   z-index: 5;
@@ -126,7 +134,7 @@ body {
   padding-left: 25px;
 }
 .autologin span {
-  background: var(--color-middlegray); 
+  background: var(--color-middlegray);
   opacity: 0.7;
   padding: 0 10px;
   border-radius: 50%;
