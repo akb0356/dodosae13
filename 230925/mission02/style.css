@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.items {
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+.item ul li {
+  width: 100%;
+}
+.item ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.items .item .info {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.info .icon i {
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 3px;
+}

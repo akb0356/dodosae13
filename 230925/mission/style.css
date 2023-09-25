@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding-bottom: 20px;
+}
+header h1,
+h5 {
+  font-weight: normal;
+}
+header h5 {
+  color: gray;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.content .sel {
+  width: 300px;
+}
+.content .sel img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.content .sel h5 {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.num4 p {
+  font-size: 11px;
+}
+.blue {
+  font-size: 15px;
+  font-weight: bold;
+  color: royalblue;
+}
+
+i {
+  color: yellow;
+  padding-bottom: 10px;
+}
+span {
+  font-size: 12px;
+  font-weight: lighter;
+  color: gray;
+}
+
+button {
+  font-size: 11px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background: #f6d5ea;
+}
+
+button:nth-child(3) {
+  background: #d1ebe0;
+}
