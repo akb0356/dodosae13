@@ -19,7 +19,6 @@ a {
 }
 
 .items {
-  width: 360px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -27,23 +26,15 @@ a {
 
 .item {
   position: relative;
-  flex-direction: column;
   text-align: center;
   margin: 0 auto;
 }
-.item ul li {
-  width: 100%;
-}
-.item ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 
-.items .item .info {
+.item .info .info_txt{
+  display: block;
   position: absolute;
-  justify-content: center;
+  top: 0;
+  bottom: 50px;
   align-items: center;
 }
 .info .icon i {
