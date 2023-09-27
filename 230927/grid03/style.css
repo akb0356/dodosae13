@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr 1fr 100px;
+  grid-template-columns: 300px 1fr 300px;
+  grid-gap: 10px;
+  grid-template-areas: "header header header" "menu main aside1" "menu main aside2" "menu main aside3" "footer footer footer";
+  height: 100vh;
+}
+
+.container > div {
+  background: skyblue;
+  padding: 20px;
+  border: 1px solid #000;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+.menu {
+  grid-area: menu;
+}
+.main {
+  grid-area: main;
+}
+.aside1 {
+  grid-area: aside1;
+}
+.aside2 {
+  grid-area: aside2;
+}
+.aside3 {
+  grid-area: aside3;
+}
+.footer {
+  grid-area: footer;
+}

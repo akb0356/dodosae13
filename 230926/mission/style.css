@@ -14,16 +14,56 @@ a {
   text-decoration: none;
 }
 
-.container {
-  border: 1px solid red;
+
+body {
   width: 1200px;
+  height: 80vh;
   margin: 0 auto;
-  padding: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
+.container {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 0 10px #d2d2d2;
+  border-radius: 30px;
+  position: relative;
+}
+
+.container h4 {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 24px;
+}
+.items {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr ;
+  padding: 30px 0;
+  gap: 20px;
+}
 .item {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  line-height: 1.8em;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.item-txt p {
+  font-weight: normal;
+  font-size: 17px;
+  color: #222;
+}
+.item-txt span {
+color: rgb(20, 125, 167);
+}
+.etc {
+  color: crimson;
+  font-size: 20px;
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
 }
