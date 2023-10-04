@@ -1,0 +1,11 @@
+.frame {
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+  text-transform: capitalize;
+  @at-root.heading {
+    font-size: 36px;
+    color: crimson;
+    font-weight: normal;
+  }
+}

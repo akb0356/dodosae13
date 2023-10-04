@@ -1,83 +1,96 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/mission/style.css" />
-  </head>
-  <body>
-    <div id="wrap">
-      <!-- header -->
-      <header class="header">
-        <div class="icon">
-          <ul>
-            <li>
-              <a href="#">
-                <img
-                  src="/mission/img_0927/s_images/info_icon_01.png"
-                  alt="icon1"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="/mission/img_0927/s_images/info_icon_02.png"
-                  alt="icon2"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="/mission/img_0927/s_images/info_icon_03.png"
-                  alt="icon3"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="/mission/img_0927/s_images/info_icon_04.png"
-                  alt="icon4"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <h2 class="logo">
-          <a href="#">Flat<br />Design</a>
-        </h2>
-        <nav class="nav">
-          <ul class="gnb">
-            <li>
-              <a href="#">홈</a>
-              <span></span>
-            </li>
-            <li>
-              <a href="#">플랫 디자인이란?</a>
-              <span></span>
-            </li>
-            <li>
-              <a href="#">갤러리</a>
-              <span></span>
-            </li>
-            <li>
-              <a href="#">문의사항</a>
-              <span></span>
-            </li>
-          </ul>
-        </nav>
-        <section class="gallery">
-          <h3>갤러리</h3>
-          <p>홈/갤러리</p>
-        </section>
-      </header>
-      <!-- main -->
-      <section class="main"></section>
-      <!-- footer -->
-      <footer class="footer"></footer>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/mission/style.css">
+  <script src="https://kit.fontawesome.com/71fdac82e6.js" crossorigin="anonymous"></script>
+  <script src="/mission/img/js/jquery.min.js"></script>
+  <script src="/mission/flat.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <section class="info-section">
+      <ul class="info-list">
+        <li><a href="#"><img src="/mission/img/s_images/info_icon_01.png" alt="icon01"></a></li>
+        <li><a href="#"><img src="/mission/img/s_images/info_icon_02.png" alt="icon02"></a></li>
+        <li><a href="#"><img src="/mission/img/s_images/info_icon_03.png" alt="icon03"></a></li>
+        <li><a href="#"><img src="/mission/img/s_images/info_icon_04.png" alt="icon04"></a></li>
+      </ul>
+    </section>
+    <header class="header">
+      <h1 class="logo"><a href="#">Flat <br /> Design</a></h1>
+      <!-- nav -->
+      <nav class="nav">
+        <ul class="gnb">
+          <li>
+            <a href="#">홈</a>
+            <span class="sub-menu-toggle-btn">하위메뉴토글 버튼</span>
+          </li>
+          <li>
+            <a href="#">플랫디자인이란?</a>
+            <span class="sub-menu-toggle-btn">토글 버튼</span>
+          </li>
+          <li>
+            <a href="#">갤러리</a>
+            <span class="sub-menu-toggle-btn">토글 버튼</span>
+          </li>
+          <li>
+            <a href="#">문의사항</a>
+            <span class="sub-menu-toggle-btn">토글 버튼</span>
+          </li>
+        </ul>
+      </nav>
+      <span class="menu-toggle-btn">전체 메뉴 토글 버튼</span>
+    </header>
+    <div class="banner">
+      <h4>갤러리</h4>
+      <p>홈/갤러리</p>
     </div>
-  </body>
+  <section class="gallery">
+    <img src="/mission/img/p_images/sub_gallery_01.jpg" alt="img01">
+    <img src="/mission/img/p_images/sub_gallery_02.jpg" alt="img02">
+    <img src="/mission/img/p_images/sub_gallery_03.jpg" alt="img03">
+    <img src="/mission/img/p_images/sub_gallery_04.jpg" alt="img04">
+    <img src="/mission/img/p_images/sub_gallery_05.jpg" alt="img05">
+    <img src="/mission/img/p_images/sub_gallery_06.jpg" alt="img06">
+    <img src="/mission/img/p_images/sub_gallery_07.jpg" alt="img07">
+    <img src="/mission/img/p_images/sub_gallery_08.jpg" alt="img08">
+    <img src="/mission/img/p_images/sub_gallery_09.jpg" alt="img09">
+    <img src="/mission/img/p_images/sub_gallery_10.jpg" alt="img10">
+    <img src="/mission/img/p_images/sub_gallery_11.jpg" alt="img11">
+    <img src="/mission/img/p_images/sub_gallery_12.jpg" alt="img12">
+  </section>
+  <div class="sub-section">
+    <form action="text" class="searchbox">
+      <input type="text" placeholder="검색어">
+      <label for="search"></label>
+      <select name="search" id="search">
+        <option value="search1">검색 대상</option>
+        <option value="search2">제목</option>
+        <option value="search3">내용</option>
+        <option value="search4">제목+내용</option>
+        <option value="search5">댓글</option>
+        <option value="search6">이름</option>
+        <option value="search7">닉네임</option>
+        <option value="search8">아이디</option>
+        <option value="search9">태그</option>
+      </select>
+    </form>
+    <button>글쓰기</button>
+
+  </div>
+  <div class="btn">
+    <span class="green-btn"><i class="fas fa-angle-left"></i></span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span class="green-btn"> <i class="fas fa-angle-right"></i></span>
+  </div>
+  <footer class="footer">
+    <p>copyright@ 2014.flat design blog all rights reserved</p>
+  </footer>
+  </div>
+</body>
 </html>
