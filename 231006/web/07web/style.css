@@ -1,0 +1,61 @@
+input[id="trigger"] {
+  display: none;
+}
+
+label[for="trigger"] {
+  border: 1px solid red;
+  width: 30px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+label[for="trigger"] span {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #222;
+  transition: 0.3s;
+}
+
+label[for="trigger"] span:nth-child(1) {
+  top: 0;
+}
+label[for="trigger"] span:nth-child(2) {
+  top: 50%;
+}
+label[for="trigger"] span:nth-child(3) {
+  top: 100%;
+}
+
+.side-bar {
+  background: #000;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  right: -300px;
+  transition: 0.3s;
+}
+
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(2) {
+  opacity: 0;
+}
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+input[id="trigger"]:checked ~ .side-bar {
+  right: 0;
+}
+input[id="trigger"]:checked + label[for="trigger"] {
+  right: 310px;
+}
