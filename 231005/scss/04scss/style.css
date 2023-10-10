@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ a {
 }
 
 body {
-  font-family: "Noto Sans KR";
+  font-family: "Noto sans KR";
   color: #222;
   font-size: 15px;
   font-weight: 300;
@@ -27,12 +28,12 @@ body {
 .portfolio {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   height: 100vh;
-  background: url("/img/03/_02/background.png") no-repeat top center;
+  background: url(/img/03/_02/background.png) no-repeat top center;
 }
 .portfolio .headline-share {
-  margin-top: 50px;
+  margin-bottom: 100px;
 }
 .portfolio .headline-share h1 {
   text-decoration-style: wavy;
@@ -55,12 +56,12 @@ body {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 45px rgba(253, 128, 128, 0.15);
 }
 .portfolio .items .item.thum .photo img {
   width: inherit;
   height: inherit;
+  border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -78,7 +79,7 @@ body {
   font-family: "Montserrat";
 }
 .portfolio .items .item.thum .portfolio-title .btn-view {
-  color: white;
+  color: #fff;
   font-size: 10px;
   border-radius: 3px;
   padding: 2px 8px;
@@ -110,6 +111,30 @@ body {
   display: list-item;
 }
 
+.featherlight .featherlight-content {
+  width: 100%;
+  height: 100%;
+  max-height: 100% !important;
+  margin: 0 !important;
+}
+
+.featherlight .featherlight-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.featherlight .featherlight-close-icon {
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  background: crimson !important;
+  font-size: 28px;
+  color: #fff !important;
+  border-radius: 50%;
+  top: 90% !important;
+  left: 30px;
+}
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .portfolio {
     height: auto;
@@ -127,7 +152,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .portfolio .items aside.item,
-  .portfolio .items .item.thum:nth-of-type(3) {
+  .portfolio .items .item.thum:nth-child(1) {
     grid-column: span 2;
   }
 }
