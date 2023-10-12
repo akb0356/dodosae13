@@ -1,15 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("/reset.css");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
-ul,
-li {
-  list-style: none;
+
+body {
+  font-weight: 300;
+  background: #262e23;
+  font-family: "pretendard", "lemonmilk", "Press+Start+2P";
 }
-a {
-  text-decoration: none;
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container::after {
+  content: "";
+  width: 150%;
+  height: 150%;
+  background-image: url("/img/Frame\ 9.png");
+  background-size: cover;
+  background-blend-mode: lighten;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* header */
+header {
+  /* position: fixed; */
+  width: 100%;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+nav {
+  position: absolute;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.logo a {
+  color: #b8eb4b;
+  font-family: "lemon";
+  font-weight: 800;
+  font-size: 1.6em;
+}
+.gnb {
+  display: flex;
+  flex-direction: row;
+}
+.gnb li a {
+  margin: 20px;
+  color: white;
+}
+.gnb li a:hover {
+  color: #b8eb4b;
+}
+
+.trigger {
+  display: none;
 }
