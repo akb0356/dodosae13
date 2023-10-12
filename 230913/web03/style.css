@@ -286,7 +286,7 @@ fieldset {
   .header .gnb {
     display: block;
     float: right;
-    position: absolute;
+    position: static;
     top: 40px;
     right: 0;
     width: auto;
