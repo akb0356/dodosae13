@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.navi {
+  z-index: 100;
+  /* transition: 0.5s; */
+}
+.navi li a {
+  font-size: 6em;
+  position: relative;
+  color: white;
+}
+.navi li a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: yellowgreen;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.navi li a:hover::before {
+  width: 100%;
+}
+.photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("/img/3/portrait-initial.jpg") no-repeat center center;
+}

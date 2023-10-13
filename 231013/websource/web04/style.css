@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #222;
+  background: #f4f4f4;
+  font-weight: 300;
+}
+section {
+  width: 800px;
+}
+.heading {
+  margin-bottom: 30px;
+}
+.heading h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.heading h1 span {
+  color: crimson;
+}
+.heading input[type="text"] {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background: white url("/img/2/search-icon.png") no-repeat center left 5px;
+  background-size: 23px;
+  padding-left: 35px;
+  box-sizing: border-box;
+}
+.heading input[type="text"]::placeholder {
+  font-style: italic;
+  transition: 0.3s;
+}
+.heading input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+/* ul태그는 기본적으로 마진과 패딩을 포함하고 있다. */
+.tab-inner .btn {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.tab-inner .btn li {
+  width: 120px;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  background: #eee;
+  border-top: 2px solid transparent;
+  border-right: 1px solid #ddd;
+}
+.tab-inner .btn li:last-child {
+  border-right: none;
+}
+.tab-inner .btn li:hover,
+.tab-inner .btn li.active {
+  background: white;
+  border-top: 2px solid crimson;
+}
+.tabs {
+  width: 100%;
+}
+.tabs div {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.tabs div.active {
+  display: block;
+}
+.tabs div h2 {
+  text-align: center;
+}
+.tabs div img {
+  float: left;
+  margin-right: 20px;
+}
+.tabs div p {
+  overflow: hidden;
+  height: 200px;
+}
