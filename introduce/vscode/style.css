@@ -10,35 +10,30 @@ body {
 }
 
 .container {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 0, auto;
-}
-.container::after {
-  content: "";
-  width: 150%;
-  height: 150%;
-  background-image: url("/img/Frame\ 9.png");
-  background-size: cover;
-  background-blend-mode: lighten;
-  opacity: 0.1;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0, 70px;
 }
 
 /* header */
 header {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
+  top: 30px;
   transition: 0.5s;
-  padding-bottom: 80px;
+  padding-bottom: 10em;
   z-index: 9999;
+}
+header.active {
+  background: #262e23;
+  border-bottom: 1px solid #b8eb4b;
+}
+header.active .gnb {
+  display: none;
 }
 
 nav {
@@ -51,10 +46,10 @@ nav {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
 .logo a {
   font-family: "lemonb";
   color: #b8eb4b;
-  font-weight: 800;
   font-size: 1.6em;
 }
 .gnb {
@@ -62,7 +57,7 @@ nav {
   flex-direction: row;
 }
 .gnb li a {
-  margin: 20px;
+  margin: 1.25em;
   color: white;
 }
 .gnb li a:hover {
@@ -71,29 +66,115 @@ nav {
 .trigger {
   display: none;
 }
-.title {
-  text-transform: uppercase;
-  text-align: center;
+/* side bar */
+.sidebar {
+  border: 3px solid red;
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  transform: translatex(10%);
+  display: grid;
+  grid-auto-flow: row;
+  transition: 0.3s;
+  display: none;
+}
+.sidebar span {
+  margin: 15px;
+  color: #b8eb4b;
+}
+.sidebar span:last-child::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: #b8eb4b;
+}
+/* intro */
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   position: relative;
-  padding-bottom: 30px;
+}
+.intro video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+.ani-star span {
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 370px;
+  background: linear-gradient(180deg, #b8eb4b 0%, rgba(184, 235, 75, 0) 80%);
+  animation: anistar 3s linear infinite;
+  opacity: 0;
+}
+.ani-star span:nth-child(1) {
+  position: absolute;
+  left: 200px;
+}
+.ani-star span:nth-child(2) {
+  position: absolute;
+  top: 0px;
+}
+.ani-star span:nth-child(3) {
+  position: absolute;
+  height: 150px;
+  left: 600px;
+  bottom: -400px;
+}
+.ani-star span:nth-child(4) {
+  position: absolute;
+  right: 130px;
+  top: 250px;
+}
+@keyframes anistar {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-250px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  z-index: 2;
 }
 .title h1 {
   font-family: "lemonb";
-  font-size: 126px;
+  font-size: 7.875em;
   color: transparent;
   -webkit-text-stroke: 3px #b8eb4b;
 }
 .title h2 {
   font-family: "press";
   color: #b8eb4b;
-  font-size: 130px;
+  font-size: 8.125em;
+  padding-bottom: 0.2em;
 }
 .title p {
+  width: 100%;
+  text-align: center;
   background: #b8eb4b;
   color: #262e23;
-  padding: 10px;
-  letter-spacing: 15px;
-  border-radius: 30px;
+  padding: 0.625em;
+  letter-spacing: 0.938em;
+  border-radius: 1.875em;
 }
 .center-contents {
   position: absolute;
@@ -102,28 +183,158 @@ nav {
   align-items: center;
   left: 45%;
   top: 50%;
+  z-index: 1;
+}
+.center-contents svg {
+  position: absolute;
+  left: 100px;
+  top: 230px;
 }
 .blur-circle {
   position: inherit;
   display: inline-block;
-  width: 479px;
-  height: 479px;
+  width: 29.938em;
+  height: 29.938em;
   border-radius: 50%;
   background: rgba(35, 197, 51, 0.3);
-  filter: blur(150px);
+  filter: blur(9.375em);
 }
 .line-circle {
   position: absolute;
-  display: inline-block;
+  display: block;
   width: 300px;
-  height: 600px;
+  height: 700px;
   border: 1px dashed #b8eb4b;
   border-radius: 50%;
   transform: rotate(-45deg);
 }
-
 .main-bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  width: 95%;
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #b8eb4b;
+}
+.main-bottom p:first-child {
+  color: white;
+}
+.scroll-plz {
+  display: flex;
+  align-items: center;
+}
+
+/* aboutme */
+
+#aboutme {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px, 0;
+  position: relative;
+}
+.sub-title {
+  font-weight: bold;
+  font-size: 65px;
+  color: #b8eb4b;
+  border-bottom: 1px solid #b8eb4b;
+  margin-bottom: 3em;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.aboutme-img-section {
+  position: relative;
+  display: flex;
+}
+.aboutme-img-section span {
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  z-index: 3;
+  color: #23c533;
+  font-size: 90px;
+  font-weight: bold;
+  transform: rotate(35deg);
+}
+.aboutme-img {
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  background: url("/img/c5ae3a02a869f7381797046f59854d54.jpg") no-repeat center
+    center;
+  background-size: cover;
+  border-radius: 10px;
+  padding-top: 20px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+.aboutme-img-shadow {
+  width: 330px;
+  height: 330px;
+  display: inline-block;
+  position: absolute;
+  background: #b8eb4b;
+  border-radius: 10px;
+  z-index: 1;
+}
+.intro-txt {
+  width: 550px;
+  height: 330px;
+}
+.intro-txt h4 {
+  font-family: "press";
+  color: #b8eb4b;
+  font-size: 29px;
+}
+.intro-txt h4 span {
+  font-family: "lemonl";
+  font-weight: lighter;
+  color: white;
+  opacity: 0.8;
+}
+.intro-txt p {
+  font-size: 20px;
+  color: white;
+  line-height: 2em;
+  word-break: normal;
+}
+.personality {
+  padding-bottom: 10px;
+}
+.personality ul li {
+  display: flex;
+  gap: 15px;
+  color: #b8eb4b;
+  align-items: center;
+  line-height: 2em;
+}
+.personality ul li label {
+  font-family: "press";
+  display: inline-block;
+  width: 120px;
+}
+.personality ul li p {
+  color: white;
+  font-size: 20px;
+}
+.aboutme-contents {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 15%;
+  top: 65%;
+}
+.aboutme-contents svg {
+  position: absolute;
+  left: 50px;
+  top: 110px;
 }
