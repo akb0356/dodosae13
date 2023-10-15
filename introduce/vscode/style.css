@@ -7,7 +7,6 @@ html {
 body {
   font-weight: 300;
   background: #262e23;
-  font-family: "pretendard", "lemonmilk", "Press+Start+2P";
 }
 
 .container {
@@ -18,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 0, auto;
 }
 .container::after {
   content: "";
@@ -37,6 +37,7 @@ header {
   /* position: fixed; */
   width: 100%;
   transition: 0.5s;
+  padding-bottom: 80px;
   z-index: 9999;
 }
 
@@ -51,8 +52,8 @@ nav {
   transform: translate(-50%, 0);
 }
 .logo a {
+  font-family: "lemonb";
   color: #b8eb4b;
-  font-family: "lemon";
   font-weight: 800;
   font-size: 1.6em;
 }
@@ -67,20 +68,62 @@ nav {
 .gnb li a:hover {
   color: #b8eb4b;
 }
-<<<<<<< HEAD
 .trigger {
   display: none;
 }
 .title {
   text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  padding-bottom: 30px;
 }
-.title h1:first-child {
-  font-family: "lemon";
-  font-weight: 800;
+.title h1 {
+  font-family: "lemonb";
   font-size: 126px;
-=======
+  color: transparent;
+  -webkit-text-stroke: 3px #b8eb4b;
+}
+.title h2 {
+  font-family: "press";
+  color: #b8eb4b;
+  font-size: 130px;
+}
+.title p {
+  background: #b8eb4b;
+  color: #262e23;
+  padding: 10px;
+  letter-spacing: 15px;
+  border-radius: 30px;
+}
+.center-contents {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 45%;
+  top: 50%;
+}
+.blur-circle {
+  position: inherit;
+  display: inline-block;
+  width: 479px;
+  height: 479px;
+  border-radius: 50%;
+  background: rgba(35, 197, 51, 0.3);
+  filter: blur(150px);
+}
+.line-circle {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  border: 1px dashed #b8eb4b;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
 
-.trigger {
-  display: none;
->>>>>>> cb1da24b69c1d51e9b1e8dd46ab3f6d8b391132d
+.main-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
