@@ -54,7 +54,6 @@ nav {
 }
 .gnb {
   display: flex;
-  flex-direction: row;
 }
 .gnb li a {
   margin: 1.25em;
@@ -73,10 +72,10 @@ nav {
   bottom: 0px;
   left: 30px;
   transform: translatex(10%);
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
   transition: 0.3s;
-  display: none;
+  /* display: none; */
 }
 .sidebar span {
   margin: 15px;
@@ -264,6 +263,7 @@ nav {
   font-size: 90px;
   font-weight: bold;
   transform: rotate(35deg);
+  z-index: 4;
 }
 .aboutme-img {
   width: 330px;
@@ -275,7 +275,7 @@ nav {
   border-radius: 10px;
   padding-top: 20px;
   transform: rotate(-10deg);
-  z-index: 2;
+  z-index: 3;
 }
 .aboutme-img-shadow {
   width: 330px;
@@ -284,7 +284,18 @@ nav {
   position: absolute;
   background: #b8eb4b;
   border-radius: 10px;
+  z-index: 2;
+}
+.aboutme-contents {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 60%;
+  top: -50%;
   z-index: 1;
+}
+.aboutme-contents svg {
+  position: absolute;
 }
 .intro-txt {
   width: 550px;
@@ -326,15 +337,78 @@ nav {
   color: white;
   font-size: 20px;
 }
-.aboutme-contents {
-  position: absolute;
+/* skills */
+#skills {
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  left: 15%;
-  top: 65%;
+  padding: 150px, 0;
+  position: relative;
 }
-.aboutme-contents svg {
-  position: absolute;
-  left: 50px;
-  top: 110px;
+.skills img {
+  width: 50px;
+  height: 50px;
+  margin-right: 9px;
+  border-radius: 8px;
+  background: cover no-repeat center center;
+  box-shadow: 0 0 5px rgba(184, 235, 75, 0.5);
+}
+.skills img:last-child {
+  margin: 0;
+}
+.memo {
+  width: 430px;
+  padding: 20px 30px;
+}
+.education {
+  background: #deeeba;
+}
+.skills {
+  border: 2px solid #b8eb4b;
+  border-radius: 10px;
+}
+.experience {
+  background: #d9d9d9;
+}
+.experience ul li {
+  display: flex;
+  gap: 15px;
+}
+.education h4,
+.skills h4,
+.experience h4 {
+  font-family: "press";
+  text-align: center;
+  padding-bottom: 20px;
+}
+.skills h4 {
+  color: #b8eb4b;
+}
+.education ul {
+  line-height: 3em;
+}
+.education li label,
+.experience li label {
+  font-weight: bold;
+}
+.skills {
+}
+/* work */
+#work-intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px, 0;
+  position: relative;
+}
+#work-intro h3 {
+  font-family: "lemonb";
+  font-size: 117px;
+  color: #b8eb4b;
 }
