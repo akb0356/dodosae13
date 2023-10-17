@@ -18,7 +18,16 @@ body {
   position: relative;
   margin: 0, 70px;
 }
-
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px, 0;
+  position: relative;
+}
 /* header */
 header {
   position: fixed;
@@ -168,6 +177,7 @@ nav {
 }
 .title p {
   width: 100%;
+  text-transform: uppercase;
   text-align: center;
   background: #b8eb4b;
   color: #262e23;
@@ -227,16 +237,6 @@ nav {
 
 /* aboutme */
 
-#aboutme {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 150px, 0;
-  position: relative;
-}
 .sub-title {
   font-weight: bold;
   font-size: 65px;
@@ -297,22 +297,22 @@ nav {
 .aboutme-contents svg {
   position: absolute;
 }
-.intro-txt {
+.aboutme-txt {
   width: 550px;
   height: 330px;
 }
-.intro-txt h4 {
+.aboutme-txt h4 {
   font-family: "press";
   color: #b8eb4b;
   font-size: 29px;
 }
-.intro-txt h4 span {
+.aboutme-txt h4 span {
   font-family: "lemonl";
   font-weight: lighter;
   color: white;
   opacity: 0.8;
 }
-.intro-txt p {
+.aboutme-txt p {
   font-size: 20px;
   color: white;
   line-height: 2em;
@@ -337,78 +337,115 @@ nav {
   color: white;
   font-size: 20px;
 }
+
 /* skills */
-#skills {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.skills {
+  border: 2px solid #b8eb4b;
+  border-radius: 10px;
   align-items: center;
-  padding: 150px, 0;
-  position: relative;
+}
+.skills-board {
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.skills-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 25px;
 }
 .skills img {
   width: 50px;
   height: 50px;
-  margin-right: 9px;
   border-radius: 8px;
   background: cover no-repeat center center;
   box-shadow: 0 0 5px rgba(184, 235, 75, 0.5);
 }
-.skills img:last-child {
-  margin: 0;
+.skills h4 {
+  color: #b8eb4b;
 }
 .memo {
   width: 430px;
-  padding: 20px 30px;
+  padding: 30px 30px;
 }
 .education {
   background: #deeeba;
 }
-.skills {
-  border: 2px solid #b8eb4b;
-  border-radius: 10px;
-}
 .experience {
   background: #d9d9d9;
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  position: relative;
+}
+.experience ul li p {
+  font-weight: 500;
+}
+.experience ul li div span {
+  display: block;
+  font-size: 13px;
+  text-indent: 5px;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+.experience ul li,
+.education ul li {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  border-bottom: 1px dashed #222;
+}
+.education ul li {
+  line-height: 2em;
 }
 .experience ul li {
-  display: flex;
-  gap: 15px;
+  line-height: 1.9em;
+}
+.education li:last-child,
+.experience li:last-child {
+  border: none;
+}
+.education li label,
+.experience li label {
+  font-weight: bold;
+}
+.experience > span:first-child {
+  position: absolute;
+  top: -8%;
+  right: -8%;
+  color: #23c533;
+  font-size: 90px;
+  font-weight: bold;
+  transform: rotate(35deg);
+  z-index: 4;
 }
 .education h4,
 .skills h4,
 .experience h4 {
   font-family: "press";
   text-align: center;
+  font-size: 30px;
   padding-bottom: 20px;
 }
-.skills h4 {
-  color: #b8eb4b;
-}
-.education ul {
-  line-height: 3em;
-}
-.education li label,
-.experience li label {
-  font-weight: bold;
-}
-.skills {
-}
-/* work */
-#work-intro {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 150px, 0;
-  position: relative;
-}
+
+/* work info*/
+
 #work-intro h3 {
+  position: absolute;
+  left: 10%;
+  top: 15%;
   font-family: "lemonb";
   font-size: 117px;
   color: #b8eb4b;
+}
+.workintro-contents {
+  position: relative;
+}
+
+/* work */
+#work {
+  background-color: #b8eb4b;
 }
