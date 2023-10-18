@@ -520,3 +520,106 @@ nav {
 .work {
   background-color: #b8eb4b;
 }
+.work-title {
+  color: #262e23;
+  border-bottom: 1px solid #262e23;
+}
+.workpage-gallery {
+  border: 1px solid red;
+  width: 90%;
+  margin: 0 auto;
+}
+.workpage-gallery .gallery {
+  display: grid;
+  border: 1px solid blue;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-row: repeat(2, 1fr);
+}
+
+/* CONNACT */
+
+.connect-inner {
+  background: #d9d9d9;
+  width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 50px;
+}
+.connection-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-info {
+  width: 45%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  padding: 20px;
+  background: #262e23;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+.icon span {
+  width: 80px;
+  height: 80px;
+  font-size: 45px;
+  border: 3px solid #b8eb4b;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  color: #b8eb4b;
+  margin-right: 25px;
+}
+.icon-text h3 {
+  font-family: "press";
+  color: #b8eb4b;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.icon-text p {
+  color: white;
+  font-weight: lighter;
+}
+.connect-input {
+  width: 50%;
+  height: 500px;
+}
+.input-box {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.input-box input[type="submit"] {
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 10px;
+  border: none;
+  background: #b8eb4b;
+  border-radius: 10px;
+  color: #262e23;
+  transition: 0.5s;
+}
+.input-box input[type="submit"]:hover {
+  background: #262e23;
+  color: #b8eb4b;
+}
