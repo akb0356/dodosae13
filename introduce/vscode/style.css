@@ -10,12 +10,6 @@ body {
 }
 
 .container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   margin: 0, 70px;
 }
 .page {
@@ -32,29 +26,25 @@ body {
 header {
   position: fixed;
   width: 100%;
-  top: 30px;
-  transition: 0.5s;
   z-index: 9999;
+  transition: all 0.3s;
+}
+nav {
+  margin: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 header.active {
   background: #262e23;
   border-bottom: 1px solid #b8eb4b;
 }
-header.active .gnb {
-  display: none;
+header.active nav {
+  padding-bottom: 10px;
 }
-
-nav {
-  position: absolute;
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
 .logo a {
   font-family: "lemonb";
   color: #b8eb4b;
@@ -75,27 +65,32 @@ nav {
 }
 /* side bar */
 .sidebar {
-  border: 3px solid red;
   position: fixed;
-  bottom: 0px;
-  left: 30px;
-  transform: translatex(10%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 80px;
+  left: 30px;
   transition: 0.3s;
-  /* display: none; */
+  display: none;
 }
-.sidebar span {
-  margin: 15px;
+.sidebar a {
+  padding: 10px;
+  font-size: 1.4em;
   color: #b8eb4b;
 }
-.sidebar span:last-child::after {
+.sidebar i:last-child::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  left: 50%;
+  bottom: -30%;
   width: 1px;
-  height: 90px;
+  height: 30%;
   background: #b8eb4b;
+}
+.sidebar.active {
+  opacity: 1;
 }
 /* intro */
 .intro {
@@ -254,7 +249,7 @@ nav {
   position: relative;
   display: flex;
 }
-.aboutme-img-section span {
+.aboutme-img-section i {
   position: absolute;
   right: -10px;
   top: -50px;
@@ -262,7 +257,6 @@ nav {
   color: #23c533;
   font-size: 90px;
   font-weight: bold;
-  transform: rotate(35deg);
   z-index: 4;
 }
 .aboutme-img {
@@ -290,12 +284,15 @@ nav {
   position: absolute;
   display: flex;
   align-items: center;
-  left: 40%;
-  top: -20%;
-  z-index: 1;
+  left: -10%;
+  top: 60%;
+  z-index: 5;
 }
 .aboutme-contents svg {
   position: absolute;
+  border: 3px solid red;
+  left: 0;
+  top: 30%;
 }
 .aboutme-txt {
   width: 650px;

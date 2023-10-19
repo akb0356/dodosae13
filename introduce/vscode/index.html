@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jquery script -->
+    <script defer src="/script.js"></script>
     <link rel="stylesheet" href="/style.css" />
     <!-- google icon -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/71fdac82e6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -25,6 +34,7 @@
             <li><a href="#aboutme">Aboutme</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#work-intro">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <!-- trigger -->
@@ -36,10 +46,11 @@
       </header>
       <!-- sidebar -->
       <div class="sidebar">
-        <span class="material-symbols-outlined"> home </span>
-        <span class="material-symbols-outlined"> sentiment_satisfied </span>
-        <span class="material-symbols-outlined"> settings </span>
-        <span class="material-symbols-outlined"> design_services </span>
+        <a href="#"><i class="fa-solid fa-house"></i></a>
+        <a href="#aboutme"><i class="fa-solid fa-user"></i></a>
+        <a href="#skills"><i class="fa-solid fa-pen-nib"></i></a>
+        <a href="#work-intro"><i class="fa-solid fa-folder-open"></i></a>
+        <a href="#contact"><i class="fa-solid fa-paper-plane"></i></a>
       </div>
       <!-- main -->
       <main class="intro">
@@ -98,7 +109,7 @@
         <h3 class="sub-title">About me</h3>
         <div class="profile">
           <div class="aboutme-img-section">
-            <span class="material-symbols-outlined"> attach_file </span>
+            <i class="fa-solid fa-paperclip"></i>
             <div class="aboutme-img"></div>
             <div class="aboutme-img-shadow"></div>
             <div class="aboutme-contents">
