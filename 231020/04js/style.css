@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contents {
+  width: 600px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 40px;
+  gap: 30px;
+}
+.image img {
+  width: 250px;
+}
+.txt ul {
+  padding-bottom: 20px;
+}
+.txt ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.txt ul li label {
+  font-weight: bold;
+}
+button {
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  margin-left: 45px;
+}
