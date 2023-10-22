@@ -7,12 +7,14 @@ $(function () {
     }
   });
 });
-$(function () {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 50) {
-      $(".sidebar").addClass("active");
-    } else {
-      $(".sidebar").removeClass("active");
-    }
-  });
+$(".trigger").click(function () {
+  $(this).toggleClass("active");
+  $(".gnb").toggleClass("active");
 });
+$(".gnb a").click(function () {
+  $(".gnb, .trigger").removeClass("active");
+});
+// $("#fullpage").fullpage({
+//   anchors: ["intro", "aboutMe", "skills", "workIntro", "work", "contact"],
+//   menu: "#topMenu",
+// });
