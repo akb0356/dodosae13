@@ -595,7 +595,7 @@ header.active nav {
   color: #b8eb4b;
 }
 
-@media all and (max-width: 625px) {
+@media all and (max-width: 758px) {
   .page {
     margin: 0, 50px;
   }
@@ -603,6 +603,8 @@ header.active nav {
   nav {
     width: 100%;
     padding: 0 20px;
+    height: 50px;
+    align-items: center;
   }
   .gnb {
     flex-direction: column;
@@ -673,7 +675,7 @@ header.active nav {
 
   /* intro */
   .center-title {
-    width: 70%;
+    width: 80%;
     height: 50%;
   }
   .title {
@@ -685,11 +687,11 @@ header.active nav {
     justify-content: center;
   }
   .title h1 {
-    font-size: 4.2em;
+    font-size: 3em;
     -webkit-text-stroke: 2px #b8eb4b;
   }
   .title h2 {
-    font-size: 4.2em;
+    font-size: 3.2em;
     padding-bottom: 10px;
   }
   .title p {
@@ -713,8 +715,8 @@ header.active nav {
   .line-circle {
     position: absolute;
     display: block;
-    width: 200px;
-    height: 400px;
+    width: 150px;
+    height: 350px;
     border: 0.5px dashed #b8eb4b;
     border-radius: 50%;
     transform: rotate(-45deg);
@@ -723,7 +725,7 @@ header.active nav {
     width: 30px;
     position: absolute;
     left: 250px;
-    top: 410px;
+    top: 75%;
   }
   .main-bottom {
     justify-content: space-between;
@@ -747,7 +749,7 @@ header.active nav {
     left: 80%;
   }
   .sub-title {
-    font-size: 3em;
+    font-size: 2.2em;
   }
   .profile {
     flex-direction: column;
@@ -777,25 +779,28 @@ header.active nav {
   }
   .aboutme-txt h4 {
     padding-top: 30px;
-    font-size: 2em;
-    margin-left: 20px;
+    font-size: 1.6em;
+    margin-left: 25px;
   }
   .aboutme-txt span {
     font-size: 0.5em;
   }
   .personality ul li {
-    font-size: 1em;
+    font-size: 0.9em;
     display: flex;
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .personality ul li label {
-    font-size: 15px;
+    font-size: 1em;
   }
   .personality ul li p {
     font-size: 1em;
+    padding-left: 0;
   }
+
   .aboutme-txt p {
-    font-size: 1em;
+    font-size: 0.8em;
+    text-align: center;
   }
   /* skills */
   .memo {
@@ -803,7 +808,7 @@ header.active nav {
   }
   .skills-board {
     width: 90%;
-    height: 50%;
+    height: 80%;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -828,11 +833,14 @@ header.active nav {
   }
   .skills-board i {
     font-size: 45px;
-    top: 350px;
+    top: 55%;
     right: 20px;
   }
+  .skills-icon {
+    gap: 10px;
+  }
   .skills-icon img {
-    width: 60px;
+    width: 55px;
   }
   .education,
   .skills,
@@ -861,20 +869,29 @@ header.active nav {
     line-height: 1em;
   }
   /* work*/
+  #work {
+    height: 100%;
+    padding: 20px 0;
+  }
   #work-title {
-    position: absolute;
-    top: 7%;
-    font-size: 3em;
+    font-size: 2.2em;
+    color: #262e23;
+    margin-bottom: 0.7em;
   }
   .gallery-container {
     flex-direction: column;
-    height: 40%;
-    gap: 15px;
+    height: 50%;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .port-img {
+    height: 150px;
   }
   /* contact*/
   .connect-inner {
-    width: 550px;
-    height: 800px;
+    width: 350px;
+    height: 680px;
+    padding: 20px;
   }
   .connection-section {
     height: 100%;
@@ -883,11 +900,15 @@ header.active nav {
   }
   .icon-info {
     width: 100%;
-    margin-bottom: 15px;
+    height: 40%;
+    margin-bottom: 35px;
   }
   .icon {
-    height: 100px;
+    height: 90px;
     margin-bottom: 5px;
+  }
+  .icon-text p {
+    font-size: 0.8em;
   }
   .icon-box {
     width: 50px;
