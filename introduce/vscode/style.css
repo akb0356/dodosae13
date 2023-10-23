@@ -445,92 +445,36 @@ header.active nav {
   padding-bottom: 20px;
 }
 
-/* work info*/
-.work-intro-text {
-  position: absolute;
-  width: 100%;
-  top: 15%;
-  left: 10%;
-  text-align: left;
-}
-.work-intro-text h3 {
-  font-family: "lemonb";
-  font-size: 117px;
-  color: #b8eb4b;
-}
-.work-intro-text p {
-  color: white;
-  font-size: 20px;
-  text-indent: 25px;
-}
-.work-list {
-  position: absolute;
-  bottom: 15%;
-  left: 10%;
-}
-.work-list li {
-  border: 1px solid white;
-  color: white;
-  padding: 10px;
-  font-size: 1.5em;
-  border-radius: 30px;
-  text-indent: 12px;
-  width: 280px;
-  margin-bottom: 15px;
-}
-.workintro-contents {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  left: 0%;
-  top: -20%;
-}
-.workintro-contents svg {
-  position: absolute;
-  bottom: -24%;
-  left: 7%;
-}
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.image-box {
-  position: absolute;
-  right: 5%;
-  bottom: 0;
-  width: 20%;
-  height: 1200px;
-  padding-bottom: 25px;
-  animation: slide 10s linear infinite;
-}
-
 /* work */
 .work {
   background-color: #b8eb4b;
 }
-.work-title {
+#work-title {
   color: #262e23;
   border-bottom: 1px solid #262e23;
+  font-weight: bold;
+  font-size: 65px;
+  margin: 0 30px;
+  margin-bottom: 1.3em;
 }
 .workpage-gallery {
   width: 90%;
-  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 .gallery-container {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 20px;
 }
 .port-img {
   width: 100%;
-  height: 400px;
-  border-radius: 15px;
+  height: 600px;
+  border-radius: 25px;
   object-fit: cover;
   object-position: top;
   position: relative;
@@ -562,6 +506,7 @@ header.active nav {
   top: 90% !important;
   left: 30px;
 }
+
 /* CONNACT */
 
 .connect-inner {
@@ -650,7 +595,7 @@ header.active nav {
   color: #b8eb4b;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 625px) {
   .page {
     margin: 0, 50px;
   }
@@ -740,11 +685,11 @@ header.active nav {
     justify-content: center;
   }
   .title h1 {
-    font-size: 3.5em;
+    font-size: 4.2em;
     -webkit-text-stroke: 2px #b8eb4b;
   }
   .title h2 {
-    font-size: 3.5em;
+    font-size: 4.2em;
     padding-bottom: 10px;
   }
   .title p {
@@ -768,17 +713,17 @@ header.active nav {
   .line-circle {
     position: absolute;
     display: block;
-    width: 150px;
-    height: 300px;
-    border: 1px dashed #b8eb4b;
+    width: 200px;
+    height: 400px;
+    border: 0.5px dashed #b8eb4b;
     border-radius: 50%;
     transform: rotate(-45deg);
   }
   .center-contents svg {
     width: 30px;
     position: absolute;
-    left: 200px;
-    top: 310px;
+    left: 250px;
+    top: 410px;
   }
   .main-bottom {
     justify-content: space-between;
@@ -858,14 +803,13 @@ header.active nav {
   }
   .skills-board {
     width: 90%;
-    height: 70%;
+    height: 50%;
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-rows: 1fr 1fr 2fr;
     grid-template-columns: 1fr;
     position: relative;
-    gap: -30px;
   }
   .skills {
     grid-row: span 1;
@@ -916,41 +860,58 @@ header.active nav {
   .education ul li {
     line-height: 1em;
   }
-  /*  work-intro*/
-  .work-intro-text {
-    text-align: center;
-    width: 80%;
-  }
-  .work-intro-text h3 {
-    font-size: 5em;
-  }
-  .work-intro-text p {
-    font-size: 1em;
-    word-break: keep-all;
-  }
-  .work-list {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .workintro-contents {
-    top: 0;
-    left: -10%;
-  }
-  .workintro-contents svg {
-    width: 35px;
-    top: 15%;
-    left: 20%;
-  }
-
   /* work*/
+  #work-title {
+    position: absolute;
+    top: 7%;
+    font-size: 3em;
+  }
   .gallery-container {
     flex-direction: column;
+    height: 40%;
     gap: 15px;
   }
-
   /* contact*/
-
-  
+  .connect-inner {
+    width: 550px;
+    height: 800px;
+  }
+  .connection-section {
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .icon-info {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .icon {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 25px;
+  }
+  .connect-input {
+    width: 100%;
+    height: 350px;
+  }
+  .input-box {
+    justify-content: start;
+  }
+  .input-box input[type="text"],
+  .input-box input[type="email"],
+  .input-box textarea {
+    padding: 15px;
+    margin-bottom: 5px;
+  }
+  .input-box textarea {
+    height: 130px;
+  }
+  .input-box input[type="submit"] {
+    padding: 15px;
+  }
 }

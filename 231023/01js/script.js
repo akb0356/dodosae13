@@ -1,0 +1,2 @@
+document.write()
+document.querySelector()

@@ -14,7 +14,8 @@ $(".trigger").click(function () {
 $(".gnb a").click(function () {
   $(".gnb, .trigger").removeClass("active");
 });
+
 // $("#fullpage").fullpage({
-//   anchors: ["intro", "aboutMe", "skills", "workIntro", "work", "contact"],
+//   anchors: ["intro", "aboutMe", "skills", "work", "contact"],
 //   menu: "#topMenu",
 // });
