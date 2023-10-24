@@ -33,3 +33,9 @@ $(".history-slider").slick({
     // instead of a settings object
   ],
 });
+
+
+$("trigger").click(function () {
+  $(this).toggleClass("active");
+  $(".gnb").toggleClass("active");
+});

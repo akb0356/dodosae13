@@ -832,3 +832,99 @@ hr.bar {
   width: 25px;
   font-size: 40px;
 }
+
+/* mobile */
+
+@media all and (max-width: 758px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #ddd;
+  }
+  .welcome-text {
+    text-align: center;
+  }
+  .home-heading {
+    left: 10%;
+  }
+  .home-heading span {
+    font-size: 50px;
+  }
+  .slogan {
+    display: none;
+  }
+  .gnb-inner {
+    width: 100%;
+    height: 5%;
+    position: relative;
+  }
+  .logo img {
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  .gnb {
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: -200px;
+    background: #222;
+    position: relative;
+    transition: 0.3s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .menu {
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    top: 55px;
+    display: inline-block;
+  }
+  .menu a {
+    color: white;
+  }
+  .trigger {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+  .trigger span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #222;
+    transition: 0.3s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span {
+    background: white;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    display: none;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+}

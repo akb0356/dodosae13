@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/03 js/style.css" />
+    <script defer src="/03 js/script.js"></script>
+  </head>
+  <body>
+    BODY
+    <!-- div에 이벤트를 부여해주고싶어 -->
+    <!-- 하위구조의 태그에 이벤트를 부여하면 상위요소까지 전파가 된다. 하지만 상위요소에 하면 밑에 있는 자식요소에는 안끌고와진다. -->
+    <div onclick="console.log('div')">
+      DIV
+      <section onclick="console.log('section')">
+        SECTION
+        <p onclick="console.log('p')">P</p>
+      </section>
+    </div>
+  </body>
+</html>
