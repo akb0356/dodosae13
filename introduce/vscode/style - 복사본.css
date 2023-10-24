@@ -1,4 +1,4 @@
-@import url("./reset.css");
+@import url("/reset.css");
 
 html {
   scroll-behavior: smooth;
@@ -12,7 +12,6 @@ body {
 .container {
   margin: 0, 4.375em;
   position: relative;
-  overflow: hidden;
 }
 .page {
   width: 100%;
@@ -22,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   text-align: center;
 }
 #content-video {
@@ -108,20 +108,20 @@ header.active nav {
   bottom: -25em;
 }
 .ani-star span:nth-child(4) {
-  right: 8.125em;
-  top: 15.625em;
+  right: 130px;
+  top: 250px;
 }
 .ani-star span:nth-child(5) {
-  right: 21.875em;
-  bottom: -6.25em;
+  right: 350px;
+  bottom: -100px;
 }
 @keyframes anistar {
   0% {
-    transform: translateY(-50em);
+    transform: translateY(-800px);
     opacity: 0;
   }
   50% {
-    transform: translateY(-15.625em);
+    transform: translateY(-250px);
     opacity: 0.5;
   }
   100% {
@@ -130,8 +130,8 @@ header.active nav {
   }
 }
 .center-title {
-  width: 59.375em;
-  height: 28.125em;
+  width: 950px;
+  height: 450px;
   position: relative;
   animation: reveal 2s linear both;
 }
@@ -161,7 +161,7 @@ header.active nav {
   padding-bottom: 0.2em;
 }
 .title p {
-  width: 100%;
+  width: inherit;
   text-transform: uppercase;
   text-align: center;
   background: #b8eb4b;
@@ -181,8 +181,8 @@ header.active nav {
 }
 .center-contents svg {
   position: absolute;
-  left: 6.25em;
-  top: 14.375em;
+  left: 100px;
+  top: 230px;
 }
 .blur-circle {
   position: inherit;
@@ -195,8 +195,8 @@ header.active nav {
 .line-circle {
   position: absolute;
   display: block;
-  width: 18.75em;
-  height: 43.75em;
+  width: 300px;
+  height: 700px;
   border: 1px dashed #b8eb4b;
   border-radius: 50%;
   transform: rotate(-45deg);
@@ -204,7 +204,7 @@ header.active nav {
 .main-bottom {
   width: 95%;
   position: absolute;
-  bottom: 1.875em;
+  bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -217,7 +217,7 @@ header.active nav {
 .scroll-plz {
   display: flex;
   align-items: center;
-  gap: 0.938em;
+  gap: 15px;
 }
 
 /* aboutme */
@@ -225,7 +225,7 @@ header.active nav {
 .sub-title {
   display: inline-block;
   font-weight: bold;
-  font-size: 4.063em;
+  font-size: 65px;
   color: #b8eb4b;
   text-align: center;
   margin: 0 auto;
@@ -233,13 +233,12 @@ header.active nav {
   margin-bottom: 1.3em;
 }
 .profile {
-  height: 34.375em;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1.563em;
-  gap: 6.25em;
-  text-align: left;
+  padding-top: 25px;
+  gap: 100px;
 }
 .aboutme-img-section {
   position: relative;
@@ -247,33 +246,34 @@ header.active nav {
 }
 .aboutme-img-section i {
   position: absolute;
-  right: -0.3em;
-  top: -0.3em;
+  right: -10px;
+  top: -50px;
   z-index: 3;
   color: #23c533;
-  font-size: 5.625em;
+  font-size: 90px;
   font-weight: bold;
+  transform: rotate(-20deg);
   z-index: 4;
 }
 .aboutme-img {
-  width: 26.875em;
-  height: 26.875em;
+  width: 430px;
+  height: 430px;
   overflow: hidden;
   background: url("/img/c5ae3a02a869f7381797046f59854d54.jpg") no-repeat center
     center;
   background-size: cover;
-  border-radius: 0.625em;
-  padding-top: 1.25em;
+  border-radius: 10px;
+  padding-top: 20px;
   z-index: 3;
   animation: rotate 0.3s linear both;
 }
 .aboutme-img-shadow {
-  width: 26.875em;
-  height: 26.875em;
+  width: 430px;
+  height: 430px;
   display: inline-block;
   position: absolute;
   background: #b8eb4b;
-  border-radius: 0.625em;
+  border-radius: 10px;
   transform: rotate(-10deg);
   z-index: 2;
 }
@@ -293,8 +293,8 @@ header.active nav {
   top: 30%;
 }
 .aboutme-txt {
-  width: 40.625em;
-  height: 25em;
+  width: 650px;
+  height: 400px;
 }
 .aboutme-txt h4 {
   font-family: "press";
@@ -316,14 +316,14 @@ header.active nav {
   text-align: left;
 }
 .personality {
-  padding-bottom: 0.625em;
+  padding-bottom: 10px;
 }
 .personality li i {
-  font-size: 1.563em;
+  font-size: 25px;
 }
 .personality ul li {
   display: flex;
-  gap: 1.25em;
+  gap: 20px;
   color: #b8eb4b;
   align-items: center;
   line-height: 2.5em;
@@ -332,24 +332,24 @@ header.active nav {
   font-family: "press";
   display: inline-block;
   font-size: 1.3em;
-  width: 7.5em;
+  width: 120px;
 }
 .personality ul li p {
   color: white;
   font-size: 1.5em;
-  padding-left: 1.5em;
+  padding-left: 25px;
 }
 
 /* skills */
 
 .skills-board {
   width: 80%;
-  height: 34.375em;
+  height: 550px;
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1.875em;
+  gap: 30px;
   position: relative;
 }
 .skills-board i {
@@ -357,13 +357,13 @@ header.active nav {
   right: -1%;
   top: -5%;
   color: #23c533;
-  font-size: 5.625em;
+  font-size: 90px;
   font-weight: bold;
   z-index: 555;
 }
 .skills {
   border: 2px solid #b8eb4b;
-  border-radius: 0.625em;
+  border-radius: 10px;
   grid-row: 3 / 2;
   grid-column: 2 / 1;
 }
@@ -371,12 +371,12 @@ header.active nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1.875em;
-  gap: 2.813em;
+  padding-top: 30px;
+  gap: 45px;
 }
 .skills img {
-  width: 5.625em;
-  border-radius: 1.125em;
+  width: 90px;
+  border-radius: 18px;
   background: cover no-repeat center center;
   box-shadow: 0 0 5px rgba(184, 235, 75, 0.5);
 }
@@ -386,7 +386,7 @@ header.active nav {
 .memo {
   width: 100%;
   height: 100%;
-  padding: 1.875em;
+  padding: 30px;
 }
 .education {
   background: #deeeba;
@@ -429,8 +429,8 @@ header.active nav {
 .experience ul li,
 .education ul li {
   display: flex;
-  gap: 1.25em;
-  padding: 0.938em;
+  gap: 20px;
+  padding: 15px;
   line-height: 2.6em;
   border-bottom: 1px dashed #222;
 }
@@ -449,7 +449,7 @@ header.active nav {
   font-family: "press";
   text-align: center;
   font-size: 2.2em;
-  padding-bottom: 1.25em;
+  padding-bottom: 20px;
 }
 
 /* work */
@@ -460,12 +460,12 @@ header.active nav {
   color: #262e23;
   border-bottom: 1px solid #262e23;
   font-weight: bold;
-  font-size: 4.063em;
-  margin: 0 1.875em;
+  font-size: 65px;
+  margin: 0 30px;
   margin-bottom: 1.3em;
 }
 .workpage-gallery {
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,12 +476,12 @@ header.active nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25em;
+  gap: 20px;
 }
 .port-img {
   width: 100%;
-  height: 37.5em;
-  border-radius: 1.563em;
+  height: 600px;
+  border-radius: 25px;
   object-fit: cover;
   object-position: top;
   position: relative;
@@ -503,26 +503,26 @@ header.active nav {
   object-fit: cover;
 }
 .featherlight .featherlight-close-icon {
-  width: 2.5em !important;
-  height: 2.5em !important;
-  line-height: 2.5em !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
   background: #23c533 !important;
-  font-size: 1.75em;
+  font-size: 28px;
   color: #fff !important;
   border-radius: 50%;
   top: 90% !important;
-  left: 1.875em;
+  left: 30px;
 }
 
 /* CONNACT */
 
 .connect-inner {
   background: #d9d9d9;
-  width: 75em;
-  height: 37.5em;
+  width: 1200px;
+  height: 600px;
   margin: 0 auto;
-  border-radius: 0.625em;
-  padding: 3.125em;
+  border-radius: 10px;
+  padding: 50px;
   text-align: left;
 }
 .connection-section {
@@ -533,7 +533,7 @@ header.active nav {
 }
 .icon-info {
   width: 45%;
-  height: 31.25em;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -542,28 +542,28 @@ header.active nav {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 8.125em;
-  padding: 1.25em;
+  height: 130px;
+  padding: 20px;
   background: #262e23;
-  border-radius: 0.625em;
-  padding-left: 3em;
+  border-radius: 10px;
+  padding-left: 40px;
 }
 .icon-box {
-  width: 2em;
-  height: 2em;
-  font-size: 2.813em;
+  width: 90px;
+  height: 90px;
+  font-size: 45px;
   border: 3px solid #b8eb4b;
   border-radius: 50%;
   text-align: center;
-  line-height: 2em;
+  line-height: 85px;
   color: #b8eb4b;
-  margin-right: 1em;
+  margin-right: 25px;
 }
 .icon-text h3 {
   font-family: "press";
   color: #b8eb4b;
   font-size: 1.2em;
-  margin-bottom: 0.625em;
+  margin-bottom: 10px;
 }
 .icon-text p {
   color: white;
@@ -571,10 +571,10 @@ header.active nav {
 }
 .connect-input {
   width: 50%;
-  height: 31.25em;
+  height: 500px;
 }
 .input-box {
-  height: 31.25em;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -585,17 +585,17 @@ header.active nav {
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
-  padding: 1.25em;
-  margin-bottom: 1.25em;
+  padding: 20px;
+  margin-bottom: 20px;
   width: 100%;
 }
 .input-box input[type="submit"] {
   cursor: pointer;
-  padding: 1.25em;
-  margin-top: 0.625em;
+  padding: 20px;
+  margin-top: 10px;
   border: none;
   background: #b8eb4b;
-  border-radius: 0.625em;
+  border-radius: 10px;
   color: #262e23;
   transition: 0.5s;
 }
@@ -606,13 +606,13 @@ header.active nav {
 
 @media all and (max-width: 758px) {
   .page {
-    margin: 0, 3.125em;
+    margin: 0, 50px;
   }
   /* header */
   nav {
     width: 100%;
-    padding: 0 1.25em;
-    height: 3.125em;
+    padding: 0 20px;
+    height: 50px;
     align-items: center;
   }
   .gnb {
@@ -620,14 +620,14 @@ header.active nav {
     background: #b8eb4b;
     position: fixed;
     top: 0;
-    right: -15.625em;
-    width: 15.625em;
+    right: -250px;
+    width: 250px;
     height: 100vh;
     text-align: right;
-    padding-right: 0.625em;
+    padding-right: 10px;
     padding-top: 80px;
     box-sizing: border-box;
-    box-shadow: 0 0 0.938em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
   .gnb.active {
@@ -637,19 +637,19 @@ header.active nav {
     color: #262e23;
     display: block;
     margin: 0;
-    padding: 0.625em;
-    font-size: 1.125em;
+    padding: 10px;
+    font-size: 18px;
   }
   .gnb li a:hover {
     color: #262e23;
   }
   .trigger {
     display: block;
-    width: 1.875em;
-    height: 1.25em;
+    width: 30px;
+    height: 16px;
     position: absolute;
-    right: 1.25em;
-    top: 2.188em;
+    right: 20px;
+    top: 35px;
   }
   .trigger span {
     position: absolute;
@@ -704,7 +704,6 @@ header.active nav {
     padding-bottom: 10px;
   }
   .title p {
-    width: 80%;
     font-size: 0.3em;
   }
   .center-contents {
@@ -725,22 +724,22 @@ header.active nav {
   .line-circle {
     position: absolute;
     display: block;
-    width: 9.375em;
-    height: 21.875em;
+    width: 150px;
+    height: 350px;
     border: 0.5px dashed #b8eb4b;
     border-radius: 50%;
     transform: rotate(-45deg);
   }
   .center-contents svg {
-    width: 1.875em;
+    width: 30px;
     position: absolute;
-    left: 15.625em;
+    left: 250px;
     top: 73%;
   }
   .main-bottom {
     justify-content: space-between;
     /* gap: 230px; */
-    padding: 0 0.938em;
+    padding: 0 15px;
   }
   .main-bottom p {
     font-size: 0.4em;
@@ -749,10 +748,10 @@ header.active nav {
     display: none;
   }
   .ani-star span {
-    height: 9.375em;
+    height: 150px;
   }
   .ani-star span:nth-child(1) {
-    height: 9.375em;
+    height: 150px;
     bottom: 15%;
   }
   .ani-star span:nth-child(3) {
@@ -772,37 +771,33 @@ header.active nav {
     top: -10%;
   }
   .aboutme-img {
-    width: 15.625em;
-    height: 15.625em;
+    width: 250px;
+    height: 250px;
   }
   .aboutme-img-shadow {
-    width: 15.625em;
-    height: 15.625em;
+    width: 250px;
+    height: 250px;
     transform: rotate(-10deg);
   }
   .aboutme-txt {
     width: 100%;
-    padding-top: 0.938em;
-    margin: 0 auto;
-    text-align: left;
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .aboutme-txt h4 {
-    padding-top: 1.875em;
+    padding-top: 30px;
     font-size: 1.6em;
+    margin-left: 25px;
   }
   .aboutme-txt span {
     font-size: 0.5em;
   }
-  .aboutme-txt h4,
-  .aboutme-txt .personality {
-    width: 100%;
-    margin-left: 20%;
-  }
   .personality ul li {
-    width: 60%;
     font-size: 0.9em;
     display: flex;
-    align-items: center;
+    margin-left: 20px;
   }
   .personality ul li label {
     font-size: 1em;
@@ -818,11 +813,11 @@ header.active nav {
   }
   /* skills */
   .memo {
-    padding: 0.938em;
+    padding: 15px;
   }
   .skills-board {
     width: 90%;
-    height: 70%;
+    height: 80%;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -833,28 +828,28 @@ header.active nav {
   .skills {
     grid-row: span 1;
     grid-column: span 1;
-    height: 9.375em;
+    height: 150px;
   }
   .education {
     grid-row: span 1;
     grid-column: span 1;
-    height: 9.375em;
+    height: 150px;
   }
   .experience {
     grid-row: span 1;
     grid-column: span 1;
-    height: 18.75em;
+    height: 300px;
   }
   .skills-board i {
-    font-size: 2.813em;
+    font-size: 45px;
     top: 55%;
-    right: 0.5em;
+    right: 20px;
   }
   .skills-icon {
-    gap: 1.5em;
+    gap: 10px;
   }
   .skills-icon img {
-    width: 3.438em;
+    width: 55px;
   }
   .education,
   .skills,
@@ -865,7 +860,7 @@ header.active nav {
   .skills h4,
   .experience h4 {
     font-size: 1.4em;
-    padding-bottom: 0.313em;
+    padding-bottom: 5px;
   }
   .education li label,
   .education li p,
@@ -885,7 +880,7 @@ header.active nav {
   /* work*/
   #work {
     height: 100%;
-    padding: 1.25em 0;
+    padding: 20px 0;
   }
   #work-title {
     font-size: 2.2em;
@@ -894,46 +889,45 @@ header.active nav {
   }
   .gallery-container {
     flex-direction: column;
-    height: 100%;
-    gap: 0.625em;
-    margin-bottom: 0.938em;
+    height: 50%;
+    gap: 10px;
+    margin-bottom: 15px;
   }
   .port-img {
-    height: 13em;
+    height: 150px;
   }
   /* contact*/
   .connect-inner {
-    width: 21.875em;
-    height: 43.1em;
-    padding: 1.25em;
+    width: 350px;
+    height: 680px;
+    padding: 20px;
   }
   .connection-section {
     height: 100%;
     flex-direction: column;
+    justify-content: start;
   }
   .icon-info {
     width: 100%;
-    margin-bottom: 2.188em;
+    height: 40%;
+    margin-bottom: 35px;
   }
   .icon {
-    height: 5.625em;
-    margin-bottom: 0.313em;
+    height: 90px;
+    margin-bottom: 5px;
   }
   .icon-text p {
     font-size: 0.8em;
   }
   .icon-box {
-    width: 2.7em;
-    height: 2.7em;
-    line-height: 2.5em;
-    font-size: 1.3em;
-  }
-  .connect-inner {
-    width: 80%;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 25px;
   }
   .connect-input {
     width: 100%;
-    height: 21.875em;
+    height: 350px;
   }
   .input-box {
     justify-content: start;
@@ -941,13 +935,13 @@ header.active nav {
   .input-box input[type="text"],
   .input-box input[type="email"],
   .input-box textarea {
-    padding: 0.938em;
-    margin-bottom: 0.8em;
+    padding: 15px;
+    margin-bottom: 5px;
   }
   .input-box textarea {
-    height: 8.125em;
+    height: 130px;
   }
   .input-box input[type="submit"] {
-    padding: 0.938em;
+    padding: 15px;
   }
 }

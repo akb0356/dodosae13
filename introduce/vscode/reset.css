@@ -2,37 +2,37 @@
 
 @font-face {
   font-family: "press";
-  src: url("/font/Press_Start_2P/PressStart2P-Regular.ttf");
-  src: url("/font/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
+  src: url("./font/Press_Start_2P/PressStart2P-Regular.ttf");
+  src: url("./font/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "lemonr";
-  src: url("/font/lemon_milk/LEMONMILK-Regular.ttf");
-  src: url("/font/lemon_milk/LEMONMILK-Regular.ttf") format("truetype");
+  src: url("./font/lemon_milk/LEMONMILK-Regular.ttf");
+  src: url("./font/lemon_milk/LEMONMILK-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "lemonl";
-  src: url("/font/lemon_milk/LEMONMILK-Light.ttf");
-  src: url("/font/lemon_milk/LEMONMILK-Light.ttf") format("truetype");
+  src: url("./font/lemon_milk/LEMONMILK-Light.ttf");
+  src: url("./font/lemon_milk/LEMONMILK-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "lemonm";
-  src: url("/font/lemon_milk/LEMONMILK-Medium.ttf");
-  src: url("/font/lemon_milk/LEMONMILK-Medium.ttf") format("truetype");
+  src: url("./font/lemon_milk/LEMONMILK-Medium.ttf");
+  src: url("./font/lemon_milk/LEMONMILK-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "lemonb";
-  src: url("/font/lemon_milk/LEMONMILK-Bold.ttf");
-  src: url("/font/lemon_milk/LEMONMILK-Bold.ttf") format("truetype");
+  src: url("./font/lemon_milk/LEMONMILK-Bold.ttf");
+  src: url("./font/lemon_milk/LEMONMILK-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -49,11 +49,4 @@ li {
 }
 a {
   text-decoration: none;
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
 }

@@ -16,6 +16,6 @@ $(".gnb a").click(function () {
 });
 
 // $("#fullpage").fullpage({
-//   anchors: ["intro", "aboutMe", "skills", "work", "contact"],
 //   menu: "#topMenu",
+//   anchors: ["intro", "aboutMe", "skills", "work", "contact"],
 // });
