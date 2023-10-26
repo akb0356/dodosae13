@@ -262,7 +262,7 @@ header.active nav {
   width: 28em;
   height: 28em;
   overflow: hidden;
-  background: url("/img/c5ae3a02a869f7381797046f59854d54.jpg") no-repeat center
+  background: url("./img/KakaoTalk_20230929_190904053_18\ \(3\).jpg") no-repeat center
     center;
   background-size: cover;
   border-radius: 0.625em;
@@ -415,7 +415,7 @@ header.active nav {
 }
 .experience::before,
 .education::before {
-  content: url("/img/paper-3155438_1280.jpg");
+  content: url("../img/paper-3155438_1280.jpg");
   background-size: cover;
   mix-blend-mode: multiply;
   position: absolute;
@@ -892,7 +892,7 @@ header.active nav {
   }
   .skills-board i {
     font-size: 2.813em;
-    top: 52%;
+    top: 50%;
     right: 0.3em;
   }
   .skills-icon {
