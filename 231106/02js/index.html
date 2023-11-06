@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>오늘의 할 일</h1>
+    </header>
+    <form action="/process_todo" method="post">
+      <!-- 필수 진행시켯 required / input 안에 누가 value 값을 적은 적이 있어도 기본적으로 기록이 뜨지 않게 막아줄 수 있는 것 autocomplete off-->
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="할 일을 입력하세요."
+        required
+        autocomplete="off"
+      />
+      <input id="add-button" type="submit" value="추가" />
+    </form>
+    <div id="container">
+      <ul id="todo-list"></ul>
+    </div>
+  </body>
+</html>

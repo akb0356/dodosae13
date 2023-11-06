@@ -1,0 +1,102 @@
+@import url("./reset.css");
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+.franch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+.franch_contents {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.franch_title {
+  font: normal 9rem/1 "Montserrat";
+  margin-bottom: 3rem;
+}
+.franch_title::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: var(--twosomePoint-color);
+  margin-left: 1.5rem;
+}
+.franch_subtitle {
+  font: 700 2.4rem/1.5 "";
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.franch_desc {
+  font: 400 1.8rem/1.5 "";
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.franch_button {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.franch_button_left,
+.franch_button_right {
+  position: relative;
+  border: 0.2rem solid #222;
+  background: white;
+  width: 25rem;
+  height: 6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.franch_button_left::before,
+.franch_button_right::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  background: #222;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+  z-index: 1;
+}
+.franch_button_left:hover::before,
+.franch_button_right:hover::before {
+  transform: translateX(0%);
+}
+.franch_button_left a,
+.franch_button_right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.franch_button_left span,
+.franch_button_right span {
+  font: 700 2rem/1 "";
+}
+.franch_button_left:hover span,
+.franch_button_right:hover span,
+.franch_button_left:hover i,
+.franch_button_right:hover i {
+  color: white;
+  z-index: 2;
+}
+.fa-arrow-right-long {
+  font-size: 2rem;
+}
+.franch_button_left {
+  margin-right: 1.5rem;
+}
