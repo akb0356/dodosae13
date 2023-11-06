@@ -1,4 +1,11 @@
 @import url("./reset.css");
+<<<<<<< HEAD
+=======
+body {
+  background: rgba(238, 238, 238, 0.9333333333);
+}
+
+>>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 #container {
   position: relative;
   max-width: 1920px;
@@ -10,11 +17,17 @@
   justify-content: center;
 }
 #container section {
+<<<<<<< HEAD
   border: 1px solid red;
   width: 100%;
   height: inherit;
   margin: 0 35.2rem;
   padding: 0 4.8rem;
+=======
+  width: 100%;
+  height: inherit;
+  margin: 0 352px;
+>>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 }
 
 header {
@@ -80,8 +93,13 @@ header ul li:last-child::before {
   word-break: keep-all;
 }
 .deli_contents .deli_img img {
+<<<<<<< HEAD
   width: 48.6rem;
   height: 65.4rem;
+=======
+  width: 486.39px;
+  height: 654.11px;
+>>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 }
 
 .deli_menu {
@@ -266,6 +284,7 @@ header ul li:last-child::before {
 
 .modal.on {
   display: flex;
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 768px) {
@@ -283,4 +302,6 @@ header ul li:last-child::before {
   .delistory .deli_contents {
     flex-direction: column;
   }
+=======
+>>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 }/*# sourceMappingURL=style.css.map */
