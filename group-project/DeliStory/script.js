@@ -26,20 +26,13 @@ const foodtable = document.querySelector(".foodinfo_table");
 
 
 //각 이미지 클릭이벤트를 부여한다. 누르면 모달에 클래스 on을 주고 배경을 흐리게
-<<<<<<< HEAD
 // each img 선택했을 때 json 파일을 객체화한다. 누를 때마다 createElement로 div를 foodtable에 추가하고 각 객체의 key value 값을 함께 안에 넣는다.
-=======
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 
 //모달창 띄우기
 lists.forEach((img) => {
   img.addEventListener("click", () => {
     modal.classList.add("on");
     background.style.filter = "blur(3px)";
-<<<<<<< HEAD
-
-=======
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
   });
 });
 //xbtn에 on 클래스 빼기
@@ -48,8 +41,5 @@ xbtn.addEventListener("click", () => {
   background.style.filter = "";
 });
 
-<<<<<<< HEAD
 //
 
-=======
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902

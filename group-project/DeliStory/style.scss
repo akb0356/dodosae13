@@ -17,13 +17,6 @@ $modal-font: (
   table: 1.3rem,
 );
 // container
-<<<<<<< HEAD
-
-=======
-body {
-  background: #eeee;
-}
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 #container {
   position: relative;
   max-width: 1920px;
@@ -34,18 +27,11 @@ body {
   align-items: center;
   justify-content: center;
   section {
-<<<<<<< HEAD
     border: 1px solid red;
     width: 100%;
     height: inherit;
     margin: 0 35.2rem;
     padding: 0 4.8rem;
-=======
-    width: 100%;
-    height: inherit;
-    margin: 0 352px;
-    // padding: 0 48px;
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
   }
 }
 // header
@@ -112,13 +98,8 @@ header {
   }
   .deli_img {
     img {
-<<<<<<< HEAD
       width: 48.6rem;
       height: 65.4rem;
-=======
-      width: 486.39px;
-      height: 654.11px;
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
     }
   }
   margin-bottom: 5rem;
@@ -196,10 +177,7 @@ header {
     opacity: 1;
   }
 }
-<<<<<<< HEAD
 // modal
-=======
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
 .modal {
   position: absolute;
   top: 50%;
@@ -312,12 +290,13 @@ header {
 .modal.on {
   display: flex;
 }
-<<<<<<< HEAD
 
 @media screen and (max-width: 768px) {
-  section {
-    border: 1px solid red;
-    padding: 0 3rem;
+  #container {
+    margin: 0 rem;
+    section {
+      border: 1px solid red;
+    }
   }
   header {
     display: none;
@@ -334,5 +313,3 @@ header {
 }
 @media screen and (max-width: 480px) {
 }
-=======
->>>>>>> 80ca1f8519c25d6ffcd17b50e7b78bfb35c02902
