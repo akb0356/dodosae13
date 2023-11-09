@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.slide_wrapper {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  height: 200px;
+  overflow: hidden;
+}
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slides.animated {
+  transition: 0.5s ease-out;
+}
+.slides li {
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  float: left;
+}
+/* 마지막 요소 빼고 전부 마진 주는 법 */
+.slides li:not(:last-child) {
+  margin-right: 30px;
+}
+.controls {
+  text-align: center;
+  margin-top: 50px;
+}
+.controls span {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+}

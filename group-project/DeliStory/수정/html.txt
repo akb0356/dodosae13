@@ -1,0 +1,27 @@
+      <header>
+        <div class="logo">
+          <img class="black" src="./imgs/logo/logo.svg" alt="" />
+          <img class="white" src="./imgs/logo/logo-white.svg" alt="" />
+        </div>
+        <div class="nav">
+          <a href=""><p>20주년 이야기</p></a>
+          <a href=""><p class="focus">커피이야기</p></a>
+          <a href=""><p>디저트 이야기</p></a>
+          <a href=""><p>델리 이야기</p></a>
+          <a href=""><p>DT / DI</p></a>
+        </div>
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="dropmenu">
+        <div class="nav">
+          <a href=""><p>20주년 이야기</p></a>
+          <a href=""><p class="focus">커피이야기</p></a>
+          <a href=""><p>디저트 이야기</p></a>
+          <a href=""><p>델리 이야기</p></a>
+          <a href=""><p>DT / DI</p></a>
+        </div>
+      </div>

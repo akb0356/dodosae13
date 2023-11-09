@@ -4,21 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/71fdac82e6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- custom -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./header.css" />
     <script defer src="./script.js"></script>
   </head>
   <body>
     <div id="container">
+      <header>
+        <h1 class="logo">
+          <a href="#"
+            ><img class="black" src="./deli_img/logo.svg" alt=""
+          /></a>
+          <a href=""
+            ><img class="white" src="./deli_img/logo-white.svg" alt=""
+          /></a>
+        </h1>
+        <div class="nav">
+          <a href=""><p>20주년 이야기</p></a>
+          <a href=""><p class="focus">커피이야기</p></a>
+          <a href=""><p>디저트 이야기</p></a>
+          <a href=""><p>델리 이야기</p></a>
+          <a href=""><p>DT / DI</p></a>
+        </div>
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="dropmenu">
+        <div class="nav">
+          <a href=""><p>20주년 이야기</p></a>
+          <a href=""><p class="focus">커피이야기</p></a>
+          <a href=""><p>디저트 이야기</p></a>
+          <a href=""><p>델리 이야기</p></a>
+          <a href=""><p>DT / DI</p></a>
+        </div>
+      </div>
       <section>
         <!-- menu header -->
-        <header>
+        <div class="top">
           <ul>
             <!-- 메뉴이야기 링크 받아서 수정 -->
             <li><a href="#">홈</a></li>
             <li><a href="#">메뉴이야기</a></li>
           </ul>
-        </header>
+        </div>
         <!-- main contents -->
         <div class="delistory">
           <h1 class="deli_title">델리이야기</h1>
@@ -78,10 +114,10 @@
                 </div>
                 <div class="menu_img"></div>
               </div>
+              <div class="slide_prevbtn"><i class="fas fa-angle-left"></i></div>
+              <div class="slide_nxtbtn"><i class="fas fa-angle-right"></i></div>
             </div>
           </div>
-          <div class="slide_prevbtn"><i class="fas fa-angle-left"></i></div>
-          <div class="slide_nxtbtn"><i class="fas fa-angle-right"></i></div>
         </div>
       </section>
       <!-- modal 창 -->
@@ -92,13 +128,10 @@
         <div class="modal_img"></div>
         <div class="modal_info">
           <div class="food_txt">
-            <h3 class="foodtxt_title">호밀 B. E. L. T</h3>
-            <span class="foodtxt_subtitle">Rye B. E. L. T</span>
+            <h3 class="foodtxt_title"></h3>
+            <span class="foodtxt_subtitle"></span>
             <hr class="foodtxt_bar" />
-            <p class="foodtxt_desc">
-              구수한 호밀 식빵에 베이컨, 계란과 양상추, 토마토를 듬뿍 넣어
-              풍성한 샌드위치
-            </p>
+            <p class="foodtxt_desc"></p>
             <div class="foodtxt_allergy">
               <p class="foodtxt_allergy_title">알레르기 유발 성분 :</p>
               <p class="foodtxt_allergy_desc">
@@ -108,7 +141,22 @@
             </div>
             <div class="foodinfo">
               <p class="foodinfo_title">제품 영양 정보</p>
-              <div class="foodinfo_table"></div>
+              <div class="foodinfo_table">
+                <div>총중량</div>
+                <div></div>
+                <div>1회 제공량</div>
+                <div></div>
+                <div>열량(Kcal)</div>
+                <div></div>
+                <div>당류(g)</div>
+                <div></div>
+                <div>단백질(g/%)</div>
+                <div></div>
+                <div>포화지방(g/%)</div>
+                <div></div>
+                <div>나트륨(mg/%)</div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
