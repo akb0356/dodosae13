@@ -84,27 +84,28 @@ section {
 }
 
 .menu_slide {
-  border: 2px solid red;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
   position: relative;
-  gap: 0.5rem;
+  margin-right: 3rem;
 }
 .menu_slide .slide_prevbtn i,
 .menu_slide .slide_nxtbtn i {
+  display: none;
   font-size: 3rem;
   color: #777777;
 }
 .menu_slide .slide_prevbtn i {
   position: absolute;
-  left: 0;
-  top: 45%;
+  left: -5%;
+  top: 40%;
 }
 .menu_slide .slide_nxtbtn i {
   position: absolute;
-  right: 0;
-  top: 45%;
+  right: -5%;
+  top: 40%;
 }
 
 .menu_slide_item {
@@ -286,16 +287,17 @@ section {
 
 @media screen and (max-width: 1200px) {
   #container section {
-    width: 100%;
+    border: 1px solid red;
+    max-width: 80%;
+    padding: 25rem 0 0 0;
   }
-  header {
-    display: none;
+  .top ul li a {
+    font-size: 1.8rem;
   }
   .delistory .deli_title {
-    font-size: 3.2rem;
+    font-size: 7.2rem;
     margin-bottom: 5rem;
     padding-right: 0;
-    text-indent: 3rem;
   }
   .delistory .deli_contents {
     display: flex;
