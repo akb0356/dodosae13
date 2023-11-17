@@ -1,0 +1,29 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* style */
+div {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+}
+.box1 {
+  background: orange;
+}
+.box2 {
+  background: yellowgreen;
+}
+.box3 {
+  background: green;
+}

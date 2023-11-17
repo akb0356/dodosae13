@@ -1,56 +1,50 @@
+/* reset css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 ul,
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
 
-/* common */
-
+/* common css */
 html {
   height: 100%;
   overflow: hidden;
-  background: url("../img/Background.png") no-repeat center center;
+  background: url(../img/Background.png) no-repeat center center;
   background-size: cover;
 }
-
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background: url(../img/Center_Background.png) no-repeat center center;
 }
 #wrap {
-  border: 1px solid red;
+  position: relative;
   width: 960px;
   height: 500px;
-  position: relative;
-  background: url("../img/Center_Background.png") no-repeat center center;
 }
 
-/* title */
-
+/* title css */
 #title {
   position: absolute;
-  left: 0;
   top: -48px;
+  left: 0;
   width: 240px;
   height: 48px;
   overflow: hidden;
 }
-
 #title h1 {
-  background: url("../img/Title_Images.png") no-repeat center center;
-  text-indent: -99999px;
+  background: url(../img/Title_Images.png) no-repeat center center;
+  text-indent: -999px;
   position: absolute;
   left: 0;
   top: 48px;
@@ -58,11 +52,9 @@ body {
   height: 48px;
   transition: all 1s;
 }
-
 #title h1.active {
   top: 0;
 }
-
 #title h1:nth-child(1) {
   background-position: 0 0;
 }
@@ -73,23 +65,21 @@ body {
   background-position: 0 -96px;
 }
 
-/* container */
-
+/* container css */
 #container {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   padding: 0 40px;
-  margin-left: -40px;
+  overflow: hidden;
+  margin-left: -20px;
 }
 div[data-name] {
   width: 960px;
   height: 500px;
   position: absolute;
+  top: 550px;
   left: 40px;
-  top: 0;
-  /* top: 550px; */
   transition: all 2s;
 }
 div[data-name].active {
@@ -97,13 +87,9 @@ div[data-name].active {
 }
 div[data-name="main"] img {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 0px;
+  bottom: 0px;
   width: 925px;
-}
-div[data-name="main"] {
-  overflow: hidden;
-  padding: 10px;
 }
 div[data-name="information"] img {
   position: absolute;
@@ -112,22 +98,23 @@ div[data-name="information"] img {
 }
 div[data-name="information"] div {
   position: absolute;
-  left: 450px;
+  left: 470px;
   top: 50px;
-  width: 440px;
+  width: 420px;
 }
 div[data-name="multimedia"] {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 div[data-name="character"] > a {
   display: block;
   width: 40px;
   height: 40px;
-  text-indent: -9999px;
-  background: url("../img/Arrow_Images.png") no-repeat;
+  text-indent: -999px;
+  background: url(../img/Arrow_Images.png);
+  z-index: 10;
 }
 div[data-name="character"] > a:nth-child(1) {
-  background-position: 0 -40px;
+  background-position: 0 0;
   position: absolute;
   left: 10px;
   top: 50%;
@@ -154,7 +141,7 @@ div[data-name="character"] > article.show {
 article {
   position: relative;
 }
-article h1 {
+article > h1 {
   position: absolute;
   left: 90px;
   top: 40px;
@@ -169,25 +156,25 @@ article > img:nth-of-type(2) {
   position: absolute;
   left: 100px;
   top: 120px;
-  border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 article > p {
   position: absolute;
   left: 400px;
   top: 120px;
-  width: 450px;
+  width: 430px;
 }
 
-/* navigation */
-
+/* navigation css */
 #main_navigation {
+  background: #fc3f3b;
   overflow: hidden;
 }
-#main_navigation > ul > li {
-  float: left;
+#main_navigation > ul {
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 #main_navigation > ul > li > a {
@@ -196,8 +183,8 @@ article > p {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background: url("../img/Navigation_Button.png") center -6px;
-  text-indent: -9999999px;
+  background: url(../img/Navigation_Button.png) center -6px;
+  text-indent: -9999px;
 }
 #main_navigation li:nth-child(1) > a {
   background-position: center 0;
@@ -211,15 +198,16 @@ article > p {
 #main_navigation li:nth-child(4) > a {
   background-position: center -300px;
 }
+
 #main_navigation li:nth-child(1) > a:hover {
-  background-position: center -50px;
+  background-position: -6px -50px;
 }
 #main_navigation li:nth-child(2) > a:hover {
-  background-position: center -150px;
+  background-position: -6px -150px;
 }
 #main_navigation li:nth-child(3) > a:hover {
-  background-position: center -250px;
+  background-position: -6px -250px;
 }
 #main_navigation li:nth-child(4) > a:hover {
-  background-position: center -350px;
+  background-position: -6px -350px;
 }

@@ -1,0 +1,44 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* style */
+section {
+  background: skyblue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+ul {
+  display: flex;
+  width: 400px;
+  flex-flow: wrap;
+}
+li {
+  width: calc(100% / 9 - 4px);
+  height: 30px;
+  background: ivory;
+  margin: 0 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}

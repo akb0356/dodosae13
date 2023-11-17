@@ -1,9 +1,39 @@
 @import url("./reset.css");
 
 section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
+/* resetcss에 10px 준 상태 */
+
+/* common */
+.total-title {
+  font: normal 9rem/1 "Montserrat";
+  margin-bottom: 3rem;
+  color: #000;
+}
+.total-title::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: var(--main-color);
+  margin-left: 1.5rem;
+}
+.total-subtitle {
+  font: 700 2.4rem/1.5 "";
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #000;
+}
+.total-desc {
+  font: 400 1.8rem/1.5 "";
+  text-align: center;
+  margin-bottom: 4rem;
+  word-break: keep-all;
+}
+
+/* franchise */
 .franch {
   position: relative;
   display: flex;
@@ -12,43 +42,22 @@ section {
   justify-content: center;
   background: #f5f5f5;
 }
-.franch_contents {
+.franch-contents {
+  position: relative;
   width: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.franch_title {
-  font: normal 9rem/1 "Montserrat";
-  margin-bottom: 3rem;
-}
-.franch_title::after {
-  content: "";
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background: var(--twosomePoint-color);
-  margin-left: 1.5rem;
-}
-.franch_subtitle {
-  font: 700 2.4rem/1.5 "";
   text-align: center;
-  margin-bottom: 3rem;
+  z-index: 10;
 }
-.franch_desc {
-  font: 400 1.8rem/1.5 "";
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.franch_button {
+
+.franch-button {
   width: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.franch_button_left,
-.franch_button_right {
+.franch-button-left,
+.franch-button-right {
   position: relative;
   border: 0.2rem solid #222;
   background: white;
@@ -60,43 +69,309 @@ section {
   justify-content: center;
   overflow: hidden;
 }
-.franch_button_left::before,
-.franch_button_right::before {
+.franch-button-left::before,
+.franch-button-right::before {
   content: "";
   position: absolute;
   display: inline-block;
   width: inherit;
   height: inherit;
   background: #222;
-  transform: translateX(-100%);
+  transform: translateX(-105%);
   transition: all 0.5s;
   z-index: 1;
 }
-.franch_button_left:hover::before,
-.franch_button_right:hover::before {
+.franch-button-left:hover::before,
+.franch-button-right:hover::before {
   transform: translateX(0%);
 }
-.franch_button_left a,
-.franch_button_right a {
+.franch-button-left a,
+.franch-button-right a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
-.franch_button_left span,
-.franch_button_right span {
+.franch-button-left span,
+.franch-button-right span {
   font: 700 2rem/1 "";
 }
-.franch_button_left:hover span,
-.franch_button_right:hover span,
-.franch_button_left:hover i,
-.franch_button_right:hover i {
+.franch-button-left:hover span,
+.franch-button-right:hover span,
+.franch-button-left:hover i,
+.franch-button-right:hover i {
   color: white;
   z-index: 2;
 }
 .fa-arrow-right-long {
   font-size: 2rem;
 }
-.franch_button_left {
+.franch-button-left {
   margin-right: 1.5rem;
+}
+.franch-bg-contents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.franch-dotani {
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  position: absolute;
+  animation: dotani 35s ease-in-out infinite;
+}
+@keyframes dotani {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.franchise-dot {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.franchise-dot:nth-child(1) {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.franchise-dot:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.franchise-dot:nth-child(3) {
+  position: absolute;
+  top: 70%;
+  left: 0;
+}
+.franchise-dot:nth-child(4) {
+  position: absolute;
+  top: 90%;
+  left: 35%;
+}
+.franchise-dot:nth-child(5) {
+  position: absolute;
+  top: 25%;
+  right: 0%;
+}
+.franchise-dot:nth-child(6) {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+}
+.franchise-dot:nth-child(7) {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+.franchise-dot:nth-child(8) {
+  position: absolute;
+  top: 5%;
+  left: 100%;
+}
+.franchise-dot:nth-child(9) {
+  position: absolute;
+  top: 85%;
+  left: 95%;
+}
+.franch-infoani {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: infoani 80s linear infinite;
+}
+@keyframes infoani {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -300%;
+  }
+}
+.franchise-items:nth-child(1) {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.franchise-items:nth-child(2) {
+  position: absolute;
+  top: 75%;
+  left: 35%;
+}
+.franchise-items:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+}
+.franchise-items:nth-child(4) {
+  position: absolute;
+  top: 60%;
+  left: 110%;
+}
+.franchise-items:nth-child(5) {
+  position: absolute;
+  top: 10%;
+  left: 150%;
+}
+.franchise-items:nth-child(6) {
+  position: absolute;
+  top: 70%;
+  left: 180%;
+}
+.franchise-items:nth-child(7) {
+  position: absolute;
+  top: 35%;
+  left: 220%;
+}
+.franchise-item {
+  position: relative;
+  width: 23rem;
+}
+.franchise-txt {
+  position: absolute;
+  display: inline-block;
+  width: 11.5rem;
+  height: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  top: 10%;
+  left: 40%;
+  background: rgba(213, 0, 55, 0.68);
+  border-radius: 3rem 3rem 3rem 0;
+  z-index: 2;
+  color: white;
+  font: 700 1.3rem/1 "";
+}
+.franchise-img img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+@media all and (max-width: 1000px) {
+  /* common */
+  .total-title {
+    font-size: 6.4rem;
+  }
+  .total-title::after {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .total-subtitle {
+    font-size: 2rem;
+  }
+  .total-desc {
+    font-size: 1.4rem;
+  }
+
+  /* franchise */
+  .franch-button-left,
+  .franch-button-right {
+    width: 25rem;
+    height: 5rem;
+  }
+  .franch-button-left span,
+  .franch-button-right span {
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width: 900px) {
+  html,
+  body {
+    font-size: 6px;
+  }
+
+  /* common */
+  .total-title {
+    font-size: 10.2rem;
+  }
+  .total-title::after {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .total-subtitle {
+    font-size: 3.5rem;
+  }
+  .total-desc {
+    font-size: 2.5rem;
+  }
+
+  /* franchise */
+  .franchise-item {
+    width: 22rem;
+  }
+  .franchise-img img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+  }
+  .franchise-txt {
+    width: 10rem;
+    height: 1rem;
+    font-size: 1rem;
+  }
+  .franch-button-left,
+  .franch-button-right {
+    border: 0.33rem solid #222;
+    width: 35rem;
+    height: 8rem;
+  }
+  .franch-button-left span,
+  .franch-button-right span {
+    font-size: 2.8rem;
+  }
+}
+@media all and (max-width: 480px) {
+  html,
+  body {
+    font-size: 4px;
+  }
+  /* common */
+  .total-title {
+    font-size: 8rem;
+  }
+  .total-title::after {
+    width: 2rem;
+    height: 2rem;
+  }
+  .total-subtitle {
+    font-size: 4rem;
+  }
+  .total-desc {
+    font-size: 3.5rem;
+    padding: 0 3.2rem;
+  }
+  .total-hide_br {
+    display: none;
+  }
+
+  /* franchise */
+
+  .franch-button-left,
+  .franch-button-right {
+    border: 0.5rem solid #222;
+    width: 40rem;
+    height: 8rem;
+  }
+  .franch-button-left span,
+  .franch-button-right span {
+    font-size: 3.5rem;
+  }
+  .fa-arrow-right-long {
+    font-size: 2.5rem;
+  }
 }

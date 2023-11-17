@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    //가장 최신 문법을 적용시킬거야 라는 의미.
+    "target": "ESNext",
+    "module": "CommonJS",
+    //src 폴더 안에 있는 ts를 컴파일링해서 어느 폴더로 내보내줄까 하는 명령어
+    // dist라는 폴더로 보내달라는 명령어
+    "outDir": "dist",
+    //너무 엄격한 ts, 이 명령어가 false로 되어있으면 엄격함이 줄어들어서 느슨해진다.
+    "strict": false,
+    //이게 기본설정
+    // "moduleDetection": "auto"
+    //force로 하면 각 다른 파일에 변수명이 같아도 오류가 생기지 않는다.
+    "moduleDetection": "force",
+    //각각의 모듈의 데이터값을 공유할 수 있는 옵션
+    "esModuleInterop": true,
+    //npm에서 찾지 못하는 요소들을 찾지 못하는 불상사가 생길 때 노드안에 있는 앱이다 하고 찾아준다
+    "moduleResolution": "Node",
+    //서로 동일한 폴더안에서 파일을 끌고올거니깐 .을 미리 찍어줌(반복적인 경로)
+    "baseUrl": ".",
+    // 뒤쪽에 있는 폴더명을 가져오고 싶을 때
+    "paths": { "*": ["src/*"] },
+    //데이터를 컴파일링하게 될때 나중에 js뿐만 아닌
+    "sourceMap": true,
+    //이터러블 반복문이 안될 때 호환성을 위해서 씀.
+    "downlevelIteration": true,
+    //any는 어디에 붙여도 가능한 마법의 단어, 아래 설정 true를 하면 ani 값을 다 막는데 true하면 다 허용한다는 의미
+    "noImplicitAny": true,
+    //타입스트립트에서 js를 끌고와 쓸 수 있게해주는 생성자.
+    "allowJs": true,
+    //초기값 세팅이 안되어있어도 타입정의가 안되어도 잠시 유연하게 넘어가준다는 의미
+    "strictPropertyInitialization": false
+  },
+  "ts-node": { "esm": false },
+  "include": ["src"]
+}
