@@ -349,8 +349,8 @@ section {
     .footer_bottom_info_item {
       display: none;
       li {
-        color: #777777;
-        font-size: 1.4rem;
+        color: #777777 !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem;
       }
     }
@@ -376,8 +376,8 @@ section {
     .footer_bottom_item3 {
       display: flex;
       li {
-        color: #777777;
-        font-size: 1.4rem;
+        color: #777777 !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem;
       }
     }
@@ -678,7 +678,7 @@ section {
       .footer_bottom_item3 {
         flex-direction: column;
         li {
-          font-size: 2rem;
+          font-size: 2rem !important;
         }
       }
       .footer_bottom_item1,
@@ -694,7 +694,7 @@ section {
       }
       .footer_bottom_info_item {
         li {
-          font-size: 2rem;
+          font-size: 2rem !important;
         }
       }
       .sns {
@@ -707,7 +707,7 @@ section {
             margin-right: 1.6rem;
           }
           li a i {
-            font-size: 2.9rem;
+            font-size: 2.9rem !important;
           }
         }
       }
@@ -774,12 +774,12 @@ section {
       .footer_bottom_item3 {
         flex-direction: column;
         li {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
       }
       .footer_bottom_info_item {
         li {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
       }
       .sns {
@@ -791,7 +791,7 @@ section {
             margin-right: 2.5rem;
           }
           li a i {
-            font-size: 4.25rem;
+            font-size: 4.25rem !important;
           }
         }
       }

@@ -326,8 +326,8 @@ section {
   display: none;
 }
 .footer .footer_bottom .footer_bottom_info_item li {
-  color: #777777;
-  font-size: 1.4rem;
+  color: #777777 !important;
+  font-size: 1.4rem !important;
   margin-bottom: 1rem;
 }
 .footer .footer_bottom .footer_bottom_top ul li {
@@ -353,8 +353,8 @@ section {
 .footer .footer_bottom .footer_bottom_item1 li,
 .footer .footer_bottom .footer_bottom_item2 li,
 .footer .footer_bottom .footer_bottom_item3 li {
-  color: #777777;
-  font-size: 1.4rem;
+  color: #777777 !important;
+  font-size: 1.4rem !important;
   margin-bottom: 1rem;
 }
 .footer .footer_bottom .footer_bottom_item1 li:not(li:first-child):before,
@@ -617,7 +617,7 @@ section {
   .footer .footer_bottom .footer_bottom_item1 li,
   .footer .footer_bottom .footer_bottom_item2 li,
   .footer .footer_bottom .footer_bottom_item3 li {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
   .footer .footer_bottom .footer_bottom_item1 li:not(li:first-child):before,
   .footer .footer_bottom .footer_bottom_item2 li:not(li:first-child):before {
@@ -627,7 +627,7 @@ section {
     margin: 0;
   }
   .footer .footer_bottom .footer_bottom_info_item li {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
   .footer .footer_bottom .sns ul {
     justify-content: start;
@@ -639,7 +639,7 @@ section {
     margin-right: 1.6rem;
   }
   .footer .footer_bottom .sns ul li a i {
-    font-size: 2.9rem;
+    font-size: 2.9rem !important;
   }
 }
 @media screen and (max-width: 480px) {
@@ -694,10 +694,10 @@ section {
   .footer .footer_bottom .footer_bottom_item1 li,
   .footer .footer_bottom .footer_bottom_item2 li,
   .footer .footer_bottom .footer_bottom_item3 li {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   .footer .footer_bottom .footer_bottom_info_item li {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   .footer .footer_bottom .sns ul li {
     width: 8rem;
@@ -706,6 +706,6 @@ section {
     margin-right: 2.5rem;
   }
   .footer .footer_bottom .sns ul li a i {
-    font-size: 4.25rem;
+    font-size: 4.25rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
