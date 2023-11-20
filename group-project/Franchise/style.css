@@ -69,6 +69,12 @@ section {
   justify-content: center;
   overflow: hidden;
 }
+.franchise-arrow-img {
+  width: 3rem;
+  height: 2rem;
+  background: url("./img/icon_arrow_right_black.svg") no-repeat center center;
+  background-size: contain;
+}
 .franch-button-left::before,
 .franch-button-right::before {
   content: "";
@@ -97,10 +103,16 @@ section {
   font: 700 2rem/1 "";
 }
 .franch-button-left:hover span,
-.franch-button-right:hover span,
-.franch-button-left:hover i,
-.franch-button-right:hover i {
+.franch-button-right:hover span {
   color: white;
+  z-index: 2;
+}
+.franch-button-left:hover .franchise-arrow-img,
+.franch-button-right:hover .franchise-arrow-img {
+  background: url("./img/ico_arrow_right_white.svg") no-repeat center center;
+  width: 3rem;
+  height: 2rem;
+  background-size: contain;
   z-index: 2;
 }
 .fa-arrow-right-long {

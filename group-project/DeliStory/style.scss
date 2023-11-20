@@ -57,6 +57,7 @@ section {
   }
   margin-bottom: 5rem;
 }
+
 // main
 .delistory {
   width: inherit;
@@ -96,6 +97,7 @@ section {
   }
   margin-bottom: 5rem;
 }
+
 // slider
 .deli_menu {
   width: 100%;
@@ -220,7 +222,6 @@ section {
     height: 100%;
     display: flex;
     align-items: center;
-    // margin-top: 10rem;
     justify-content: left;
     .food_txt {
       text-align: left;
@@ -233,11 +234,6 @@ section {
       font: 400 2rem/1 "Noto Sans KR";
       color: map-get($color, twosomepoint);
     }
-    // .foodtxt_bar {
-    //   margin: 2rem 0;
-    //   width: 15%;
-    //   border: 0.05rem solid map-get($color, darkgray);
-    // }
     .foodtxt_desc {
       font: 400 2rem/1.5 "Noto Sans KR";
       color: map-get($color, semiblack);
@@ -303,7 +299,6 @@ section {
 }
 
 // footer
-
 .footer {
   width: 100%;
   padding: 4.6rem 4.8rem;
@@ -354,8 +349,8 @@ section {
     .footer_bottom_info_item {
       display: none;
       li {
-        color: #777777;
-        font-size: 1.4rem;
+        color: #777777 !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem;
       }
     }
@@ -381,8 +376,8 @@ section {
     .footer_bottom_item3 {
       display: flex;
       li {
-        color: #777777;
-        font-size: 1.4rem;
+        color: #777777 !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem;
       }
     }
@@ -431,6 +426,7 @@ section {
   }
 }
 
+// media
 @media screen and (max-width: 1200px) {
   html {
     font-size: 10px;
@@ -535,7 +531,6 @@ section {
 
 @media screen and (max-width: 1100px) {
   #container {
-    // 6px 기준임
     section {
       max-width: 80%;
       overflow: hidden;
@@ -683,7 +678,7 @@ section {
       .footer_bottom_item3 {
         flex-direction: column;
         li {
-          font-size: 2rem;
+          font-size: 2rem !important;
         }
       }
       .footer_bottom_item1,
@@ -712,7 +707,7 @@ section {
             margin-right: 1.6rem;
           }
           li a i {
-            font-size: 2.9rem;
+            font-size: 2.9rem !important;
           }
         }
       }
@@ -779,12 +774,12 @@ section {
       .footer_bottom_item3 {
         flex-direction: column;
         li {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
       }
       .footer_bottom_info_item {
         li {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
       }
       .sns {
@@ -796,7 +791,7 @@ section {
             margin-right: 2.5rem;
           }
           li a i {
-            font-size: 4.25rem;
+            font-size: 4.25rem !important;
           }
         }
       }

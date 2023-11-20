@@ -1,13 +1,4 @@
 const lists = document.querySelectorAll(".menu_slide_item");
-// 슬라이더 이미지 변경
-let i = 0;
-for (let el of lists) {
-  let pic = el.querySelector(".menu_img");
-  pic.style.background = `url(./deli_img/img_p_delimenu${
-    i + 1
-  }.jpg) no-repeat center center/cover`;
-  i++;
-}
 const xbtn = document.querySelector(".xbtn .close");
 const modal = document.querySelector(".modal");
 const background = document.querySelector("section");
@@ -20,7 +11,17 @@ const foodImage = document.querySelector(".modal_img");
 const foodInfoTable = document.querySelector(".foodinfo_table");
 const tableDiv = foodInfoTable.querySelectorAll("div");
 
-//json 파일을 객체로 가져오기
+// 슬라이더 이미지 변경
+let i = 0;
+for (let el of lists) {
+  let pic = el.querySelector(".menu_img");
+  pic.style.background = `url(./deli_img/img_p_delimenu${
+    i + 1
+  }.jpg) no-repeat center center/cover`;
+  i++;
+}
+
+//json 파일을 가져오기
 const url = "menu_info.json";
 fetch(url)
   .then((info) => info.json())
@@ -94,7 +95,6 @@ trigger.addEventListener("click", (e) => {
 });
 
 // /*sticky*/
-
 window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 0);
 
@@ -108,7 +108,6 @@ window.addEventListener("scroll", () => {
 });
 
 // swiper
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -123,22 +122,19 @@ const swiper = new Swiper(".swiper", {
 
   breakpoints: {
     100: {
-      slidesPerView: 1, //브라우저가 768보다 클 때
+      slidesPerView: 1, //브라우저가 100보다 클 때
     },
     750: {
-      slidesPerView: 3, //브라우저가 768보다 클 때
+      slidesPerView: 3, //브라우저가 750보다 클 때
       spaceBetween: 20,
     },
     990: {
-      slidesPerView: 4, //브라우저가 1024보다 클 때
+      slidesPerView: 4, //브라우저가 990보다 클 때
       spaceBetween: 20,
     },
     1200: {
-      slidesPerView: 5, //브라우저가 1024보다 클 때
+      slidesPerView: 5, //브라우저가 1200보다 클 때
       spaceBetween: 20,
     },
   },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
 });
