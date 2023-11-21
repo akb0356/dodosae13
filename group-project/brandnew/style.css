@@ -21,7 +21,7 @@
 
 .brand {
   left: 0;
-  top: 10rem;
+  top: 20rem;
 }
 
 .total-title::after {
@@ -43,12 +43,11 @@
   margin-bottom: 4rem;
   word-break: keep-all;
 }
-
 .mySwiper {
   width: 135.9rem;
   position: absolute;
   right: -20rem;
-  top: 0;
+  top: 13rem;
 }
 .swiper-wrapper {
   display: flex;
