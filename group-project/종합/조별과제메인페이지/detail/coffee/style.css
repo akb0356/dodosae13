@@ -642,14 +642,14 @@ section .menu_1 .modal .textbox .textbox02 .body .red {
 /* menu1 modal aromanote*/
 
 section .menu_1 #modal_2 .img {
-  background: url("/imgs/coffee/aromanote.png") center center;
+  background: url("./imgs/coffee/aromanote.png") center center;
   background-size: cover;
 }
 
 /* menu1 modal decaf*/
 
 section .menu_1 #modal_3 .img {
-  background: url("/imgs/coffee/swpdecaf.png") center center;
+  background: url("./imgs/coffee/swpdecaf.png") center center;
   background-size: cover;
 }
 
@@ -879,21 +879,21 @@ section .menu_2 .modal.block {
 /* menu2 modal longblack*/
 
 section .menu_2 #modal_5 .img {
-  background: url("/imgs/coffee/longblack496.png");
+  background: url("./imgs/coffee/longblack496.png");
   /* background-size: cover; */
 }
 
 /* menu2 modal lemonTea*/
 
 section .menu_2 #modal_6 .img {
-  background: url("/imgs/coffee/honey496.png");
+  background: url("./imgs/coffee/honey496.png");
   /* background-size: cover; */
 }
 
 /* menu2 modal strawberry*/
 
 section .menu_2 #modal_7 .img {
-  background: url("/imgs/coffee/strawberry496.png");
+  background: url("./imgs/coffee/strawberry496.png");
   /* background-size: cover; */
 }
 
@@ -1222,21 +1222,21 @@ section .menu_2 #modal_7 .img {
   /* menu2 modal longblack*/
 
   section .menu_2 #modal_5 .img {
-    background: url("/imgs/coffee/longblack450.png") center center;
+    background: url("./imgs/coffee/longblack450.png") center center;
     background-size: cover;
   }
 
   /* menu2 modal lemonTea*/
 
   section .menu_2 #modal_6 .img {
-    background: url("/imgs/coffee/honey450.png") center center;
+    background: url("./imgs/coffee/honey450.png") center center;
     background-size: cover;
   }
 
   /* menu2 modal strawberry*/
 
   section .menu_2 #modal_7 .img {
-    background: url("/imgs/coffee/strawberry450.png") center center;
+    background: url("./imgs/coffee/strawberry450.png") center center;
     background-size: cover;
   }
 }

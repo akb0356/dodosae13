@@ -381,7 +381,7 @@ header.sticky .trigger span {
 }
 
 #air .total-subtitle {
-  font: 900 2.4rem/1.5 "Noto Sans KR";
+  font: 900 2.4rem/1.5 "Montserrat";
 }
 
 #air .total-desc {
@@ -855,6 +855,7 @@ header.sticky .trigger span {
 #notice .total-title {
   font: normal 9rem/1 "Montserrat";
   margin-bottom: 3rem;
+  color: #000;
 }
 
 #notice .total-title::after {
@@ -1265,6 +1266,7 @@ header.sticky .trigger span {
   #air .total-title {
     margin-top: 0rem;
     margin-bottom: 7.2rem;
+    color: #000;
   }
 
   #air .total-title::after {

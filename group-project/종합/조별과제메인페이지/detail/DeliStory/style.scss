@@ -31,7 +31,7 @@ section {
     display: flex;
     li {
       a {
-        font: 700 1.4rem/1 "Noto Sans KR";
+        font: 700 1.4rem "Noto Sans KR";
       }
       &:first-child {
         a {
@@ -67,7 +67,7 @@ section {
   display: flex;
   flex-direction: column;
   .deli_title {
-    font: 700 7.2rem/1 "Noto Sans KR";
+    font: 700 7.2rem "Noto Sans KR";
     margin-bottom: 3rem;
   }
 }
@@ -77,11 +77,11 @@ section {
   .deli_txt {
     padding-right: 10vw;
     .deli_Engtitle {
-      font: 5.5rem/1.2 "Montserrat";
+      font: 5.5rem/1.5 "Montserrat";
       margin-bottom: 3rem;
     }
     .deli_subtitle {
-      font: 700 3.2rem/1.2 "";
+      font: 900 3.4rem/1.5 "";
       word-break: keep-all;
       margin-bottom: 3rem;
     }
@@ -573,6 +573,8 @@ section {
       width: 100%;
       max-width: 100%;
       margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   .top {
@@ -702,7 +704,7 @@ section {
       }
       .footer_bottom_info_item {
         li {
-          font-size: 2rem;
+          font-size: 2rem !important;
         }
       }
       .sns {
@@ -769,7 +771,7 @@ section {
       .footer_bottom_info_item {
         display: block;
         li {
-          font-size: 3rem;
+          font-size: 3rem !important;
         }
       }
       .footer_bottom_top {

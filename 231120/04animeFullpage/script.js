@@ -4,7 +4,8 @@ const sec2_Title = document.querySelector("#sec2 h1.title");
 const sec2_slider = document.querySelector("#sec2 .slider_wrap");
 
 //section2 slider
-const s_Icons = document.querySelectorAll(".slide_icons");
+//  li잡아오는거 잊지마시길
+const s_Icons = document.querySelectorAll(".slide_icons li");
 const s_Left = document.querySelector(".slide_btn.left");
 const s_Right = document.querySelector(".slide_btn.right");
 const Bg = document.querySelector("#sec2");
@@ -18,9 +19,7 @@ s_Icons.forEach((li) => {
         if (target == i) {
           s_Slider[i].classList.add("on");
           s_Icons[i].classList.add("active");
-          Bg.style.backgroundImage = `url("../portfolio/img/sec2_bg_${[
-            i,
-          ]}.png")`;
+          Bg.style.backgroundImage = `url("../portfolio/img/sec2_bg_${i}.png")`;
         }
       }
     }
