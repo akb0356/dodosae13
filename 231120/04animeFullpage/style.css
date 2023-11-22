@@ -1,3 +1,5 @@
+@import url("./font.css");
+
 /* reset */
 body {
   margin: 0;
@@ -232,15 +234,54 @@ body.nav_active nav {
   justify-content: space-around;
 }
 #sec3 {
-  background-image: linear-gradient(to top, #6e45e2 0%, #88d3ce 100%);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+h1 {
+  font-family: "Back to Black Demo";
+  font-size: 100px;
+  display: flex;
+  letter-spacing: -3px;
+  color: white;
+}
+#sec3 h1 {
+  transform: translateX(-100px);
+}
+#sec3 h1 span {
+  opacity: 0;
+}
+#sec3 h1 span:nth-child(7) {
+  margin-left: 50px;
+}
+.sec3_svg {
+  fill: #667eea;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 #sec4 {
-  background-image: linear-gradient(
-    to top,
-    #5271c4 0%,
-    #b19fff 48%,
-    #eca1fe 100%
-  );
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  overflow: hidden;
+}
+#sec4 h1 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  z-index: 3;
+  opacity: 1;
+}
+#sec4 .img_wrap {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: #009efd; */
+}
+.tail {
+  width: calc(100% / 20);
+  height: calc(100% / 20);
+  background: #009efd;
 }
 .inner {
   display: flex;
@@ -249,6 +290,8 @@ body.nav_active nav {
   width: 1200px;
   height: 100vh;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 .inner h1 img {
   width: 400px;
