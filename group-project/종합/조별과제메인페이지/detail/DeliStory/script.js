@@ -11,7 +11,7 @@ const foodImage = document.querySelector(".modal_img");
 const foodInfoTable = document.querySelector(".foodinfo_table");
 const tableDiv = foodInfoTable.querySelectorAll("div");
 
-// 슬라이더 이미지 변경
+// slider image change
 let i = 0;
 for (let el of lists) {
   let pic = el.querySelector(".menu_img");
@@ -21,7 +21,7 @@ for (let el of lists) {
   i++;
 }
 
-//json 파일을 가져오기
+//json import
 const url = "menu_info.json";
 fetch(url)
   .then((info) => info.json())
@@ -45,7 +45,6 @@ fetch(url)
         allergy.innerHTML = infoDataI.allergy;
 
         foodImage.innerHTML = "";
-
         const imgElement = document.createElement("img");
         imgElement.src = infoDataI.image;
         foodImage.appendChild(imgElement);
@@ -56,7 +55,7 @@ fetch(url)
     console.log(err);
   });
 
-//xbtn에 on 클래스 빼기
+//xbtn remove on
 xbtn.addEventListener("click", () => {
   modal.classList.remove("on");
   background.style.filter = "";
@@ -109,10 +108,9 @@ window.addEventListener("scroll", () => {
 
 // swiper
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
-  slidesPerView: 5, // 한번에 보여줄 슬라이드 개수
+  slidesPerView: 5,
 
   // Navigation arrows
   navigation: {

@@ -1,53 +1,3 @@
-// let prv = document.querySelector("#prv");
-// let next = document.querySelector("#next");
-
-// document.querySelector("#prv").addEventListener("click", () => {
-//   document.querySelector(".slideimg").style.transform = "translate(-1120px)";
-
-// });
-// document.querySelector("#next").addEventListener("click", () => {
-//   document.querySelector(".slideimg").style.transform = "translate(0)";
-
-// });
-
-// var slide = new Swiper('.swiper', {
-//   slidesPerView: '5', // 한 슬라이드에 보여줄 갯수
-//   spaceBetween: 5, // 슬라이드 사이 여백
-//   loop: false, // 슬라이드 반복 여부
-//   pagination: true, // pager 여부
-//   // autoplay: { // 자동 슬라이드 설정
-//   //     delay: 2000, // 시간 설정
-//   //     disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-//   // },
-//   navigation: { // 버튼 사용자 지정
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//   },
-
-// })
-
-// if (window.innerWidth > 480 ) {
-//   var slide = new Swiper(".swiper", {
-//     slidesPerView: "5",
-//     spaceBetween: 5,
-//     loop: false,
-//     pagination: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//           autoplay: {
-//       delay: 2000,
-//       disableOnInteraction: false,
-//     },
-//     },
-
-//   });
-// } else {
-
-//   slide.destroy();
-//   slide = undefined;
-// }
-
 /*header*/
 const trigger = document.querySelector(".trigger");
 const dropmenu = document.querySelector(".dropmenu");
@@ -99,9 +49,8 @@ function initializeSwiper() {
       loop: false,
       pagination: true,
       autoplay: {
-        // 자동 슬라이드 설정
-        delay: 2000, // 시간 설정
-        disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        delay: 2000, 
+        disableOnInteraction: false, 
       },
       navigation: {
         nextEl: ".swiper-button-next",
@@ -118,10 +67,8 @@ function destroySwiper() {
   }
 }
 
-// 초기화
 initializeSwiper();
 
-// 창 크기 변경 감지
 window.addEventListener("resize", function () {
   if (window.innerWidth > 900) {
     initializeSwiper();

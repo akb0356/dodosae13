@@ -92,7 +92,6 @@ changeText();
 //brand slider
 
 let swipe = new Swiper(".mySwiper", {
-  loop: true,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",

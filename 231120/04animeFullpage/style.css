@@ -225,6 +225,7 @@ body.nav_active nav {
   text-indent: -9999px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .slide_icons li.active {
   width: 20px;
@@ -307,4 +308,13 @@ h1 {
 }
 .sl_04 {
   background: violet;
+}
+
+@media screen and (max-width:999px) {
+  .inner {
+    width: 100vw;
+  }
+  #sec2 .inner {
+    
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext" /*  */,
+    "module": "CommonJS",
+    "outDir": "dist" /*  저장할 공간을 정의 */,
+    "strict": false,
+    "moduleDetection": "force" /* 기본적으로 ts 는 1개의 파일을 독립적으로 인식하지 않아 force 하면 독립적으로 인식 */,
+    "esModuleInterop": true /* 각각의 data 공유하는데 이상 없게끔 */,
+    "moduleResolution": "Node",
+    "baseUrl": "." /* 반복적인 경로를 이것으로 약속 */,
+    "paths": {
+      "*": ["src/*"]
+    } /* 앞이 아닌 뒷쪽에 있는 폴더명 가져올때 사용 */,
+    "sourceMap": true /*  */,
+    "downlevelIteration": true /* 이터러블 반복문 쓸 수 있게끔 호환성 */,
+    "noImplicitAny": true /* any라는 치트값의 유효성 */,
+    "allowJs": true /* 타입스크립트 안에서 js 쓸 수 있게 하겠다.*/,
+    "strictPropertyInitialization": false /* 정의되지 않은 클래스값을 완화 시켜주는 false */
+  },
+  "ts-node": {
+    "esm": false
+  },
+  "include": ["src"]
+}

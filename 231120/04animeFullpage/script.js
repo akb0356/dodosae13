@@ -4,16 +4,23 @@ const sec2_Title = document.querySelector("#sec2 h1.title");
 const sec2_slider = document.querySelector("#sec2 .slider_wrap");
 
 //section2 slider
-//  li잡아오는거 잊지마시길
 const s_Icons = document.querySelectorAll(".slide_icons li");
 const s_Left = document.querySelector(".slide_btn.left");
 const s_Right = document.querySelector(".slide_btn.right");
 const Bg = document.querySelector("#sec2");
 const s_Slider = document.querySelectorAll(".sec2_slider li");
 
+const s_Reset = () => {
+  s_Slider.forEach((elem, idx) => {
+    s_Slider[idx].classList.remove("on");
+    s_Icons[idx].classList.remove("active");
+  });
+};
+
 s_Icons.forEach((li) => {
   li.addEventListener("click", (e) => {
     let target = e.target.dataset.index;
+    s_Reset();
     if (li.tagName === "LI") {
       for (let i = 0; i < s_Icons.length; i++) {
         if (target == i) {
@@ -25,6 +32,14 @@ s_Icons.forEach((li) => {
     }
   });
 });
+
+const next = (e) => {
+  e.preventDefault();
+  let crtSlide = document.querySelector(".sec2_slider li.on")
+  let i = crtSlide.dataset.index;
+  s_Reset()
+};
+s_Right.addEventListener("click", next);
 
 nav_btn.addEventListener("click", (e) => {
   body.classList.toggle("nav_active");

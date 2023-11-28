@@ -365,6 +365,7 @@ header.sticky .trigger span {
   font: 900 9rem/1 "Noto Sans KR";
   margin-top: 4rem;
   margin-bottom: 7.2rem;
+  color: #000;
 }
 
 #air .total-title::after {
