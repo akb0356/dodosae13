@@ -1,0 +1,22 @@
+.Todoitem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.Todoitem .checkBox_col {
+  width: 20px;
+}
+.Todoitem .title_col {
+  flex: 1;
+  color: gray;
+}
+.Todoitem .btn_col button {
+  cursor: pointer;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

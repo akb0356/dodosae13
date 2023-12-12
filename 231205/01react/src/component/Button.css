@@ -1,0 +1,21 @@
+.Button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  white-space: nowrap;
+  font-family: "Hahmlet";
+}
+.Button_default {
+  background: #ececec;
+  color: #000;
+}
+.Button_positive {
+  background: #64c964;
+  color: white;
+}
+.Button_negative {
+  background: #fd565f;
+  color: white;
+}
