@@ -83,40 +83,6 @@ nav::after {
   rotate: 135deg;
   z-index: -10;
 }
-.navWrap li:nth-child(8) > .submenu {
-  width: 60rem;
-  left: -430%;
-}
-.navWrap li:nth-child(9) > .submenu {
-  width: 20rem;
-  left: -100%;
-}
-.navWrap li:nth-child(1):hover > .submenu {
-  display: block;
-}
-.navWrap li:nth-child(2):hover > .submenu {
-  display: block;
-}
-.navWrap li:nth-child(8):hover > .submenu {
-  display: block;
-}
-.navWrap li:nth-child(8) > .submenu ul {
-  display: flex;
-  flex-direction: row;
-}
-.navWrap li:nth-child(8) > .submenu ul li > ul {
-  display: flex;
-  flex-direction: column;
-}
-.navWrap li:nth-child(8) > .submenu::before {
-  left: 73%;
-}
-.navWrap li:nth-child(9) > .submenu::before {
-  left: 55%;
-}
-.navWrap li:nth-child(9):hover > .submenu {
-  display: block;
-}
 .navWrap li > .submenu > ul {
   border-top: 2px solid #ffe85a;
   width: 100%;
@@ -151,11 +117,67 @@ nav::after {
   margin-top: 1rem;
   background-color: #eaeaea;
 }
+.navWrap li:nth-child(8) > .submenu {
+  width: 60rem;
+  left: -430%;
+}
+.navWrap li:nth-child(9) > .submenu {
+  width: 20rem;
+  left: -100%;
+}
+.navWrap li:nth-child(1):hover > .submenu {
+  display: block;
+}
+.navWrap li:nth-child(2):hover > .submenu {
+  display: block;
+}
+.navWrap li:nth-child(8):hover > .submenu {
+  display: block;
+}
+.navWrap li:nth-child(8) > .submenu ul {
+  display: flex;
+  flex-direction: row;
+}
+.navWrap li:nth-child(8) > .submenu ul li > ul {
+  display: flex;
+  flex-direction: column;
+}
+.navWrap li:nth-child(8) > .submenu::before {
+  left: 73%;
+}
+.navWrap li:nth-child(9) > .submenu::before {
+  left: 55%;
+}
+.navWrap li:nth-child(9):hover > .submenu {
+  display: block;
+}
 .navWrap li:not(:nth-child(8), :nth-child(9)) > .submenu ul li:hover {
   background: #ffe85a;
 }
 .navWrap li:nth-child(8) > .submenu ul li .submenu-wrap li:hover {
   background: #ffe85a;
+}
+.navWrap li:nth-child(9):hover > .submenu ul li .submenu-wrap li {
+  display: flex;
+  float: left;
+  align-items: center;
+}
+.navWrap li:nth-child(9):hover > .submenu ul li .submenu-wrap li::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: url(https://oimg1.kbstar.com/img/omoney/2016/ocalculator/bg_flag.png)
+    no-repeat 0 0;
+}
+.navWrap
+  li:nth-child(9):hover
+  > .submenu
+  ul
+  li:first-child
+  .submenu-wrap
+  li:nth-child(2):before {
+  background-position: 0 -70rem;
 }
 .navWrap li > .submenu ul li a {
   font-size: 1.3rem;

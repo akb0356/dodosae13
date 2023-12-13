@@ -1,0 +1,91 @@
+.nav-header {
+  display: flex;
+  font-display: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+.nav-header * {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.nav-header div:last-child,
+.nav-header div:last-child span {
+  margin-right: 0;
+}
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav-menu-area {
+  display: flex;
+  justify-content: center;
+}
+.nav-menu-area .menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 20px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 20px;
+}
+.search-box {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+.search-box input {
+  border: none;
+  margin-left: 5px;
+}
+.search-box input:focus {
+  outline: none;
+}
+
+/* ProductCard */
+
+.ProductCard {
+  padding: 20px 0;
+}
+.ProductCard img {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* login form */
+.login-area {
+  display: flex;
+  justify-content: center;
+}
+.login-form {
+  width: 40em;
+}
+.login-form button {
+  width: 100%;
+}
+
+/* ProductDetail */
+.product-detail-img {
+  display: flex;
+  justify-content: flex-end;
+}
+.product-info {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.choice {
+  font-size: 11px;
+  font-weight: bold;
+  color: #63786a;
+  height: 20px;
+}
+.add-button {
+  margin-top: 20px;
+  width: 50%;
+}
