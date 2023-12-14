@@ -195,6 +195,7 @@ header.active .header-lnbwrap,
 header.active .header-lnb {
   top: 8.8rem;
 }
+
 /* ----------------Top slider---------------- */
 main {
   width: 100%;
@@ -271,6 +272,7 @@ main {
 .swiper-button-prev {
   color: #000 !important;
 }
+
 /*----------------Section CSS-----------------*/
 section {
   width: 100%;

@@ -153,6 +153,7 @@ const magazineswiper = new Swiper(".magazine-sliderwrap", {
   slidesPerGroup: 1,
   spaceBetween: 10,
   autoplay: false,
+  observer: true,
   observeParents: true,
   preventClicks: true,
   preventClicksPropagation: false,
