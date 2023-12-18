@@ -1,0 +1,143 @@
+@import url(./reset.css);
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 7rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 99999;
+}
+header h1 a svg {
+  fill: white;
+}
+header nav ul li {
+  float: left;
+  margin-right: 4rem;
+}
+header nav ul li:last-child {
+  margin-right: 0;
+}
+header nav ul li a {
+  font: 500 1.8rem "Noto Sans";
+  color: white;
+  transition: color 0.5s;
+}
+header nav ul li a:hover {
+  color: var(--sub-color);
+}
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main .maintitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .maintitle svg {
+  margin-bottom: 1rem;
+}
+main .maintitle p {
+  position: relative;
+  width: 50%;
+  padding-top: 7rem;
+  color: white;
+  font: 300 1.5rem/2 "Noto Sans";
+  text-align: center;
+}
+main .maintitle p::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 5rem;
+  background: white;
+}
+.scrolleffect {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 5rem;
+  display: inline-block;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.scrolleffect:hover span {
+  animation: move 2s ease-in infinite;
+}
+.scrolleffect span {
+  position: absolute;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+}
+@keyframes move {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+main .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -50;
+}
+main .background::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(./img/002.jpg) no-repeat center center/cover;
+  mix-blend-mode: overlay; /* Multiply 효과 적용 */
+  opacity: 0.4;
+}
+main .background h3 {
+  position: absolute;
+  font: 34.8rem "YesevaOne";
+  color: var(--main-color);
+  text-shadow: 0px 2px 5px rgba(238, 238, 238, 0.15);
+  letter-spacing: 10.44px;
+  font-style: italic;
+  transform: skewY(-15deg) rotate(15deg);
+}
+main .background h3:first-child {
+  top: 10%;
+  left: -5%;
+}
+main .background h3:last-child {
+  right: -60%;
+  bottom: 10%;
+}

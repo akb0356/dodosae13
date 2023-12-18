@@ -86,11 +86,15 @@ nav {
   z-index: inherit;
 }
 .searchbar-header {
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+.searchbar-header > i.fa-xmark {
+  font-size: 3rem !important;
+}
+
 .logo {
   width: 15rem;
   height: 2.8rem;
