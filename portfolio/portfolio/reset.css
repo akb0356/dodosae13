@@ -8,7 +8,13 @@
   font-style: normal;
   font-weight: normal;
 }
-
+@font-face {
+  font-family: "Welland";
+  src: url("./font/Welland-FREE.otf");
+  src: url("./font/Welland-FREE.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 * {
   margin: 0;
@@ -110,6 +116,7 @@ video {
   font-family: "Noto Sans", sans-serif;
   vertical-align: baseline;
 }
+
 body {
   width: 100%;
   display: flex;

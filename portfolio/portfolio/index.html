@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <div class="wrap">
       <header>
         <h1 class="logo">
           <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="45"
-              viewBox="0 0 30 51"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="45">
               <path
                 d="M22.2353 32.0471L21.1765 37.2001C20.8941 38.4001 20.8235 39.1059 19.553 39.1059H13.0588C13.0588 39.2471 13.0588 39.3177 13.0588 39.4589H21.0353H21.8824L22.6588 32.0471H22.2353Z"
               />
@@ -49,8 +44,9 @@
         </nav>
       </header>
       <main>
+        <div class="blackBox"></div>
         <section class="maintitle">
-          <svg width="744" height="141" xmlns="http://www.w3.org/2000/svg">
+          <svg xmlns="http://www.w3.org/2000/svg">
             <path
               d="M711.305 48.2606C711.305 44.0774 712.52 40.434 714.949 37.3303C717.513 34.0917 720.751 32.4724 724.665 32.4724C728.848 32.4724 732.491 33.7544 735.595 36.3183C738.834 38.7472 740.453 41.9184 740.453 45.8317C740.453 50.0149 739.171 53.7258 736.607 56.9644C734.178 60.068 731.007 61.6199 727.094 61.6199C722.91 61.6199 719.2 60.4054 715.961 57.9764C712.857 55.4125 711.305 52.1739 711.305 48.2606ZM725.677 83.0756C727.296 83.0756 728.443 83.0756 729.118 83.0756C730.467 83.0756 731.614 83.278 732.559 83.6829C733.638 84.0877 735.325 85.1672 737.619 86.9215C740.048 88.6757 741.667 90.7673 742.477 93.1963C743.422 95.4903 743.894 98.1891 743.894 101.293C743.894 102.372 743.826 103.519 743.692 104.734C743.557 105.813 743.489 106.623 743.489 107.163C740.925 113.91 738.699 118.903 736.809 122.141C733.841 126.999 730.13 131.115 725.677 134.488C725.137 134.758 724.395 134.893 723.45 134.893C720.616 134.893 718.188 133.409 716.163 130.44C715.894 128.281 716.636 125.447 718.39 121.939C720.279 118.565 721.224 115.934 721.224 114.045C721.224 112.965 721.156 112.156 721.021 111.616C719.132 109.187 717.58 106.758 716.366 104.329C714.746 101.225 713.937 98.3915 713.937 95.8276C713.937 94.4782 714.207 92.9938 714.746 91.3745C715.286 89.6203 716.636 88.001 718.795 86.5166C720.954 84.8973 723.248 83.7503 725.677 83.0756Z"
               fill="white"
@@ -93,7 +89,7 @@
             />
           </svg>
           <p>
-            untitled는 무제라는 의미입니다. <br />저는 스스로를 한정짓는 것보다
+            Untitled는 무제라는 의미입니다. <br />저는 스스로를 한정짓는 것보다
             그 무엇이든 제목을 붙이는대로 <br />변화할 가능성을 품고 있는 자로
             정의하고 싶습니다.
           </p>
@@ -104,29 +100,17 @@
           <h3>PORTFOLIO</h3>
         </section>
       </main>
-      <section id="about">
-        <h3 class="section-title">About</h3>
-        <div class="aboutsection">
-          <div class="introduce">
-            <img src="" alt="" />
-            <article></article>
-          </div>
-          <div class="about-skills">
-            <div class="about-experience-wrap">
-              <h3 class="about-skills-title">Experience</h3>
-              <ul class="about-experience">
-                <li><span>2016</span> 졸업 및 수상경력</li>
-                <li><span>2016</span> 졸업 및 수상경력</li>
-                <li><span>2016</span> 졸업 및 수상경력</li>
-                <li><span>2016</span> 졸업 및 수상경력</li>
-                <li><span>2016</span> 졸업 및 수상경력</li>
-                <li><span>2016</span> 졸업 및 수상경력</li>
-              </ul>
+      <div class="mainContentWrap">
+        <section id="about">
+          <h3 class="section-title">About</h3>
+          <div class="aboutsection">
+            <div class="introduce">
+              <img src="https://via.placeholder.com/440x300" alt="" />
+              <article></article>
             </div>
-            <div class="about-skills-wrap">
-              <h3 class="about-skills-title">Skills</h3>
-              <div class="graphicskills">
-                <span>Graphic Design Skills</span>
+            <div class="about-skills">
+              <div class="about-experience-wrap">
+                <h3 class="about-skills-title">Experience</h3>
                 <ul class="about-experience">
                   <li><span>2016</span> 졸업 및 수상경력</li>
                   <li><span>2016</span> 졸업 및 수상경력</li>
@@ -136,21 +120,35 @@
                   <li><span>2016</span> 졸업 및 수상경력</li>
                 </ul>
               </div>
-              <div class="softwareskills">
-                <span>Software Skills</span>
-                <ul class="about-experience">
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                  <li><span>2016</span> 졸업 및 수상경력</li>
-                </ul>
+              <div class="about-skills-wrap">
+                <h3 class="about-skills-title">Skills</h3>
+                <div class="graphicskills">
+                  <span>Graphic Design Skills</span>
+                  <ul class="about-experience">
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                  </ul>
+                </div>
+                <div class="softwareskills">
+                  <span>Software Skills</span>
+                  <ul class="about-experience">
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                    <li><span>2016</span> 졸업 및 수상경력</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </body>
 </html>

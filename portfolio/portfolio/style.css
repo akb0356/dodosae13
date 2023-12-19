@@ -1,22 +1,49 @@
 @import url(./reset.css);
 
+/*------------ common ------------*/
 .wrap {
   width: 100%;
   height: 100%;
 }
-
-header {
+section:not(main > section) {
   width: 100%;
-  height: 7rem;
-  padding: 5rem;
+  height: 100vh;
+  padding: 15rem;
+  padding-top: 12rem;
+}
+.mainContentWrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.section-title {
+  margin-top: 5rem;
+  font: 5.5rem "Welland";
+}
+
+/*------------ header ------------*/
+header {
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  padding: 0rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  z-index: 99999;
+  z-index: 50;
+  transition: border-bottom 0.3s;
+  border-bottom: 1px solid transparent;
+}
+header h1 {
+  width: 3.5rem;
+  height: 5rem;
 }
 header h1 a svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   fill: white;
+  transition: all 0.3s;
 }
 header nav ul li {
   float: left;
@@ -30,14 +57,30 @@ header nav ul li a {
   color: white;
   transition: color 0.5s;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header.fixed nav ul li a:hover {
   color: var(--sub-color);
 }
+header.fixed {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid black;
+}
+header.fixed h1 a svg {
+  fill: var(--main-color);
+}
+header.fixed nav ul li a {
+  color: var(--main-color);
+}
+
+/*------------ main ------------*/
 main {
   width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 main .maintitle {
@@ -48,23 +91,23 @@ main .maintitle {
   gap: 2rem;
 }
 main .maintitle svg {
+  width: 75rem;
+  height: 15rem;
+  margin: 0 auto;
   margin-bottom: 1rem;
 }
 main .maintitle p {
   position: relative;
   width: 50%;
-  padding-top: 7rem;
   color: white;
   font: 300 1.5rem/2 "Noto Sans";
   text-align: center;
 }
 main .maintitle p::before {
   content: "";
-  position: absolute;
   display: block;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  margin-bottom: 3rem;
   width: 1px;
   height: 5rem;
   background: white;
@@ -72,8 +115,6 @@ main .maintitle p::before {
 .scrolleffect {
   position: absolute;
   bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
   width: 2.5rem;
   height: 5rem;
   display: inline-block;
@@ -83,6 +124,7 @@ main .maintitle p::before {
   padding: 0.5rem;
   border-radius: 3rem;
   cursor: pointer;
+  z-index: 50;
 }
 .scrolleffect:hover span {
   animation: move 2s ease-in infinite;
@@ -140,4 +182,25 @@ main .background h3:first-child {
 main .background h3:last-child {
   right: -60%;
   bottom: 10%;
+}
+main .blackBox {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+}
+
+/*------------ about ------------*/
+.aboutsection {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+}
+.introduce {
+  border: 1px solid red;
+  flex: 1;
+}
+.about-skills {
+  border: 1px solid red;
+  flex: 2;
 }
