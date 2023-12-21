@@ -15,7 +15,13 @@
   font-style: normal;
   font-weight: normal;
 }
-
+@font-face {
+  font-family: "Indira_K";
+  src: url("./font/Indira_K.ttf");
+  src: url("./font/Indira_K.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -115,6 +121,8 @@ video {
   font-size: 10px;
   font-family: "Noto Sans", sans-serif;
   vertical-align: baseline;
+  scroll-behavior: smooth;
+  color: var(--main-color);
 }
 
 body {

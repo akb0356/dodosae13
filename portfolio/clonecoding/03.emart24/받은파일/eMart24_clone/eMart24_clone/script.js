@@ -40,36 +40,46 @@ mobGnbDrop.forEach((drop, index) => {
 
 /* Top slide */
 
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
+const mainslide = new Swiper(".mainslide-swiper", {
+  // centeredSlides: true,
+  watchOverflow: false,
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
+    el: ".numberpage",
+    type: "fraction",
+    renderFraction: function (currentClass, totalClass) {
+      return (
+        '<span class="' +
+        currentClass +
+        '"></span> <span class="' +
+        totalClass +
+        '"></span>'
+      );
+    },
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    },
+});
+const mainslideprogress = new Swiper(".mainslide-swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
   },
 });
+mainslide.controller.control = mainslideprogress;
 
 /* touchtab */
 const plusone = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "/product/plusone.html");
+    .setAttribute("src", "./product/plusone.html");
   document.querySelector("#plusone").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plustwo").style = "background: none; color: #999;";
@@ -78,7 +88,7 @@ const plusone = () => {
 const plustwo = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "/product/plustwo.html");
+    .setAttribute("src", "./product/plustwo.html");
   document.querySelector("#plustwo").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";
@@ -87,7 +97,7 @@ const plustwo = () => {
 const plusnew = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "/product/plusnew.html");
+    .setAttribute("src", "./product/plusnew.html");
   document.querySelector("#plusnew").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";

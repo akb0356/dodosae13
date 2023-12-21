@@ -2,6 +2,7 @@
 const header = document.querySelector("header");
 const blackBox = document.querySelector(".blackBox");
 const mainContentWrap = document.querySelector(".mainContentWrap");
+const scrolleffect = document.querySelector(".scrolleffect");
 
 let scrollNum = 0;
 let documentHeight = 0;
@@ -12,16 +13,14 @@ window.addEventListener("scroll", () => {
   documentHeight = document.body.scrollHeight;
   if (scrollNum >= coverHeight) {
     header.classList.add("fixed");
-    blackBox.style.display = "none";
-    blackBox.style.zIndex = "-555";
-  } else if (scrollNum <= coverHeight) {
+    scrolleffect.style.opacity = `${scrollNum / 1000}`;
+  } else {
     header.classList.remove("fixed");
-    blackBox.style.display = "block";
-    blackBox.style.zIndex = "555";
     blackBox.style.backgroundColor = `rgba(0, 0, 0, ${scrollNum / 1000})`;
+    blackBox.style.zIndex = `${scrollNum / 1000}`;
+    scrolleffect.style.opacity = `${1 - scrollNum / 1000}`;
   }
-  if (scrollNum < coverHeight) {
-    blackBox.style.display = "none";
-    blackBox.style.zIndex = ""; // 또는 다른 원하는 값으로 설정
-  }
+});
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
 });

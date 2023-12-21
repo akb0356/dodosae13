@@ -203,15 +203,16 @@ main {
   justify-content: center;
   padding-top: 12.3rem;
 }
-.swiper {
+.mainslide-swiper {
+  position: relative;
   display: block;
   max-width: 128rem;
   width: 100vw;
   border-radius: 0 0 4.8rem 4.8rem;
-  /* box-shadow: 8rem 8rem 12.8rem rgba(0, 0, 0, 0.095); */
   z-index: -1;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.112);
+  overflow: hidden;
 }
-
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: #fece6a !important;
   position: absolute;
@@ -234,43 +235,101 @@ main {
   object-fit: cover;
 }
 
-.autoplay-progress {
+.pagination-wrap {
+  position: relative;
+  display: flex;
+  top: -3rem;
+  left: 3.2rem;
+  width: 40rem;
+  height: 7rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.113);
+}
+.pagination-swiper-pager {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pause-button {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 0.1px;
+  top: 2rem;
+}
+.swiper-button-prev {
+  left: 40%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrev.png)
+    no-repeat center center/cover;
+}
+.swiper-button-prev:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrevHover.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next {
+  left: 65%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNext.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNextHover.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button {
   position: absolute;
-  right: 1rem;
-  bottom: 1.6rem;
-  z-index: 10;
-  width: 2.5rem;
-  height: 2.5rem;
+  left: 15%;
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPause.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPauseHover.png)
+    no-repeat center center/cover;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 0rem;
+}
+.pagination-index-wrap {
+  position: relative;
+  width: 60%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1xrem;
-  font-weight: bold;
-  color: #000;
+  gap: 18rem;
+  margin-right: 1rem;
 }
-
-.autoplay-progress svg {
-  --progress: 0;
+.numberpage .swiper-pagination-current {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 0.4rem;
-  stroke: #000;
-  fill: none;
-  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
+  color: #f9bb00;
 }
-.autoplay-progress span {
+.numberpage .swiper-pagination-total {
   position: absolute;
-  left: 0.7rem;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999999;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  color: #000 !important;
+.pagination-index-wrap h3 {
+  font-size: 1.5rem;
+}
+.swiper-pagination {
+  width: 70% !important;
+  height: 0.2rem !important;
+  top: initial !important;
+  left: initial !important;
+  z-index: 0;
 }
 
 /*----------------Section CSS-----------------*/
@@ -294,7 +353,7 @@ section {
 
 /*-------------- EVENT CSS ---------------*/
 #event {
-  margin-top: 10rem;
+  margin-top: 5rem;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -450,15 +509,7 @@ iframe {
 }
 
 /*--------------buisness---------------*/
-/* #mainContents {
-  max-width: 100%;
-  width: 100%;
-  align-self: center;
-  margin-top: 10rem;
-}
-#mainContents h1 {
-  font-size: 3.8rem;
-} */
+
 #buisness {
   width: 100%;
   position: relative;
@@ -1826,7 +1877,7 @@ footer {
     font-size: 3.2rem;
   }
   .buisness-menu .description .caption {
-    font-size: 3.2rem;
+    font-size: 2.3rem;
     color: #9999;
     line-height: 5rem;
   }
@@ -1846,7 +1897,7 @@ footer {
   }
   /*----------------Map Service CSS-----------------*/
   .mapservice-tagwrap > ul > li > a {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   /*----------------Magazine CSS-----------------*/
