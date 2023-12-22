@@ -8,21 +8,41 @@
 // 3. on이 사라지면 input 태그도 같이 checked속성이 사라져야한다.
 
 // 각 선택자를 click하면 on을 부여하고 형제요소 input태그에도 체크를한다.
-//1번을 제외하고 class on을 붙이고 input도 체크함
+// 1번을 제외하고 class on을 붙이고 input도 체크함
 const visualCheckbox = document.querySelectorAll(".visualCheckbox");
 const checkAll = document.querySelector(".check-All .visualCheckbox");
-visualCheckbox.forEach((element, index) => {
-  const siblingInput = element
-    .closest(".checkbox")
-    .querySelectorAll('input[type="checkbox"]');
-  element.addEventListener("click", (e) => {
-    if (index !== 0) {
-      element.classList.toggle("on");
-      siblingInput.forEach(
-        (checkInput) => (checkInput.checked = !checkInput.checked)
-      );
+
+
+console.log(visualCheckbox);
+
+//전체선택 전체해제
+checkAll.addEventListener("click", () => {
+  checkAll.classList.toggle("on");
+  visualCheckbox.forEach((checkBox) => {
+    if (checkAll.classList.contains("on")) {
+      checkBox.classList.add("on");
+    } else {
+      checkBox.classList.remove("on");
     }
   });
 });
 
-//checkall을 누르면 전체가 눌리고 
+
+
+// 전체선택 전체 해제
+
+// visualCheckbox.forEach((element, index) => {
+//   const siblingInput = element
+//     .closest(".checkbox")
+//     .querySelectorAll('input[type="checkbox"]');
+//   element.addEventListener("click", (e) => {
+//     if (index !== 0) {
+//       element.classList.toggle("on");
+//       siblingInput.forEach(
+//         (checkInput) => (checkInput.checked = !checkInput.checked)
+//       );
+//     }
+//   });
+// });
+
+//checkall을 누르면 전체가 눌리고

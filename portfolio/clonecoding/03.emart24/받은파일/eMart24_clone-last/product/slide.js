@@ -78,10 +78,3 @@ const stopSlide = () => {
   clearInterval(timer);
   timer = undefined;
 };
-
-// slides.addEventListener("mouseenter", () => {
-//   stopSlide();
-// });
-// slides.addEventListener("mouseleave", () => {
-//   autoSlide();
-// });

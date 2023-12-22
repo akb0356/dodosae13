@@ -245,6 +245,7 @@ main {
   background: white;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.113);
+  z-index: 0;
 }
 .pagination-swiper-pager {
   width: 40%;
@@ -289,6 +290,14 @@ main {
   background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPause.png)
     no-repeat center center/cover;
 }
+.swiper-pause-button.play {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlay.png)
+    no-repeat center center/cover;
+}
+.swiper-pause-button.play:hover {
+  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlayHover.png)
+    no-repeat center center/cover;
+}
 .swiper-pause-button:hover {
   background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPauseHover.png)
     no-repeat center center/cover;
@@ -329,7 +338,6 @@ main {
   height: 0.2rem !important;
   top: initial !important;
   left: initial !important;
-  z-index: 0;
 }
 
 /*----------------Section CSS-----------------*/
@@ -1363,6 +1371,7 @@ footer {
     position: absolute;
     right: 20px;
     top: 25px;
+    cursor: pointer;
   }
   .header-mobwrap .trigger span {
     position: absolute;
@@ -1516,7 +1525,14 @@ footer {
   .mobheader-snb-icon img {
     width: 100%;
   }
+
   /*----------------Business CSS-----------------*/
+  .yellowBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: #ffebc1;
+  }
 
   /*----------------Map Service CSS-----------------*/
   .mapservice-search {
@@ -1764,23 +1780,36 @@ footer {
   main {
     width: 100%;
   }
-  .swiper {
+  .mainslide-swiper {
     height: 44.9vw;
     width: 84vw;
+    box-shadow: none;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-  .autoplay-progress {
-    display: none;
-  }
-  .yellowBackground {
+  .swiper-slide a {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    background: #ffebc1;
   }
+
+  .pagination-wrap {
+    background: transparent;
+    box-shadow: none;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+  }
+  .pagination-swiper-pager,
+  .numberpage {
+    display: none;
+  }
+  .pagination-index-wrap {
+    width: 100%;
+  }
+  .swiper-pagination {
+    width: 100% !important;
+    height: 0.3rem !important;
+  }
+
   /*----------------Event CSS-----------------*/
   #event {
     display: flex;
@@ -1877,7 +1906,7 @@ footer {
     font-size: 3.2rem;
   }
   .buisness-menu .description .caption {
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     color: #9999;
     line-height: 5rem;
   }
@@ -1897,7 +1926,7 @@ footer {
   }
   /*----------------Map Service CSS-----------------*/
   .mapservice-tagwrap > ul > li > a {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   /*----------------Magazine CSS-----------------*/

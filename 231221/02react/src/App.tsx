@@ -37,8 +37,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   font-family: 'Source Sans 3', sans-serif;
-  background: ${(props) => props.theme.bgColor}
-  color: ${(props) => props.theme.textColor}
+  background: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.textColor};
 }
 ol, ul {
 	list-style: none;

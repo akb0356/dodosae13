@@ -41,7 +41,6 @@ mobGnbDrop.forEach((drop, index) => {
 /* Top slide */
 
 const mainslide = new Swiper(".mainslide-swiper", {
-  // centeredSlides: true,
   watchOverflow: false,
   loop: true,
   autoplay: {
@@ -66,6 +65,17 @@ const mainslide = new Swiper(".mainslide-swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const playpausebtn = document.querySelector(".swiper-pause-button");
+playpausebtn.addEventListener("click", (e) => {
+  playpausebtn.classList.toggle("play");
+  if (playpausebtn.classList.contains("play")) {
+    mainslide.autoplay.stop();
+  } else {
+    mainslide.autoplay.start();
+  }
+});
+
 const mainslideprogress = new Swiper(".mainslide-swiper", {
   loop: true,
   pagination: {
@@ -79,7 +89,7 @@ mainslide.controller.control = mainslideprogress;
 const plusone = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plusone.html");
+    .setAttribute("src", "/product/plusone.html");
   document.querySelector("#plusone").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plustwo").style = "background: none; color: #999;";
@@ -88,7 +98,7 @@ const plusone = () => {
 const plustwo = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plustwo.html");
+    .setAttribute("src", "/product/plustwo.html");
   document.querySelector("#plustwo").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";
@@ -97,7 +107,7 @@ const plustwo = () => {
 const plusnew = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plusnew.html");
+    .setAttribute("src", "/product/plusnew.html");
   document.querySelector("#plusnew").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";
