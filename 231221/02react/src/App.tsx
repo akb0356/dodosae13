@@ -2,10 +2,11 @@ import React from "react";
 import "./App.css";
 import Router from "./Router";
 import { createGlobalStyle } from "styled-components";
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,19 +27,22 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-*{
-  box-sizing: border-box;
-}
 body {
-	line-height: 1;
   font-family: 'Source Sans 3', sans-serif;
-  background: ${(props) => props.theme.bgColor};
-  color: ${(props) => props.theme.textColor};
+	background: ${(props) => props.theme.bgColor};
+	color: ${(props) => props.theme.textColor};
+	line-height: 1;
+}
+a {
+  text-decoration: none;
+	color: inherit;
+}
+* {
+  box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -55,9 +59,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a {
-  text-decoration:none;
-}
 `;
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
     <div>
       <GlobalStyle />
       <Router />
+      <ReactQueryDevtools initialIsOpen={true} />
     </div>
   );
 }

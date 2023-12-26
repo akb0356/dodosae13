@@ -12,8 +12,8 @@ const Router = () => {
         <Route path="/" element={<Coins />} />
         <Route path="/:coinId/*" element={<Coin />} />
         {/* chart라는 문자열이 있으면 chart보여주고 price잇음 price보여줘 */}
-        <Route path="chart" element={<Chart />} />
-        <Route path="price" element={<Price />} />
+        {/* <Route path="chart" element={<Chart />} />
+        <Route path="price" element={<Price />} /> */}
       </Routes>
     </BrowserRouter>
   );

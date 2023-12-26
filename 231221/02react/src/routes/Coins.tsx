@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
+import { fetchCoins } from "../Api";
+import { Helmet } from "react-helmet";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.accentColor};
@@ -68,31 +71,40 @@ interface CoinInterface {
 }
 
 const Coins = () => {
-  //coin 데이터를 가져왔을 때 뿌려주는 일을 한다
-  const [coins, setCoins] = useState<CoinInterface[]>([]);
-  //데이터를 가져온건지 가져오고있는건지 상태관리하는 일
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(
-        "https://my-json-server.typicode.com/Divjason/coinlist/coins"
-      );
-      const json = await response.json();
-      setCoins(json.slice(0, 100));
-      console.log(json.slice(0, 100));
-      setLoading(false);
-    })();
-  }, []);
+  // allcoin이라고 정의할게.
+  const { isLoading, data } = useQuery<CoinInterface[] | undefined>(
+    "allCoins",
+    fetchCoins
+  );
+  console.log(isLoading, data);
+  // //coin 데이터를 가져왔을 때 뿌려주는 일을 한다
+  // const [coins, setCoins] = useState<CoinInterface[]>([]);
+  // //데이터를 가져온건지 가져오고있는건지 상태관리하는 일
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await fetch(
+  //       "https://my-json-server.typicode.com/Divjason/coinlist/coins"
+  //     );
+  //     const json = await response.json();
+  //     setCoins(json.slice(0, 100));
+  //     console.log(json.slice(0, 100));
+  //     setLoading(false);
+  //   })();
+  // }, []);
   return (
     <Container>
+      <Helmet>
+        <Title>Coin List</Title>
+      </Helmet>
       <Header>
         <Title>Virtual Money - CoinList</Title>
       </Header>
-      {loading ? (
+      {isLoading ? (
         <Loader>Loading...</Loader>
       ) : (
         <CoinList>
-          {coins.map((coin) => (
+          {data?.map((coin) => (
             <Coin key={coin.id}>
               <Link to={`/${coin.id}`} state={`${coin.name}`}>
                 <Img

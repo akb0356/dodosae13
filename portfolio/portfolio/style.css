@@ -54,7 +54,7 @@ header nav ul li:last-child {
   margin-right: 0;
 }
 header nav ul li a {
-  font: 500 1.8rem "Noto Sans";
+  font: 500 1.8rem "Noto Sans KR";
   color: white;
   transition: color 0.5s;
 }
@@ -99,7 +99,7 @@ main .maintitle .maintitleimgwrap {
 main .maintitle p {
   width: 50%;
   color: white;
-  font: 300 2.2rem/2 "Noto Sans";
+  font: 300 2.2rem/2 "Noto Sans KR";
   text-align: center;
 }
 main .maintitle p::before {
@@ -195,12 +195,32 @@ main .blackBox {
   gap: 5rem;
 }
 .introduce {
-  border: 1px solid red;
   width: calc((100% - 5rem) / 2.5);
   overflow: hidden;
 }
+.introduce img {
+  width: 50rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: center center;
+  margin-bottom: 1rem;
+}
+.introduce article h3 {
+  font: normal 2.3rem/1.7 "PuradakGentleGothicR";
+  margin-bottom: 1rem;
+}
+
+.introduce article h3 em {
+  font: inherit;
+  text-decoration: underline wavy 1px rgba(0, 0, 0, 0.2);
+  text-underline-offset: 0.8rem;
+}
+.introduce article p {
+  font: 400 1.3rem/2 "Noto Sans KR";
+  word-break: keep-all;
+  letter-spacing: -1px;
+}
 .about-skills {
-  border: 1px solid blue;
   width: calc((100% - 5rem) / 1.5);
 }
 .about-skills-title {
@@ -219,7 +239,7 @@ main .blackBox {
   color: white;
   font: 1.5rem/3 "Welland";
   letter-spacing: 0.15rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 .about-experience-wrap {
   width: 100%;
@@ -264,7 +284,7 @@ main .blackBox {
   border-top: 2px dotted var(--main-color);
 }
 .about-experience-contents > .about-experience li p {
-  font: 500 1.5rem "Noto Sans";
+  font: 500 1.5rem "Noto Sans KR";
 }
 .graphicskills > .about-experience,
 .softwareskills > .about-experience {
@@ -274,7 +294,6 @@ main .blackBox {
 }
 .graphicskills > .about-experience li,
 .softwareskills > .about-experience li {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -283,10 +302,11 @@ main .blackBox {
 .graphicskills > .about-experience li em,
 .softwareskills > .about-experience li em {
   font: 2rem "Indira_K";
+  margin-bottom: 1rem;
 }
 .graphicskills > .about-experience li p,
 .softwareskills > .about-experience li p {
-  font: 500 1.5rem "Noto Sans";
+  font: 500 1.5rem "Noto Sans KR";
 }
 .graphicskills > .about-experience li:last-child,
 .softwareskills > .about-experience li:last-child {
@@ -298,3 +318,38 @@ main .blackBox {
   font-style: normal;
   margin-bottom: 1rem;
 }
+.graphicskills > .about-experience li > em {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.graphicskills > .about-experience li > em > i {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--main-color);
+  border-radius: 0.5rem;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 1.3rem "Noto Sans KR";
+  user-select: none;
+  color: var(--main-color);
+  transition: 1s;
+  overflow: hidden;
+}
+.softwareskills > .about-experience li > em > i {
+  position: relative;
+  border: 1px solid var(--main-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  float: left;
+  margin-right: 1rem;
+}
+
