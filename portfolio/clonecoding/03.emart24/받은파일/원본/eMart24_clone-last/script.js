@@ -40,56 +40,36 @@ mobGnbDrop.forEach((drop, index) => {
 
 /* Top slide */
 
-const mainslide = new Swiper(".mainslide-swiper", {
-  watchOverflow: false,
-  loop: true,
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".numberpage",
-    type: "fraction",
-    renderFraction: function (currentClass, totalClass) {
-      return (
-        '<span class="' +
-        currentClass +
-        '"></span> <span class="' +
-        totalClass +
-        '"></span>'
-      );
-    },
+    el: ".swiper-pagination",
+    type: "progressbar",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-const playpausebtn = document.querySelector(".swiper-pause-button");
-playpausebtn.addEventListener("click", (e) => {
-  playpausebtn.classList.toggle("play");
-  if (playpausebtn.classList.contains("play")) {
-    mainslide.autoplay.stop();
-  } else {
-    mainslide.autoplay.start();
-  }
-});
-
-const mainslideprogress = new Swiper(".mainslide-swiper", {
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    },
   },
 });
-mainslide.controller.control = mainslideprogress;
 
 /* touchtab */
 const plusone = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plusone.html");
+    .setAttribute("src", "/product/plusone.html");
   document.querySelector("#plusone").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plustwo").style = "background: none; color: #999;";
@@ -98,7 +78,7 @@ const plusone = () => {
 const plustwo = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plustwo.html");
+    .setAttribute("src", "/product/plustwo.html");
   document.querySelector("#plustwo").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";
@@ -107,51 +87,12 @@ const plustwo = () => {
 const plusnew = () => {
   document
     .querySelector("#contentframe")
-    .setAttribute("src", "./product/plusnew.html");
+    .setAttribute("src", "/product/plusnew.html");
   document.querySelector("#plusnew").style =
     "background: #f9bb00; color: #fff;";
   document.querySelector("#plusone").style = "background: none; color: #999;";
   document.querySelector("#plustwo").style = "background: none; color: #999;";
 };
-
-// const eventswiper = new Swiper(".product-inner", {
-//   wrapperClass: "event-products",
-//   slideClass: "event-product",
-//   spaceBetween: 15,
-//   slidesPerView: 4,
-//   slidesPerGroup: 4,
-//   centeredSlides: false,
-//   observer: true,
-//   observeParents: true,
-//   pagination: {
-//     el: ".eventswiper-pagination",
-//     clickable: true,
-//     dynamicBullets: false,
-//   },
-//   autoplay: true,
-//   breakpoints: {
-//     300: {
-//       slidesPerView: 1,
-//       slidesPerGroup: 1,
-//     },
-//     640: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 1,
-//     },
-//     750: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 2,
-//     },
-//     700: {
-//       slidesPerView: 3,
-//       slidesPerGroup: 3,
-//     },
-//     1000: {
-//       slidesPerView: 4,
-//       slidesPerGroup: 4,
-//     },
-//   },
-// });
 
 // magazine swiper li tag create
 const url = "slide.json";

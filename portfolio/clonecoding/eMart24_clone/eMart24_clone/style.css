@@ -1,10 +1,10 @@
 /*----------------Reset CSS-----------------*/
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* width: 100vw; */
 }
 ul,
 li {
@@ -13,6 +13,7 @@ li {
 a {
   text-decoration: none;
 }
+
 html,
 body,
 h1,
@@ -20,12 +21,10 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a {
+h6 {
   font-size: 10px;
   font-weight: normal;
   font-family: "Noto Sans KR", sans-serif;
-  color: var(--color-sub);
 }
 body {
   width: 100%;
@@ -36,16 +35,6 @@ body {
   font-size: 10px;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-:root {
-  /* color */
-  --color-main: #f9bb00;
-  --color-sub: #333;
-
-  /* title */
-  --size-maintitle: 3.8rem;
-  --size-subtitle: 1.6rem;
 }
 
 /*----------------Header CSS-----------------*/
@@ -62,14 +51,14 @@ header {
 }
 .header-pcwrap {
   width: 100%;
-  max-width: 128rem;
+  /* max-width: 128rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 0 2.4rem;
-  background: white;
+  background: #fff;
   position: fixed;
   z-index: 5;
 }
@@ -95,7 +84,7 @@ header {
   color: #999;
 }
 .header-subwrap .header-snb a:hover {
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .header-mainwrap {
   width: 128rem;
@@ -135,10 +124,10 @@ header {
 .header-center .header-gnb .gnbmenu a {
   font-size: 2rem;
   font-weight: 400;
-  color: var(--color-sub);
+  color: #333;
 }
 .header-center .header-gnb .gnbmenu a:hover {
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .header-lnbwrap {
   width: 100vw;
@@ -153,6 +142,7 @@ header {
   z-index: 999999;
   transition: 0.3s;
 }
+
 .header-center .header-lnb {
   width: 100%;
   height: 0rem;
@@ -168,6 +158,7 @@ header {
   color: #ebebeb;
   z-index: 999999;
 }
+
 .header-gnbwrap:hover .header-lnbwrap {
   opacity: 1;
   height: 22.8rem;
@@ -190,8 +181,9 @@ header {
   color: #ebebeb;
 }
 .header-center .header-lnb .lnbmenu a:hover {
-  color: var(--color-main);
+  color: #f9bb00;
 }
+
 header.active .header-pcwrap {
   background: rgba(255, 255, 255, 0.5);
 }
@@ -211,138 +203,74 @@ main {
   justify-content: center;
   padding-top: 12.3rem;
 }
-.mainslide-swiper {
-  position: relative;
+.swiper {
   display: block;
   max-width: 128rem;
   width: 100vw;
   border-radius: 0 0 4.8rem 4.8rem;
+  /* box-shadow: 8rem 8rem 12.8rem rgba(0, 0, 0, 0.095); */
   z-index: -1;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.112);
-  overflow: hidden;
 }
+
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: #fece6a !important;
   position: absolute;
   bottom: 10%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 1.8rem;
-  background: white;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.pagination-wrap {
-  position: relative;
-  display: flex;
-  top: -3rem;
-  left: 3.2rem;
-  width: 40rem;
-  height: 7rem;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.113);
-  z-index: 0;
-}
-.pagination-swiper-pager {
-  width: 40%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pause-button {
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  margin-top: 0.1px;
-  top: 2rem;
-}
-.swiper-button-prev {
-  left: 40%;
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrev.png)
-    no-repeat center center/cover;
-}
-.swiper-button-prev:hover {
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPrevHover.png)
-    no-repeat center center/cover;
-}
-.swiper-button-next {
-  left: 65%;
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNext.png)
-    no-repeat center center/cover;
-}
-.swiper-button-next:hover {
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderNextHover.png)
-    no-repeat center center/cover;
-}
-.swiper-pause-button {
+
+.autoplay-progress {
   position: absolute;
-  left: 15%;
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPause.png)
-    no-repeat center center/cover;
-}
-.swiper-pause-button.play {
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlay.png)
-    no-repeat center center/cover;
-}
-.swiper-pause-button.play:hover {
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPlayHover.png)
-    no-repeat center center/cover;
-}
-.swiper-pause-button:hover {
-  background: url(https://www.emart24.co.kr/assets/assets/imgs/sliderPauseHover.png)
-    no-repeat center center/cover;
-}
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 0rem;
-}
-.pagination-index-wrap {
-  position: relative;
-  width: 60%;
-  height: 100%;
+  right: 1rem;
+  bottom: 1.6rem;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18rem;
-  margin-right: 1rem;
+  font-size: 1xrem;
+  font-weight: bold;
+  color: #000;
 }
-.numberpage .swiper-pagination-current {
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+
+.autoplay-progress svg {
+  --progress: 0;
   position: absolute;
-  color: var(--color-main);
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 0.4rem;
+  stroke: #000;
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
 }
-.numberpage .swiper-pagination-total {
+.autoplay-progress span {
   position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999999;
+  left: 0.7rem;
 }
-.pagination-index-wrap h3 {
-  font-size: 1.5rem;
-}
-.swiper-pagination {
-  width: 70% !important;
-  height: 0.2rem !important;
-  top: initial !important;
-  left: initial !important;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
 }
 
 /*----------------Section CSS-----------------*/
@@ -351,7 +279,7 @@ content {
 }
 section {
   width: 100%;
-  background: white;
+  background: #fff;
 }
 
 .viewContentWrap {
@@ -367,15 +295,20 @@ section {
 /*-------------- EVENT CSS ---------------*/
 #event {
   margin-top: 10rem;
+  overflow: hidden;
   display: flex;
-  gap: 1.6rem;
+  flex-direction: row;
+  padding: 2rem;
 }
 .event-left {
   display: flex;
   flex-direction: column;
 }
 .event-title h2 {
-  font: 700 var(--size-maintitle) / 4.5rem "Noto Sans KR";
+  color: #333;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 4.5rem;
 }
 .event-tit-plus a {
   display: flex;
@@ -384,35 +317,38 @@ section {
   margin-top: 2rem;
 }
 .event-tit-plus a p {
-  font: 500 var(--size-subtitle) "Noto Sans KR";
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .event-tit-plus img {
   width: 2.4rem;
   height: 2.4rem;
 }
+
 .event-tab {
   height: 5.2rem;
   border-radius: 4px 4px 4px 24px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   margin-top: 2rem;
   color: #999;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.1s;
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
 #plusone {
-  background: var(--color-main);
+  background: #f9bb00;
   color: #fff;
 }
 .event-tab:hover {
-  background: var(--color-main);
-  color: white;
-  box-shadow: 1rem 1rem 1.5rem rgba(240, 180, 1, 0.2);
+  background: #f9bb00;
+  color: #fff;
 }
 .event-tab-left {
-  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -425,16 +361,19 @@ section {
   font-size: 1.7rem;
   line-height: 1.7rem;
 }
-.event-right {
-  width: 90rem;
-  height: 46rem;
-  margin-left: 1rem;
-  margin: 0 auto;
-}
 
+.event-right {
+  width: 97rem;
+  height: 46rem;
+  padding: 2rem 0;
+  margin-left: 1rem;
+  overflow: hidden;
+}
 iframe {
   width: 100%;
   height: 100%;
+  border: none;
+  margin-left: 1rem;
 }
 
 /**/
@@ -442,12 +381,15 @@ iframe {
   margin-top: 10rem;
 }
 .only-title h2 {
-  font: 700 var(--size-maintitle) "Noto Sans KR";
-  color: black;
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .only-title p {
-  font: 400 var(--size-subtitle) / 2.4 "Noto Sans KR";
-  color: var(--color-main);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #f9bb00;
   margin-top: 1rem;
 }
 .products {
@@ -458,24 +400,23 @@ iframe {
   gap: 1.5rem;
 }
 .product {
-  background: white;
+  background: #fff;
   border: 1px solid #ebebeb;
   border-radius: 2.4rem;
   width: 29.6rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.05);
   transition: 0.1s;
 }
 .product:hover {
-  border: 4px solid var(--color-main);
+  border: 4px solid #f9bb00;
   transform: translateY(-1rem);
 }
 .product a > img {
   width: 100%;
-  border-radius: 2rem;
-  transition: all 0.3s;
+  transition: 0.1s;
 }
 .product:hover a > img {
   transform: translateY(-0.5rem);
@@ -489,6 +430,7 @@ iframe {
   align-items: center;
   position: relative;
 }
+
 .product-info img {
   width: 3.3rem;
 }
@@ -497,16 +439,26 @@ iframe {
   width: 5.6rem;
 }
 .product-tit {
-  font: 500 2rem "Noto Sans KR";
+  font-size: 2rem;
+  color: #333;
+  font-weight: 500;
 }
 
 .product-desc {
   font-size: 1.7rem;
   color: #999999;
-  text-align: center;
 }
 
 /*--------------buisness---------------*/
+/* #mainContents {
+  max-width: 100%;
+  width: 100%;
+  align-self: center;
+  margin-top: 10rem;
+}
+#mainContents h1 {
+  font-size: 3.8rem;
+} */
 #buisness {
   width: 100%;
   position: relative;
@@ -514,9 +466,8 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 9.6rem;
   gap: 40px;
-  margin-top: 10rem;
 }
 .yellowBackground {
   position: absolute;
@@ -550,15 +501,18 @@ iframe {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 1.6rem;
   z-index: 1;
 }
-.title-description h1 {
-  font: 700 var(--size-maintitle) "Noto Sans KR";
-  color: black;
+.sectionName {
+  font-size: 4.8rem;
+  font-weight: 700;
 }
-.title-description p {
-  font: 400 var(--size-subtitle) / 2.4 "Noto Sans KR";
-  margin-top: 1rem;
+.title-description h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #333;
 }
 .description {
   width: 100%;
@@ -583,7 +537,7 @@ iframe {
   transition: 0.2s;
   overflow: hidden;
   padding: 2.4rem;
-  background: white;
+  background: #fff;
   cursor: pointer;
   border-radius: 2.4rem;
   gap: 4.5rem;
@@ -614,7 +568,7 @@ iframe {
   width: 100%;
   font-size: 2.8rem;
   font-weight: 500;
-  color: black;
+  color: #000;
 }
 .iconwrap {
   width: 4rem;
@@ -633,6 +587,7 @@ iframe {
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 2.55rem;
+  color: #000;
 }
 .icon {
   width: 100%;
@@ -640,30 +595,10 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-.icon .icon-coin,
-.icon .icon-coin2 {
-  position: absolute;
-  animation: dropdown 2s ease-in-out infinite;
-}
-.icon .icon-coin2 {
-  animation-delay: 2.3s;
-}
-@keyframes dropdown {
-  0% {
-    top: -100%;
-  }
-  50% {
-    top: 10%;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
 }
 .icon img {
-  width: 100%;
+  width: 24rem;
+  height: 14.3rem;
   transition: 0.3s;
 }
 .buisness-menu li:nth-child(1):hover .icon img {
@@ -691,9 +626,6 @@ iframe {
   }
   50% {
     transform: translateY(10%);
-  }
-  100% {
-    transform: translateY(0%);
   }
 }
 
@@ -733,7 +665,7 @@ iframe {
 }
 .mapservice-searchbarwrap > input {
   width: 100%;
-  border: 2px solid var(--color-main);
+  border: 2px solid #f9bb00;
   border-radius: 0.8rem 0.8rem 0.8rem 3.2rem;
   padding: 2rem 2.5rem;
   font: 400 2.4rem "Noto Sans KR";
@@ -767,10 +699,11 @@ iframe {
   transition: all 0.2s;
 }
 .mapservice-tagwrap > ul > li:hover {
-  background: var(--color-main);
+  background: #f9bb00;
 }
 .mapservice-tagwrap > ul > li > a {
   font: 500 1.7rem "Noto Sans KR";
+  color: #333;
 }
 .mapservice-imgwrap {
   width: 40%;
@@ -880,7 +813,7 @@ iframe {
 .appservice-description .titlewrap .title h2 {
   font-size: 2rem;
   font-weight: 400;
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .appservice-description .titlewrap .title h1 {
   font-size: 4.8rem;
@@ -895,6 +828,7 @@ iframe {
 .appservice-description .titlewrap .button .button-detail a {
   font-size: 1.5rem;
   font-weight: 500;
+  color: #333;
 }
 .appservice-description .titlewrap .button .icon {
   width: 2.4rem;
@@ -924,7 +858,7 @@ iframe {
   padding: 0.8rem 2.4rem;
   border-radius: 0.8rem;
   box-shadow: 0rem 0.8rem 2.4rem rgba(0, 0, 0, 0.05);
-  background-color: var(--color-main);
+  background-color: #f9bb00;
   cursor: pointer;
 }
 .appservice-description .downloadwrap .button .icon {
@@ -985,7 +919,7 @@ iframe {
 .magazine-txt-wrap > p {
   margin-top: 1.2rem;
   font: 400 1.6rem/2 "Noto Sans KR";
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .magazine-snsicon-wrap {
   width: 100%;
@@ -1131,10 +1065,10 @@ iframe {
 }
 .magazine-swiper-slide:hover .magazin-slide-snstitle h2,
 .magazine-swiper-slide:hover .magazin-slide-title {
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .magazine-swiper-slide:hover .magazin-slide-snstitle img {
-  border-color: var(--color-main);
+  border-color: #f9bb00;
 }
 .magazin-slide-snstitle {
   max-width: 90%;
@@ -1151,6 +1085,7 @@ iframe {
 }
 .magazin-slide-snstitle h2 {
   font: 400 2.4rem "Noto Sans KR";
+  color: #333;
 }
 .magazin-slide-title {
   width: 90%;
@@ -1207,6 +1142,7 @@ iframe {
 }
 
 .customer-notice-button-txt span {
+  color: #333;
   font: 400 1.5rem "Noto Sans KR";
   margin-right: 1rem;
 }
@@ -1227,7 +1163,7 @@ iframe {
   margin-bottom: 2.4rem;
 }
 .customer-notice-lists li:hover a {
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .customer-notice-lists li:last-child {
   margin-bottom: 0;
@@ -1285,10 +1221,11 @@ footer {
 .footer-fnb a {
   font-size: 1.2rem;
   font-weight: 300;
+  color: #333;
   cursor: pointer;
 }
 .footer-fnb a:hover {
-  color: var(--color-main);
+  color: #f9bb00;
 }
 .footer-fnb li:nth-child(1) a {
   font-weight: 500;
@@ -1305,6 +1242,7 @@ footer {
 .footer-contentswrap .title p {
   font-size: 1.2rem;
   font-weight: 300;
+  color: #333;
   margin-bottom: 3.6rem;
 }
 .footer-contentswrap .info p {
@@ -1323,7 +1261,7 @@ footer {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
-  background-color: white;
+  background-color: #fff;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1354,7 +1292,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: #fff;
   }
   .mobheader-center .mainlogo {
     max-width: 11.3rem;
@@ -1373,13 +1311,12 @@ footer {
     position: absolute;
     right: 20px;
     top: 25px;
-    cursor: pointer;
   }
   .header-mobwrap .trigger span {
     position: absolute;
     width: 100%;
     height: 2px;
-    background: var(--color-main);
+    background: #f9bb00;
     transition: 0.3s;
     z-index: 5;
   }
@@ -1410,7 +1347,7 @@ footer {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: #fff;
     position: absolute;
     top: 6rem;
     left: 1000px;
@@ -1485,6 +1422,7 @@ footer {
   .gnb-list-detail h2 a {
     display: inline-block;
     padding: 0.5rem 0;
+    color: #333;
     font-size: 1.4rem;
     font-weight: 500;
   }
@@ -1514,6 +1452,7 @@ footer {
     font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 1;
+    color: #333;
   }
   .mobheader-snb-icon {
     width: 2rem;
@@ -1525,15 +1464,61 @@ footer {
   .mobheader-snb-icon img {
     width: 100%;
   }
-
   /*----------------Business CSS-----------------*/
-  .yellowBackground {
+  #buisness {
     width: 100%;
-    height: 100%;
-    border-radius: 0;
-    background: #ffebc1;
+  }
+  .title-buisness {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .buisness-title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .title-description h2 {
+    display: none;
+  }
+  .title-buisness .buisness-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title-buisness .buisness-menu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .title-buisness .buisness-menu li a {
+    width: 50%;
   }
 
+  .buisness-menu .description .title h1 {
+    font-size: 3.2rem;
+  }
+  .buisness-menu .description .caption {
+    font-size: 3.2rem;
+    color: #9999;
+    line-height: 5rem;
+  }
+  .buisness-menu .icon {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .buisness-menu .iconwrap {
+    display: none;
+  }
+  .buisness-menu .icon img {
+    width: 154px;
+    height: 100%;
+  }
   /*----------------Map Service CSS-----------------*/
   .mapservice-search {
     width: 100%;
@@ -1617,7 +1602,7 @@ footer {
   .downloadwrap .button {
     width: 100%;
     flex: 1;
-    background: var(--color-main);
+    background: #f9bb00;
     text-align: center;
     border-radius: 1.5rem;
   }
@@ -1638,6 +1623,7 @@ footer {
   .appservice-description .downloadwrap .button a h1 {
     font-size: 3rem;
     font-weight: 500;
+    color: #333;
   }
 
   /*----------------Magazine CSS-----------------*/
@@ -1779,36 +1765,23 @@ footer {
   main {
     width: 100%;
   }
-  .mainslide-swiper {
+  .swiper {
     height: 44.9vw;
     width: 84vw;
-    box-shadow: none;
   }
-  .swiper-slide a {
-    width: 100%;
-    height: 100%;
-  }
-
-  .pagination-wrap {
-    background: transparent;
-    box-shadow: none;
-    width: 80vw;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 3rem;
-  }
-  .pagination-swiper-pager,
-  .numberpage {
+  .swiper-button-next,
+  .swiper-button-prev {
     display: none;
   }
-  .pagination-index-wrap {
+  .autoplay-progress {
+    display: none;
+  }
+  .yellowBackground {
     width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: #ffebc1;
   }
-  .swiper-pagination {
-    width: 100% !important;
-    height: 0.3rem !important;
-  }
-
   /*----------------Event CSS-----------------*/
   #event {
     display: flex;
@@ -1864,65 +1837,7 @@ footer {
     border: none;
     overflow: hidden;
   }
-  /* buisness */
-  #buisness {
-    width: 100%;
-  }
-  .title-buisness {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  .buisness-title {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .title-description h2 {
-    display: none;
-  }
-  #buisness .buisness-menu {
-    display: flex;
-    flex-direction: column;
-  }
-  .title-buisness .buisness-menu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .title-buisness .buisness-menu li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .title-buisness .buisness-menu li a {
-    width: 50%;
-  }
 
-  .buisness-menu .description .title h1 {
-    font-size: 3.2rem;
-  }
-  .buisness-menu .description .caption {
-    font-size: 3.2rem;
-    color: #9999;
-    line-height: 5rem;
-  }
-  .buisness-menu .icon {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-  .buisness-menu .iconwrap {
-    display: none;
-  }
-  .buisness-menu .icon img {
-    width: 154px;
-    height: 100%;
-  }
   /*----------------Map Service CSS-----------------*/
   .mapservice-tagwrap > ul > li > a {
     font-size: 3rem;

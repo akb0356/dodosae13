@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
 }
 ul,
 li {
@@ -108,4 +107,3 @@ body {
   justify-content: center;
   align-items: center;
 }
-
