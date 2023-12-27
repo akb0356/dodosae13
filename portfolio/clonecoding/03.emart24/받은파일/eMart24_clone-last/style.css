@@ -44,7 +44,7 @@ body {
   --color-sub: #333;
 
   /* title */
-  --size-maintitle: 3.8rem;
+  --size-maintitle: 4.8rem;
   --size-subtitle: 1.6rem;
 }
 
@@ -61,8 +61,7 @@ header {
   display: none;
 }
 .header-pcwrap {
-  width: 100%;
-  max-width: 128rem;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -427,7 +426,6 @@ section {
 }
 .event-right {
   width: 90rem;
-  height: 46rem;
   margin-left: 1rem;
   margin: 0 auto;
 }
@@ -520,9 +518,9 @@ iframe {
 }
 .yellowBackground {
   position: absolute;
-  left: 0;
-  width: 409.2rem;
-  height: 74.8rem;
+  left: -5vw;
+  width: 410rem;
+  height: 95rem;
   padding: 0 3.2rem;
   background: linear-gradient(
     90deg,
@@ -532,39 +530,26 @@ iframe {
   );
   opacity: 1;
   border-radius: 6.4rem 0 0 19.2rem;
-  z-index: 0;
-  transform: translate(0);
 }
+
 .title-buisness {
   width: 100%;
-  padding: 10rem;
-  align-items: center;
+  z-index: 1;
 }
 .buisness-title {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-.title-description {
   width: 100%;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  text-align: left;
+  z-index: 10;
 }
-.title-description h1 {
+.buisness-title h1 {
   font: 700 var(--size-maintitle) "Noto Sans KR";
   color: black;
 }
-.title-description p {
+.buisness-title p {
   font: 400 var(--size-subtitle) / 2.4 "Noto Sans KR";
   margin-top: 1rem;
-}
-.description {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
 }
 #buisness .buisness-menu {
   position: relative;
@@ -576,79 +561,91 @@ iframe {
 }
 .buisness-menu li {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  height: 100%;
   max-height: 45rem;
-  transition: 0.2s;
-  overflow: hidden;
   padding: 2.4rem;
   background: white;
-  cursor: pointer;
   border-radius: 2.4rem;
-  gap: 4.5rem;
+  transition: 0.2s;
   cursor: pointer;
+  overflow: hidden;
 }
 .buisness-menu li:hover {
   transform: translateY(-3%);
-}
-.buisness-menu li a {
-  width: 100%;
 }
 .buisness-menu .description {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.description .caption {
+  font: 400 1.7rem/2.55rem "Noto Sans KR";
 }
 .buisness-menu .title {
   width: 100%;
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
 }
-
-.buisness-menu .description .title h1 {
+.buisness-menu li .description .title h1 {
   width: 100%;
-  font-size: 2.8rem;
-  font-weight: 500;
+  font: 500 2.8rem "Noto Sans KR";
   color: black;
 }
-.iconwrap {
-  width: 4rem;
-  height: 4rem;
-}
-.iconwrap img {
-  width: 4rem;
+.buisness-menu li .description .title .iconwrap {
+  width: 5rem;
   height: 4rem;
   overflow: hidden;
 }
-
-.buisness-menu .description .icon img {
-  width: 35.2rem;
-}
-.description .caption {
-  font-size: 1.7rem;
-  font-weight: 400;
-  line-height: 2.55rem;
-}
-.icon {
+.buisness-menu li .description .title .iconwrap img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buisness-menu li a .icon {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  max-height: 50rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-.icon .icon-coin,
-.icon .icon-coin2 {
-  position: absolute;
-  animation: dropdown 2s ease-in-out infinite;
+.buisness-menu li a .icon img {
+  width: 90%;
+  object-fit: cover;
+  transition: all 0.3s;
 }
-.icon .icon-coin2 {
-  animation-delay: 2.3s;
+.buisness-menu li:nth-child(1):hover .icon img {
+  animation: grayscale 2s alternate infinite;
+}
+@keyframes grayscale {
+  0% {
+    transform: translateY(0%);
+    filter: grayscale(100%);
+  }
+  50% {
+    filter: grayscale(0);
+  }
+  100% {
+    transform: translateY(-5%);
+    filter: grayscale(100%);
+  }
+}
+.buisness-menu li:nth-child(2):hover .icon .icon-coin,
+.buisness-menu li:nth-child(2):hover .icon .icon-coin2 {
+  animation: dropdown 3s ease-in-out infinite;
+}
+.buisness-menu li a .icon .icon-coin,
+.buisness-menu li a .icon .icon-coin2 {
+  position: absolute;
+}
+.buisness-menu li a .icon .icon-coin2 {
+  animation-delay: 3.3s;
 }
 @keyframes dropdown {
   0% {
@@ -662,26 +659,6 @@ iframe {
     opacity: 0;
   }
 }
-.icon img {
-  width: 100%;
-  transition: 0.3s;
-}
-.buisness-menu li:nth-child(1):hover .icon img {
-  animation: grayscale 2s alternate infinite;
-}
-@keyframes grayscale {
-  0% {
-    transform: translateY(10%);
-    filter: grayscale(100%);
-  }
-  50% {
-    filter: grayscale(0);
-  }
-  100% {
-    transform: translateY(-10%);
-    filter: grayscale(100%);
-  }
-}
 .buisness-menu li:nth-child(3):hover .icon img {
   animation: bounce 1.5s alternate infinite;
 }
@@ -690,7 +667,7 @@ iframe {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(5%);
   }
   100% {
     transform: translateY(0%);
@@ -698,14 +675,12 @@ iframe {
 }
 
 /*-------------- MAPSERVICE CSS ---------------*/
-
 #mapservice {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 9.6rem 0;
-  padding: 0 3.2rem;
+  margin: 10rem 0;
   gap: 7rem;
   position: relative;
 }
@@ -717,7 +692,8 @@ iframe {
 }
 .mapservice-search > h3 {
   width: max-content;
-  font: 700 4.8rem "Noto Sans KR";
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
   margin-bottom: 5rem;
 }
 .mapservice-search-group {
@@ -813,49 +789,48 @@ iframe {
     transform: translateY(0%);
   }
 }
-/*-------------- MAPSERVICE CSS ---------------*/
+
+/*-------------- APPSERVICE CSS ---------------*/
 #appservice {
   display: flex;
+  position: relative;
   flex-direction: row;
   gap: 12.4rem;
-  position: relative;
   height: 97.2rem;
   align-items: center;
-  margin-bottom: 16rem;
+  margin-top: 10rem;
 }
 #appservice .graybackground {
-  overflow: hidden;
-  transform: translateX(0px);
-  opacity: 1;
+  position: absolute;
   width: 409.2rem;
   height: 95.3rem;
-  right: -6.666vw;
-  bottom: 0;
-  z-index: 0;
+  right: 0;
+  border-radius: 0px 256px 64px 0px;
+  overflow: hidden;
   background: linear-gradient(
     270deg,
     #f2f2f2 5.25%,
-    rgba(245, 244, 243, 0.45) 1280px,
+    rgba(245, 244, 243, 0.45) 128rem,
     #fff
   );
-  border-radius: 0px 256px 64px 0px;
-  position: absolute;
+  animation: slidebackground 1s;
+}
+@keyframes slidebackground {
+  0% {
+    right: 10vw;
+  }
+  100% {
+    right: 0vw;
+  }
 }
 .appservice-preview {
-  width: 100%;
-  max-width: 62.5rem;
-  height: 71.6rem;
+  height: 70rem;
   z-index: 1;
 }
-.appservice-preview .mockup {
+.appservice-preview img {
   width: 100%;
-  max-width: 62.5rem;
-  height: 71.6rem;
-  overflow: visible;
-}
-.appservice-preview .mockup img {
-  object-fit: contain;
-  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .appservice-description {
   display: flex;
@@ -872,19 +847,16 @@ iframe {
   margin-bottom: 9.6rem;
 }
 .appservice-description .titlewrap .title {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  align-items: center;
+  text-align: center;
 }
 .appservice-description .titlewrap .title h2 {
-  font-size: 2rem;
-  font-weight: 400;
+  font: 400 2rem "Noto Sans KR";
   color: var(--color-main);
+  margin-bottom: 2rem;
 }
 .appservice-description .titlewrap .title h1 {
-  font-size: 4.8rem;
-  font-weight: 700;
+  font: 700 var(--size-maintitle) "Noto Sans KR";
+  color: black;
 }
 .appservice-description .titlewrap .button {
   display: flex;
@@ -893,8 +865,11 @@ iframe {
   cursor: pointer;
 }
 .appservice-description .titlewrap .button .button-detail a {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font: 500 1.5rem "Noto Sans KR";
+  transition: all 0.3s;
+}
+.appservice-description .titlewrap .button:hover .button-detail a {
+  color: var(--color-main);
 }
 .appservice-description .titlewrap .button .icon {
   width: 2.4rem;
@@ -913,6 +888,10 @@ iframe {
 .appservice-description .downloadwrap .button {
   display: flex;
   gap: 1.6rem;
+  transition: all 0.3s;
+}
+.appservice-description .downloadwrap .button:hover {
+  scale: 0.9;
 }
 .appservice-description .downloadwrap .button a {
   display: flex;
@@ -931,18 +910,16 @@ iframe {
   width: 1.6rem;
   height: 1.6rem;
   overflow: hidden;
-  font-family: 0.1rem;
 }
 .appservice-description .downloadwrap .button a h1 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font: 400 var(--size-subtitle) "Noto Sans KR";
 }
 .appservice-description .downloadwrap .button .icon img {
   width: 100%;
   height: 100%;
 }
 .appservice-description .downloadwrap span {
-  font-size: 1.5rem;
+  font-size: var(--size-subtitle);
 }
 
 /*-------------- MAGAZINE CSS ---------------*/
@@ -977,14 +954,15 @@ iframe {
 }
 .magazine-txt-wrap > h1 {
   width: 100%;
-  font: 400 4.8rem/1.2 "Noto Sans KR";
+  font: 400 var(--size-maintitle) / 1.2 "Noto Sans KR";
+  color: black;
 }
 .magazine-txt-wrap > h1 > span {
-  font: 700 4.8rem/1.2 "Noto Sans KR";
+  font: 700 var(--size-maintitle) / 1.2 "Noto Sans KR";
 }
 .magazine-txt-wrap > p {
   margin-top: 1.2rem;
-  font: 400 1.6rem/2 "Noto Sans KR";
+  font: 400 var(--size-subtitle) / 2 "Noto Sans KR";
   color: var(--color-main);
 }
 .magazine-snsicon-wrap {
@@ -1032,7 +1010,7 @@ iframe {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
-  z-index: 99999 !important;
+  z-index: 50 !important;
 }
 .magazine-swiper-button-prev:hover,
 .magazine-swiper-button-next:hover {
@@ -1052,7 +1030,7 @@ iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 9999;
+  z-index: 50;
 }
 .magazine-swiper-wrapper {
   height: 60rem;
@@ -1158,14 +1136,13 @@ iframe {
   max-width: 30rem;
   min-height: 4rem;
   color: #999;
-  font: 400 1.5rem/1.5 "Noto Sans KR";
+  font: 400 var(--size-subtitle) / 1.5 "Noto Sans KR";
   text-align: left;
   padding-left: 5.6rem;
   word-break: keep-all;
 }
 
 /*-------------- CUSTOMER CSS ---------------*/
-
 #customer {
   width: 100%;
   height: 100%;
@@ -1196,9 +1173,9 @@ iframe {
 .customer-notice-titlewrap h2 {
   width: 100%;
   font: 700 2rem "Noto Sans KR";
+  color: black;
 }
 .customer-notice-button {
-  /* max-width: 9.3rem; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -1207,7 +1184,7 @@ iframe {
 }
 
 .customer-notice-button-txt span {
-  font: 400 1.5rem "Noto Sans KR";
+  font: 400 var(--size-subtitle) "Noto Sans KR";
   margin-right: 1rem;
 }
 .customer-notice-button-img {
@@ -1225,9 +1202,7 @@ iframe {
 .customer-notice-lists li {
   width: inherit;
   margin-bottom: 2.4rem;
-}
-.customer-notice-lists li:hover a {
-  color: var(--color-main);
+  transition: all 0.3s;
 }
 .customer-notice-lists li:last-child {
   margin-bottom: 0;
@@ -1236,12 +1211,18 @@ iframe {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: #999;
   transition: all 0.3s;
+  color: #999;
 }
 .customer-notice-lists li a h2,
 .customer-notice-lists li a span {
-  font: 400 1.5rem "Noto Sans KR";
+  font: 400 var(--size-subtitle) "Noto Sans KR";
+  color: #999;
+  transition: all 0.3s;
+}
+.customer-notice-lists li:hover a h2,
+.customer-notice-lists li:hover a span {
+  color: var(--color-main);
 }
 .customer-notice-lists li a h2 {
   width: 100%;
@@ -1255,7 +1236,6 @@ iframe {
 }
 
 /*----------------Footer CSS-----------------*/
-
 footer {
   width: 100%;
   background: #f0f0f0;
@@ -1283,18 +1263,30 @@ footer {
   margin-bottom: 5rem;
 }
 .footer-fnb a {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font: 300 1.2rem "Noto Sans KR";
+  transition: all 0.3s;
   cursor: pointer;
 }
 .footer-fnb a:hover {
   color: var(--color-main);
 }
-.footer-fnb li:nth-child(1) a {
+.footer-fnb li::after {
+  content: "";
+  display: inline-block;
+  width: 0.1rem;
+  height: 60%;
+  margin: 0 1rem;
+  background: var(--color-sub);
+}
+.footer-fnb li:last-child:after {
+  display: none;
+}
+.footer-fnb li:nth-child(1) a,
+.footer-fnb li:nth-child(2) a {
   font-weight: 500;
 }
-.footer-fnb .fnbmenu {
-  margin-right: 1rem;
+.footer-fnbwrap .footer-familysite {
+  font: 300 1.2rem "Noto Sans KR";
 }
 .footer-contentswrap {
   display: flex;
@@ -1303,14 +1295,11 @@ footer {
   margin-bottom: 6.4rem;
 }
 .footer-contentswrap .title p {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font: 300 1.2rem "Noto Sans KR";
   margin-bottom: 3.6rem;
 }
 .footer-contentswrap .info p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 2.4rem;
+  font: 300 1.2rem/2.4rem "Noto Sans KR";
   color: #999;
 }
 .footer-contentswrap .footer-sns {
@@ -1319,17 +1308,33 @@ footer {
   gap: 0.8rem;
   margin-top: 4rem;
 }
-.footer-contentswrap .footer-sns .snsicon img {
+.footer-contentswrap .footer-sns .snsicon {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
   background-color: white;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.3s;
 }
+.footer-contentswrap .footer-sns .snsicon a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-contentswrap .footer-sns .snsicon img {
+  width: 100%;
+  height: 100%;
+}
+.footer-contentswrap .footer-sns .snsicon:nth-child(4) img {
+  width: 70%;
+  height: 70%;
+}
+.footer-contentswrap .footer-sns .snsicon:hover {
+  border-color: var(--color-main);
+}
+
 /* tablet */
 @media screen and (max-width: 1024px) {
   /*----------------Common CSS-----------------*/
@@ -1337,6 +1342,11 @@ footer {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+  }
+  :root {
+    /* title */
+    --size-maintitle: 3.8rem;
+    --size-subtitle: 1.6rem;
   }
   /*----------------Header CSS-----------------*/
   .header-pcwrap {
@@ -1406,7 +1416,7 @@ footer {
   .mobheader-gnbwrap {
     width: 100%;
     height: 100vh;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -1471,7 +1481,6 @@ footer {
   .gnb-listbox-title .dropicon img {
     width: 100%;
   }
-
   .gnb-list-detail {
     height: 0;
     overflow: hidden;
@@ -1528,19 +1537,14 @@ footer {
 
   /*----------------Business CSS-----------------*/
   .yellowBackground {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    background: #ffebc1;
+    height: 80%;
+    padding: 0;
   }
 
   /*----------------Map Service CSS-----------------*/
   .mapservice-search {
     width: 100%;
     max-width: none;
-  }
-  .mapservice-search > h3 {
-    font-size: 3.6rem;
   }
   .mapservice-imgwrap {
     display: none;
@@ -1568,6 +1572,7 @@ footer {
     display: none;
   }
   .appservice-description {
+    position: relative;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -1583,7 +1588,7 @@ footer {
       center center no-repeat;
     background-size: 100%;
     position: absolute;
-    left: 1.4rem;
+    left: 3rem;
     bottom: 0;
     height: 100%;
     width: 25rem;
@@ -1708,6 +1713,7 @@ footer {
     width: 100%;
     height: 100%;
   }
+
   /*----------------Footer CSS-----------------*/
 
   footer {
@@ -1720,16 +1726,8 @@ footer {
     padding: 0 1rem;
   }
   .footer-fnbwrap {
-    flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
-  }
-  .footer-fnb {
-    flex-direction: column;
-    gap: 1.4rem;
-  }
-  .footer-fnb a {
-    font-size: 2.3rem;
   }
   .footer-familysite {
     font-size: 2.3rem;
@@ -1737,22 +1735,8 @@ footer {
   .footer-contentswrap {
     margin-top: 6.4rem;
   }
-  .footer-contentswrap .title p {
-    font-size: 2.3rem;
-  }
-  .footer-contentswrap .info p {
-    line-height: 2.8rem;
-    font-size: 2.3rem;
-  }
   .footer-contentswrap .footer-sns {
-    display: flex;
-    flex-direction: row;
-    gap: 0.8rem;
-    margin-top: 4rem;
-  }
-  .footer-contentswrap .footer-sns .snsicon img {
-    width: 5rem;
-    height: 5rem;
+    margin-top: 0;
   }
 }
 
@@ -1771,6 +1755,17 @@ footer {
     font-weight: normal;
     font-family: "Noto Sans KR", sans-serif;
   }
+  /*----------------Header CSS-----------------*/
+  .mobheader-center {
+    height: 15rem;
+  }
+  .mobheader-center .mainlogo img {
+    width: 20rem;
+  }
+  .mobheader-gnbwrap.active {
+    top: 15rem;
+  }
+
   .viewContentWrap {
     width: 100%;
     max-width: none;
@@ -1811,9 +1806,12 @@ footer {
 
   /*----------------Event CSS-----------------*/
   #event {
+    width: 100%;
+    height: 90rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 4rem;
   }
   .event-title {
     font-size: 6rem;
@@ -1841,6 +1839,9 @@ footer {
     justify-content: center;
     border: 1px solid #ddd;
   }
+  .event-tab-left {
+    justify-content: center;
+  }
   .event-tab i {
     font-size: 3rem;
   }
@@ -1853,7 +1854,7 @@ footer {
   .event-right {
     position: relative;
     width: 100%;
-    height: 82rem;
+    height: 100%;
   }
   iframe {
     position: absolute;
@@ -1864,9 +1865,24 @@ footer {
     border: none;
     overflow: hidden;
   }
+
+  /* only */
+  #only {
+    padding: 0 4rem;
+  }
+  .only-title p {
+    display: none;
+  }
+
   /* buisness */
   #buisness {
     width: 100%;
+    height: 100%;
+  }
+  .yellowBackground {
+    border-radius: 0;
+    height: 100%;
+    background: #ffebc1;
   }
   .title-buisness {
     display: flex;
@@ -1874,60 +1890,60 @@ footer {
     padding: 20px;
   }
   .buisness-title {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+    text-align: left;
+    margin-bottom: 2rem;
   }
-  .title-description h2 {
+  .buisness-title p {
     display: none;
   }
   #buisness .buisness-menu {
     display: flex;
     flex-direction: column;
   }
-  .title-buisness .buisness-menu {
-    width: 100%;
+  #buisness .buisness-menu li a {
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
   }
-  .title-buisness .buisness-menu li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+  #buisness .buisness-menu li:hover {
+    transform: none;
   }
-  .title-buisness .buisness-menu li a {
-    width: 50%;
+  .buisness-menu li a .description {
+    margin-top: 2.5rem;
   }
-
-  .buisness-menu .description .title h1 {
-    font-size: 3.2rem;
+  .buisness-menu li a .description .title h1 {
+    font: 700 3rem "Noto Sans KR";
   }
   .buisness-menu .description .caption {
-    font-size: 3.2rem;
+    font: 500 3rem/2 "Noto Sans KR";
     color: #9999;
-    line-height: 5rem;
-  }
-  .buisness-menu .icon {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: center;
   }
   .buisness-menu .iconwrap {
     display: none;
   }
-  .buisness-menu .icon img {
-    width: 154px;
-    height: 100%;
+  .buisness-menu li a .icon {
+    width: 50%;
+    right: -5%;
   }
   /*----------------Map Service CSS-----------------*/
+  #mapservice {
+    padding: 0 2rem;
+  }
   .mapservice-tagwrap > ul > li > a {
     font-size: 3rem;
   }
 
+  /*----------------appservice CSS-----------------*/
+  #appservice {
+    padding: 0 2rem;
+    height: 100%;
+    margin: 10rem 0;
+  }
+  .appservice-description .titlewrap {
+    margin-bottom: 3rem;
+    padding-left: 30rem;
+  }
   /*----------------Magazine CSS-----------------*/
   .magazin-slide-snstitle h2 {
     font-size: 3.5rem;
@@ -1947,5 +1963,27 @@ footer {
   .customer-notice-lists li a h2,
   .customer-notice-lists li a span {
     font-size: 2.8rem;
+  }
+
+  /* footer */
+  .footer-fnbwrap {
+    flex-direction: column;
+  }
+  .footer-fnb {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-fnb li a,
+  .footer-fnbwrap .footer-familysite p,
+  .footer-companyinfo .title p {
+    font-size: 2.5rem;
+  }
+  .footer-contentswrap .footer-sns .snsicon {
+    width: 7rem;
+    height: 7rem;
+  }
+  .footer-companyinfo .info p {
+    font-size: 2.5rem;
+    line-height: 2;
   }
 }

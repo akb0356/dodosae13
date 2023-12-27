@@ -29,6 +29,7 @@ header .headerWrap {
   padding: 0.5rem;
 }
 .logo a {
+  border: 1px solid red;
   width: 100%;
   height: 100%;
   padding: 0 0 1rem 10.8rem;
@@ -56,6 +57,7 @@ nav {
 .navWrap > li:last-child i {
   font-size: 1.8rem;
 }
+
 /* search view */
 .searchbar-view {
   position: fixed;
@@ -68,6 +70,7 @@ nav {
   align-items: center;
   background: white;
   z-index: 100;
+  display: none;
 }
 .searchbar-view::after {
   content: "";
@@ -94,8 +97,7 @@ nav {
 .searchbar-header > i.fa-xmark {
   font-size: 3rem !important;
 }
-
-.logo {
+.searchbar-header-logo {
   width: 15rem;
   height: 2.8rem;
   background: url(https://www.kbstar.com/2018/img/icon_set1_n2.png) no-repeat 0 -8rem;
