@@ -187,28 +187,75 @@ html {
 .mainSlide {
   position: relative;
   width: 100%;
+  height: 63rem;
   max-width: 144rem;
   margin: 0 auto;
   overflow: hidden;
 }
 .mainSlide .mainSlide-wrapper {
+  position: relative;
   width: 100%;
-  display: flex;
+  height: 100%;
+}
+.mainSlide .mainSlide-wrapper.animated {
+  transition: all 0.3s ease-in;
+}
+.mainSlide .mainSlide-wrapper .main-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .mainSlide .mainSlide-wrapper .main-slide a .mainSlide-mobileimg {
   display: none;
 }
-.mainSlide button {
+.mainSlide .mainSlide-pagination-wrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.mainSlide .mainSlide-pagination-wrapper > span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #7c7c7c;
+  background: white;
+  border-radius: 50%;
+  text-indent: -9999999rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mainSlide .mainSlide-pagination-wrapper > span.active {
+  background: #3f0b9f;
+}
+.mainSlide .mainSlide-pagination-wrapper > button {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mainSlide .mainSlide-pagination-wrapper > button i {
+  font-size: 2rem;
+  color: #7c7c7c;
+}
+.mainSlide .mainSlide-pagination-wrapper > button i.fa-play {
+  display: none;
+}
+.mainSlide > button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: none;
   background: none;
-  width: 2.6rem;
 }
-.mainSlide button i {
+.mainSlide > button i {
   font-size: 5rem;
   color: #222;
+  cursor: pointer;
 }
 .mainSlide #prev {
   left: 1rem;

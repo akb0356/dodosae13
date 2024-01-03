@@ -201,13 +201,21 @@ html {
 .mainSlide {
   position: relative;
   width: 100%;
+  height: 63rem;
   max-width: 144rem;
   margin: 0 auto;
   overflow: hidden;
   .mainSlide-wrapper {
+    position: relative;
     width: 100%;
-    display: flex;
+    height: 100%;
+    &.animated {
+      transition: all 0.3s ease-in;
+    }
     .main-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
       a {
         .mainSlide-mobileimg {
           display: none;
@@ -215,16 +223,54 @@ html {
       }
     }
   }
-  button {
+
+  .mainSlide-pagination-wrapper {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    & > span {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border: 0.5px solid map-get($color, gray);
+      background: white;
+      border-radius: 50%;
+      text-indent: -9999999rem;
+      overflow: hidden;
+      cursor: pointer;
+      &.active {
+        background: map-get($color, pointpurple);
+      }
+    }
+    & > button {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+        color: map-get($color, gray);
+        &.fa-play {
+          display: none;
+        }
+      }
+    }
+  }
+  & > button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border: none;
     background: none;
-    width: 2.6rem;
     i {
       font-size: 5rem;
       color: map-get($color, mainblack);
+      cursor: pointer;
     }
   }
   #prev {
