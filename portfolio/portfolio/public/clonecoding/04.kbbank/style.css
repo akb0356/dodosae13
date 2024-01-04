@@ -1,0 +1,409 @@
+@import url(./reset.css);
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* header css */
+header {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+header .headerWrap {
+  width: 95%;
+  height: 100%;
+  height: 3.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 20rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+}
+.logo a {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 1rem 10.8rem;
+  background: url("https://www.kbstar.com/2018/img/icon_set1_n2.png") no-repeat -280px
+    3px;
+}
+nav {
+  width: inherit;
+  width: 100%;
+  position: relative;
+}
+.navWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}
+.navWrap > li {
+  position: relative;
+  float: left;
+  margin-right: 2rem;
+  padding: 0.5rem;
+}
+.navWrap > li:last-child i {
+  font-size: 1.8rem;
+}
+
+/* search view */
+.searchbar-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  z-index: 100;
+  display: none;
+}
+.searchbar-view::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 19rem;
+  background: #ffd223;
+}
+.searchbar-wrap {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 80rem;
+  z-index: inherit;
+}
+.searchbar-header {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.searchbar-header > i.fa-xmark {
+  font-size: 3rem !important;
+}
+.searchbar-header-logo {
+  width: 15rem;
+  height: 2.8rem;
+  background: url(https://www.kbstar.com/2018/img/icon_set1_n2.png) no-repeat 0 -8rem;
+}
+.navWrap li > .submenu {
+  display: none;
+  position: absolute;
+  width: 11rem;
+  height: 100%;
+  left: -3.8rem;
+  top: 2.7rem;
+}
+.navWrap li > .submenu::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.3rem;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #ffe85a;
+  rotate: 135deg;
+  z-index: -10;
+}
+.navWrap li > .submenu > ul {
+  border-top: 2px solid #ffe85a;
+  width: 100%;
+  padding: 1.3rem 1rem 1.5rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.navWrap li > .submenu ul li {
+  display: block;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.navWrap li > .submenu ul > li > a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.navWrap li > .submenu ul li .submenu-subtit {
+  display: block;
+  text-align-last: left;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.navWrap li > .submenu ul li .submenu-subtit::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.5px;
+  margin: 1rem 0;
+  background-color: #eaeaea;
+}
+.navWrap li:nth-child(9) > .submenu ul li .submenu-subtit::after {
+  width: 100%;
+}
+.navWrap li:nth-child(8) > .submenu {
+  width: 60rem;
+  left: -430%;
+}
+.navWrap li:nth-child(9) > .submenu {
+  width: 35rem;
+  left: -350%;
+}
+.navWrap li:nth-child(1):hover > .submenu,
+.navWrap li:nth-child(2):hover > .submenu,
+.navWrap li:nth-child(8):hover > .submenu,
+.navWrap li:nth-child(9):hover > .submenu {
+  display: block;
+}
+.navWrap li:nth-child(8) > .submenu ul {
+  display: flex;
+  flex-direction: row;
+}
+.navWrap li:nth-child(8) > .submenu ul li > ul {
+  display: flex;
+  flex-direction: column;
+}
+.navWrap li:nth-child(8) > .submenu::before {
+  left: 73%;
+}
+.navWrap li:nth-child(9) > .submenu::before {
+  left: 85%;
+}
+.navWrap li:nth-child(9):hover > .submenu > ul > li:first-child {
+  margin-bottom: 1rem;
+}
+.navWrap li:not(:nth-child(8), :nth-child(9)) > .submenu ul li:hover,
+.navWrap li:nth-child(8) > .submenu ul li .submenu-wrap li:hover,
+.navWrap li:nth-child(9):hover > .submenu ul li .submenu-wrap li:hover {
+  background: #ffe85a;
+}
+.navWrap li:nth-child(9) > .submenu ul li .submenu-wrap {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 10rem, 20rem);
+}
+.navWrap li:nth-child(9) > .submenu ul li .submenu-wrap li {
+  display: flex;
+  align-items: center;
+}
+.navWrap li:nth-child(9) > .submenu ul li .submenu-wrap li::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: url(https://oimg1.kbstar.com/img/omoney/2016/ocalculator/bg_flag.png)
+    no-repeat 0 0;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:first-child
+  .submenu-wrap
+  li:nth-child(2):before {
+  background-position: 0rem -72rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:first-child
+  .submenu-wrap
+  li:nth-child(3):before {
+  background-position: 0rem -4rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(1):before {
+  background-position: 0rem -4rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(2):before {
+  background-position: 0rem -12rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(3):before {
+  background-position: 0rem -32rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(4):before {
+  background: url(https://oimg1.kbstar.com/img/ocommon/2018/icon_set_n1.png)
+    no-repeat 0 0;
+  scale: 1.2;
+  background-position: -19.8rem -30rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(5):before {
+  background-position: 0rem -72rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(6):before {
+  background-position: 0rem -144rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(7):before {
+  background-position: 0rem -24rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(8):before {
+  background-position: 0rem -108rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(9):before {
+  background: url(https://www.kbstar.com/2018/img/icon_set1_n2.png) no-repeat 0
+    0;
+  scale: 1.2;
+  background-position: 0.3rem -23rem;
+}
+.navWrap
+  li:nth-child(9)
+  > .submenu
+  ul
+  li:last-child
+  .submenu-wrap
+  li:nth-child(10):before {
+  background-position: 0rem -60rem;
+}
+.navWrap li > .submenu ul li a {
+  font-size: 1.3rem;
+  color: #5a5a5a;
+}
+.navWrap li a {
+  font-size: 1.4rem;
+}
+.menu-gnbwrap a {
+  display: flex;
+  align-items: center;
+}
+.menu-gnbwrap a > i {
+  margin-bottom: 0.45rem;
+  margin-left: 0.7rem;
+}
+.certMenuWrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-left: 3rem;
+  margin-top: 3rem;
+}
+.certMenuWrap > li > a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 1.4rem;
+}
+.certMenuWrap li:last-child {
+  position: relative;
+}
+.certMenuWrap li:last-child > a {
+  border-left: none;
+}
+.certMenuWrap li:last-child:hover .certMenuWrap-submenu {
+  display: flex;
+}
+.certMenuWrap-submenu {
+  border: 1px solid #ddd;
+  width: 10rem;
+  padding: 0.5rem;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  top: 160%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.certMenuWrap-submenu::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: url(https://oimg1.kbstar.com/img/ocommon/2020/bg_submenu_triangle.gif)
+    no-repeat 0 0;
+  width: 1rem;
+  height: 0.6rem;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.certMenuWrap-submenu > a {
+  padding: 0.2rem 0.3rem;
+  font-size: 1.4rem;
+}
+.certMenuWrap-submenu > a:first-child::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 1px;
+  height: 50%;
+  background: #ddd;
+}
+.certMenuWrap-submenu > a:hover {
+  background: #ffe85a;
+}

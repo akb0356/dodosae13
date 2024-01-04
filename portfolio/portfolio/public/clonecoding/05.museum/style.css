@@ -1,0 +1,270 @@
+@import url(./reset.css);
+html {
+  color: #222;
+}
+
+#container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.maincontentWrap {
+  width: 100%;
+  margin-top: 3.5rem;
+}
+
+.pcHeader {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.pcHeader .navinfo {
+  width: 100%;
+  margin-top: 1rem;
+}
+.pcHeader .navinfo .utill {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.pcHeader .navinfo .utill > li {
+  position: relative;
+  width: inherit;
+  height: 4.6rem;
+}
+.pcHeader .navinfo .utill > li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 0.3rem;
+  background: #222;
+}
+.pcHeader .navinfo .utill > li a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 1.4rem "Noto Sans KR";
+  color: #444;
+}
+.pcHeader .navinfo .utill .museunLinkWrap,
+.pcHeader .navinfo .utill .languageWrap {
+  display: block;
+  margin-right: 2rem;
+}
+.pcHeader .navinfo .utill .museunLinkWrap > a,
+.pcHeader .navinfo .utill .languageWrap > a {
+  display: flex;
+  gap: 1rem;
+}
+.pcHeader .navinfo .utill .museunLinkWrap > a i,
+.pcHeader .navinfo .utill .languageWrap > a i {
+  font-size: 1.5rem;
+}
+.pcHeader .navinfo .utill .museunLinkWrap.clickon a,
+.pcHeader .navinfo .utill .languageWrap.clickon a {
+  background: #222;
+  color: white;
+}
+.pcHeader .navinfo .utill .museunLinkWrap .museunLink,
+.pcHeader .navinfo .utill .museunLinkWrap .language,
+.pcHeader .navinfo .utill .languageWrap .museunLink,
+.pcHeader .navinfo .utill .languageWrap .language {
+  display: none;
+  background: #222;
+}
+.pcHeader .navinfo .utill .museunLinkWrap .museunLink > li > a,
+.pcHeader .navinfo .utill .museunLinkWrap .language > li > a,
+.pcHeader .navinfo .utill .languageWrap .museunLink > li > a,
+.pcHeader .navinfo .utill .languageWrap .language > li > a {
+  color: white;
+  transition: color 0.3s;
+}
+.pcHeader .navinfo .utill .museunLinkWrap .museunLink > li > a:hover,
+.pcHeader .navinfo .utill .museunLinkWrap .language > li > a:hover,
+.pcHeader .navinfo .utill .languageWrap .museunLink > li > a:hover,
+.pcHeader .navinfo .utill .languageWrap .language > li > a:hover {
+  color: #fac906;
+  text-decoration-line: underline;
+}
+.pcHeader .navinfo .utill .snsList {
+  display: flex;
+  height: 100%;
+  padding: 0 1rem;
+}
+.pcHeader .navinfo .utill .snsList > li > a > i {
+  font-size: 1.6rem;
+}
+.pcHeader nav {
+  position: relative;
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pcHeader nav .logo {
+  width: 21rem;
+  height: 5.5rem;
+  background: url(https://www.museum.go.kr/ux/content/images/common/header_logo.png) center center/cover no-repeat;
+}
+.pcHeader nav .gnbWrap {
+  display: flex;
+  gap: 3.5rem;
+}
+.pcHeader nav .gnbWrap > li > a {
+  position: relative;
+  font: 500 2.2rem "Noto Sans KR";
+  transition: all 0.3s;
+}
+.pcHeader nav .gnbWrap > li > a:hover {
+  color: #3f0b9f;
+}
+.pcHeader nav .gnbWrap > li > a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 0.5rem;
+  background: #3f0b9f;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu {
+  display: none;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  background: #222;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu > ul {
+  padding-left: 27rem;
+  width: 100%;
+  display: flex;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu > ul li {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-right: 2rem;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu > ul li > a {
+  font: 300 1.5rem "Noto Sans KR";
+  color: white;
+  transition: all 0.3s;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu > ul li > a:hover {
+  color: #fac906;
+}
+.pcHeader nav .gnbWrap > li > .sub-menu > ul li > a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 0.5rem;
+  background: #fac906;
+}
+.pcHeader nav .join {
+  display: flex;
+}
+.pcHeader nav .join li {
+  margin-right: 1rem;
+}
+.pcHeader nav .join li a {
+  color: #444;
+  font: 500 1.5rem "Noto Sans KR";
+}
+.pcHeader nav .join li:last-child i {
+  font-size: 2rem;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+.mainSlide {
+  position: relative;
+  width: 100%;
+  height: 63rem;
+  max-width: 144rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mainSlide .mainSlide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mainSlide .mainSlide-wrapper.animated {
+  transition: all 0.3s ease-in;
+}
+.mainSlide .mainSlide-wrapper .main-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mainSlide .mainSlide-wrapper .main-slide a .mainSlide-mobileimg {
+  display: none;
+}
+.mainSlide .mainSlide-pagination-wrapper {
+  border: 1px solid red;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span {
+  display: flex;
+  gap: 1.5rem;
+}
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span > span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #7c7c7c;
+  background: white;
+  border-radius: 50%;
+  text-indent: -9999999rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span > span.active {
+  background: #3f0b9f;
+}
+.mainSlide .mainSlide-pagination-wrapper > button {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mainSlide .mainSlide-pagination-wrapper > button i {
+  font-size: 2rem;
+  color: #7c7c7c;
+}
+.mainSlide .mainSlide-pagination-wrapper > button i.fa-play {
+  display: none;
+}
+.mainSlide > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+}
+.mainSlide > button i {
+  font-size: 5rem;
+  color: #222;
+  cursor: pointer;
+}
+.mainSlide #prev {
+  left: 1rem;
+}
+.mainSlide #next {
+  right: 1rem;
+}/*# sourceMappingURL=style.css.map */
