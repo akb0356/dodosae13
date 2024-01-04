@@ -3,7 +3,7 @@ const slideWrapper = document.querySelector(".mainSlide");
 const sliderContainer = document.querySelector(".mainSlide-wrapper");
 const slides = sliderContainer.querySelectorAll(".main-slide");
 const slideCounts = slides.length;
-const pager = document.querySelector(".mainSlide-pagination-wrapper");
+const pager = document.querySelector(".mainSlide-pagination-span");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
 const slideBtn = pager.querySelector("button");
@@ -15,6 +15,7 @@ for (let i = 0; i < slideCounts; i++) {
   pagerHTML += `<span data-idx="${i}">${i + 1}</span>`;
   pager.innerHTML = pagerHTML;
 }
+
 const pagerBtn = pager.querySelectorAll("span");
 
 const goToslide = (i) => {

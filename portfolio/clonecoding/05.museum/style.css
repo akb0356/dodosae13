@@ -209,6 +209,7 @@ html {
   display: none;
 }
 .mainSlide .mainSlide-pagination-wrapper {
+  border: 1px solid red;
   position: absolute;
   right: 2rem;
   bottom: 2rem;
@@ -216,7 +217,11 @@ html {
   align-items: center;
   gap: 1.5rem;
 }
-.mainSlide .mainSlide-pagination-wrapper > span {
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span {
+  display: flex;
+  gap: 1.5rem;
+}
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span > span {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -227,7 +232,7 @@ html {
   overflow: hidden;
   cursor: pointer;
 }
-.mainSlide .mainSlide-pagination-wrapper > span.active {
+.mainSlide .mainSlide-pagination-wrapper .mainSlide-pagination-span > span.active {
   background: #3f0b9f;
 }
 .mainSlide .mainSlide-pagination-wrapper > button {

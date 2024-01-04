@@ -18,7 +18,7 @@ section:not(main > section) {
   margin: 0 auto;
 }
 .section-title {
-  margin-top: 5rem;
+  margin-top: 3rem;
   font: 5.5rem "Welland";
 }
 
@@ -243,7 +243,6 @@ main .blackBox {
 }
 .about-experience-wrap {
   width: 100%;
-  margin-bottom: 3rem;
 }
 .about-experience-contents > .about-experience {
   display: grid;
@@ -333,7 +332,7 @@ main .blackBox {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 800 1.3rem "Noto Sans KR";
+  font: 800 1.5rem "Noto Sans KR";
   user-select: none;
   color: var(--main-color);
   transition: 1s;
@@ -353,3 +352,127 @@ main .blackBox {
   margin-right: 1rem;
 }
 
+/*------------ portfolio ------------*/
+.portfolio-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-section-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.portfolio-section-btn li {
+  width: 13rem;
+  text-align: center;
+  padding: 0.8rem 0;
+  border: 1px solid var(--main-color);
+  font: 700 1.5rem "Noto Sans KR";
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.portfolio-section-btn li:hover {
+  background: var(--main-color);
+  color: white;
+}
+.portfolio-section .portfolio-section-wrap {
+  padding: 0;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+}
+.portfolio-section section article {
+  width: 100%;
+  height: 46rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.portfolio-section section article .portfolio-preview-img {
+  width: 100%;
+  height: 25rem;
+  background: var(--sub-color);
+}
+.portfolio-section section article .portfolio-preview-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.portfolio-section
+  section
+  article
+  .portfolio-preview-text
+  .portfolio-preview-button {
+  display: flex;
+  gap: 1rem;
+}
+.portfolio-section
+  section
+  article
+  .portfolio-preview-text
+  .portfolio-preview-button
+  li {
+  border: 1px solid var(--main-color);
+  text-align: center;
+  padding: 0.2rem 0;
+  width: 8rem;
+  font: 700 1.3rem "Noto Sans KR";
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.portfolio-section
+  section
+  article
+  .portfolio-preview-text
+  .portfolio-preview-button
+  li:hover {
+  background: var(--main-color);
+  color: white;
+}
+.portfolio-preview-text h4 {
+  font: 800 2rem "Noto Sans KR";
+}
+.portfolio-preview-text p {
+  font: 500 1.5rem "Noto Sans KR";
+  margin-bottom: 1.5rem;
+}
+.portfolio-preview-text .portfolio-preview-software {
+  display: flex;
+  gap: 0.7rem;
+}
+.portfolio-preview-text .portfolio-preview-software li {
+  font: 400 1.3rem "Indira_K";
+  transition: color 0.3s;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.portfolio-preview-text .portfolio-preview-software li:hover {
+  color: var(--sub-color);
+}
+.portfolio-preview-text i {
+  display: block;
+  font-size: 2.5rem;
+  text-align: right;
+  transition: all 0.3s;
+}
+.portfolio-preview-text i:hover {
+  animation: move 2s alternate infinite;
+}
+@keyframes move {
+  0% {
+  }
+  50% {
+    transform-origin: right;
+    scale: 0.9;
+  }
+  100% {
+    transform-origin: center;
+  }
+}
+#contact > .section-title {
+  text-align: center;
+}

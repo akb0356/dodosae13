@@ -225,13 +225,18 @@ html {
   }
 
   .mainSlide-pagination-wrapper {
+    border: 1px solid red;
     position: absolute;
     right: 2rem;
     bottom: 2rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    & > span {
+    .mainSlide-pagination-span {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .mainSlide-pagination-span > span {
       display: inline-block;
       width: 2rem;
       height: 2rem;
