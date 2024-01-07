@@ -1,5 +1,5 @@
 /*----------------Reset CSS-----------------*/
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@300;400;500;700;800&family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@200;300;400;500;600;800&family=Noto+Sans:wght@200;300;400;500;600;700&display=swap");
 
 @font-face {
   font-family: "YesevaOne";
@@ -23,19 +23,11 @@
   font-weight: normal;
 }
 
-@font-face {
-  font-family: "PuradakGentleGothicR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Nanum Myeongjo", serif, "Noto Sans", "Noto Sans KR", sans-serif;
 }
 ul,
 li {
@@ -43,6 +35,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 html,
 body,
@@ -129,10 +122,10 @@ video {
   padding: 0;
   border: 0;
   font-size: 10px;
-  font-family: "Noto Sans", sans-serif;
   vertical-align: baseline;
   scroll-behavior: smooth;
   color: var(--main-color);
+  word-break: keep-all;
 }
 
 body {

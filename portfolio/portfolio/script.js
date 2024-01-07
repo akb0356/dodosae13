@@ -21,6 +21,6 @@ window.addEventListener("scroll", () => {
     scrolleffect.style.opacity = `${1 - scrollNum / 1000}`;
   }
 });
-window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-});
+// window.addEventListener("load", () => {
+//   window.scrollTo(0, 0);
+// });
