@@ -506,6 +506,7 @@ main .blackBox {
 }
 
 /* publishing */
+<<<<<<< HEAD
 .portfolio-section-publishing-slideWrapper,
 .portfolio-section-publishing-slide {
   width: 100%;
@@ -516,6 +517,11 @@ main .blackBox {
   align-items: center;
   justify-content: center;
 }
+=======
+
+
+
+>>>>>>> 0b34d08166c73df2f441fbe06125659435b34cee
 
 /*------------ contact ------------*/
 #contact > .section-title {

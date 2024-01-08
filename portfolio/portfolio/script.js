@@ -24,6 +24,7 @@ window.addEventListener("scroll", () => {
 // window.addEventListener("load", () => {
 //   window.scrollTo(0, 0);
 // });
+<<<<<<< HEAD
 
 
 // swiper
@@ -72,3 +73,5 @@ window.addEventListener("scroll", () => {
 //     },
 //   },
 // });
+=======
+>>>>>>> 0b34d08166c73df2f441fbe06125659435b34cee
